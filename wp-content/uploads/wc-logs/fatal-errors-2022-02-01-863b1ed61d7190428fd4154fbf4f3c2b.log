@@ -1,0 +1,10 @@
+2022-02-01T17:33:01+00:00 CRITICAL Uncaught Error: Object of class WP_Term could not be converted to string in C:\xampp\htdocs\wordpress\wp-includes\formatting.php:1098
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-includes\formatting.php(4541): wp_check_invalid_utf8(Object(WP_Term))
+#1 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\index.php(468): esc_html(Object(WP_Term))
+#2 C:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\wordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-includes\formatting.php on line 1098
+

@@ -1,0 +1,77 @@
+2022-01-29T16:59:16+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:01:57+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:02:12+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:03:10+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:03:17+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:03:25+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:03:43+00:00 CRITICAL Uncaught Error: Call to a member function get() on null in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php:10
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\index.php(455): fetchCategoriesForName()
+#1 C:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\wordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:06:11+00:00 CRITICAL Uncaught Error: Call to a member function get() on null in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php:10
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\index.php(455): fetchCategoriesForName()
+#1 C:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\wordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 10
+
+2022-01-29T17:11:06+00:00 CRITICAL syntax error, unexpected '.', expecting ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 13
+
+2022-01-29T17:11:21+00:00 CRITICAL syntax error, unexpected '.', expecting ')' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 13
+
+2022-01-29T17:15:24+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 20
+
+2022-01-29T17:17:25+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 20
+
+2022-01-29T17:19:48+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php:17
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\index.php(455): fetchCategoriesForName()
+#1 C:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\wordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 17
+
+2022-01-29T17:21:28+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE), expecting end of file in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 21
+
+2022-01-29T17:21:30+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE), expecting end of file in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 21
+
+2022-01-29T17:21:34+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE), expecting end of file in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 21
+
+2022-01-29T17:26:29+00:00 CRITICAL syntax error, unexpected '.' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 24
+
+2022-01-29T17:26:46+00:00 CRITICAL syntax error, unexpected '.' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 24
+
+2022-01-29T18:52:55+00:00 CRITICAL syntax error, unexpected '$images' (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 25
+
+2022-01-29T18:54:23+00:00 CRITICAL syntax error, unexpected '$images' (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 25
+
+2022-01-29T18:54:42+00:00 CRITICAL syntax error, unexpected '$images' (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 25
+
+2022-01-29T18:54:52+00:00 CRITICAL syntax error, unexpected '$result' (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 27
+
+2022-01-29T18:55:01+00:00 CRITICAL syntax error, unexpected '$result' (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 32
+
+2022-01-29T19:12:36+00:00 CRITICAL syntax error, unexpected ',', expecting variable (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 41
+
+2022-01-29T19:15:03+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 30
+
+2022-01-29T19:15:35+00:00 CRITICAL syntax error, unexpected ',', expecting variable (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 41
+
+2022-01-29T19:16:14+00:00 CRITICAL syntax error, unexpected '$id' (T_VARIABLE) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 45
+
+2022-01-29T19:45:26+00:00 CRITICAL syntax error, unexpected 'as' (T_AS), expecting ';' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 32
+
