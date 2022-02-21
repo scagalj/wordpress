@@ -42,58 +42,70 @@ function logToConsole($output, $with_script_tags = true){
     echo $js_code;
 }
 
-function fetchCategoriesForName(){
-    
+function fetchCategoriesForName() {
+
 //    'type' => 'external',
     $args = array(
         'limit' => 4,
-        'category' => array( 'Hoodies' )
+        'category' => array('Hoodies')
     );
     $result = '';
-    $products = wc_get_products( $args );
-    if(!empty($products)){
+    $products = wc_get_products($args);
+    if (!empty($products)) {
         foreach ($products as $product) {
             $productPost = '<div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pr-2 imageContainerBestSellers">'
                     . '<div class="imageContainerBestSellerImage">';
-            
+
             $images = $product->get_gallery_image_ids('view');
             $hasSecondImage = !empty($images);
-            
+
             $productUrl = get_permalink($product->get_id());
-            
+
             $productPost .= '<a href="' . $productUrl . '" >';
-            if($hasSecondImage){
+            if ($hasSecondImage) {
                 $productPost .= createImageTagFromImageId($product->get_image_id(), null, null, null, 'imageBestSelling img-fluid hideOnHover', null);
-            }else{
+            } else {
                 $productPost .= createImageTagFromImageId($product->get_image_id(), null, null, null, 'imageBestSelling img-fluid', null);
             }
-                    
-            if($hasSecondImage){
+
+            if ($hasSecondImage) {
                 $productPost .= createImageTagFromImageId($images[0], null, null, null, 'imageBestSelling img-fluid showOnHover', null);
             }
-            
+
+            $regular_price = (float) $product->get_regular_price(); // Regular price
+            $sale_price = (float) $product->get_price(); // Active price (the "Sale price" when on-sale)
+            // "Saving Percentage" calculation and formatting
+            $precision = 0; // Max number of decimals
+            $saving_percentage = '-' . round(100 - ( $sale_price / $regular_price * 100 ), $precision) . ' %';
+
             $productPost .= '</a>';
-            
+
             $productPost .= '<div class="imageDescription">'
-                    . '<div class="mt-2">'
+                    . '<div class="discountAmountWrapper"><span class="discountAmountValue">' . $saving_percentage . '</span></div>'
+                    . '<div class="mt-2" style="text-align:center;">'
                     . '<a href="'
                     . $productUrl . '">'
-                    . '<span style="color:black;" class="imageTitle">' 
+                    . '<span style="color:black;" class="imageTitle">'
                     . $product->get_name()
                     . '</span>'
                     . '</a>'
                     . '</div>'
-                    . '<div class="imagePrice mt-1">'
-                    . 'Cijena: '
-                    . $product->get_price() 
-                    . '</div></div></div></div>';
-            
-            $result .= $productPost . ' '; 
+                    . '<div class="imagePrice priceWrapper">';
+
+            if ($sale_price != $regular_price) {
+                $productPost .= '<span class="regularPrice">' . number_format($sale_price, 2) . ' HRK' . '</span><span class="salePrice">' . number_format($regular_price, 2) . ' HRK' . '</span>';
+            } else {
+                $productPost .= '<span class="regularPrice">' . number_format($sale_price, 2) . ' HRK' . '</span>';
+            }
+
+
+            $productPost .= '</div></div></div></div>';
+
+            $result .= $productPost . ' ';
         }
     }
     return $result;
 }
-
 
 function createImageTagFromImageId($imageId, $widht = null, $height = null, $id = null, $class = null, $style = null){
     $imageTag = '<img ';
