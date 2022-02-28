@@ -1597,6 +1597,7 @@ body .doctorDescription{
     margin-right: 5px;
     font-size: 9pt;
     text-decoration: line-through;
+    color: darkblue;
 }
 
 
@@ -1605,4 +1606,20 @@ body .doctorDescription{
 .container{
     padding-left: 0px !important;
     padding-right: 0px !important;
+}
+
+span.si-loop-product__category-wrap{
+    display: none !important;
+}
+
+.woocommerce ul.products li.product .meta-wrap>.price{
+    margin: 0.1em !important;
+}
+
+.woocommerce ul.products li.product .meta-wrap>*{
+    margin: 0.3em !important;
+}
+
+span.onsale{
+    background-color: darkgreen !important;
 }

@@ -212,7 +212,7 @@
     <div class="container mt-5">
         <div class="row d-flex mt-5">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div style="height: 600px; background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header1.jpg); background-position: center; background-repeat: no-repeat; background-size: cover" >
+                <div style="height: 500px; background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header1.jpg); background-position: center; background-repeat: no-repeat; background-size: cover" >
                     <div class="verticalmiddle">
                         <div class="headerButton">
                             <button type="button" class="btn btn-lg btn-header">

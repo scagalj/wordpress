@@ -30,10 +30,7 @@ do_action( 'woocommerce_before_main_content' );
 
 ?>
 <header class="woocommerce-products-header">
-    <div style="">
-        
-        
-        
+    <div>
          <div class="container">
          <div class="row selectCategoriesGroup">
             <?php foreach ( fetchAllProductCategories() as $cat ) : ?>
@@ -123,7 +120,7 @@ if ( woocommerce_product_loop() ) {
 	 *
 	 * @hooked woocommerce_pagination - 10
 	 */
-	do_action( 'woocommerce_after_shop_loop' );
+	do_action( 'woocommerce_after_shop_loophow t' );
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.

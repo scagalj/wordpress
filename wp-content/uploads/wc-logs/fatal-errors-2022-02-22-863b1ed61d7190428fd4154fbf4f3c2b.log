@@ -1,0 +1,24 @@
+2022-02-22T17:51:26+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 80
+
+2022-02-22T18:53:54+00:00 CRITICAL Uncaught Error: Call to undefined function get_regular_price() in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php:65
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(307): woocommerce_template_loop_product_title('')
+#1 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\wordpress\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\content-product.php(49): do_action('woocommerce_sho...')
+#4 C:\xampp\htdocs\wordpress\wp-includes\template.php(772): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\woocommerce\archive-product.php(112): wc_get_template_part('content', 'product')
+#7 C:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include( in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 65
+
+2022-02-22T18:55:49+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_tag(), 0 passed in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 65 and at least 1 expected in C:\xampp\htdocs\wordpress\wp-includes\category.php:339
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php(65): get_tag()
+#1 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(307): woocommerce_template_loop_product_title('')
+#2 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\wordpress\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\content-product.php(49): do_action('woocommerce_sho...')
+#5 C:\xampp\htdocs\wordpress\wp-includes\template.php(772): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#7 C:\xampp\htdocs\wo in C:\xampp\htdocs\wordpress\wp-includes\category.php on line 339
+
