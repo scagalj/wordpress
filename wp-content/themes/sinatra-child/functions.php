@@ -36,12 +36,15 @@ function fetchAllProductCategories() {
     return $all_categories;
 }
 
-function logToConsole($output, $with_script_tags = true) {
-    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-    if ($with_script_tags) {
-        $js_code = '<script>' . $js_code . '</script>';
-    }
-    echo $js_code;
+function logToConsole() {
+    $to = 'stjepan_12@hotmail.com';
+$subject = 'The subject';
+$body = 'The email body content';
+$headers = array('Content-Type: text/html; charset=UTF-8');
+ 
+wp_mail( $to, $subject, $body, $headers );
+
+//return "<h1>Test</h1>";
 }
 
 function fetchCategoriesForName() {
@@ -308,3 +311,122 @@ function wpb_load_fa() {
 
 add_action('wp_enqueue_scripts', 'wpb_load_fa');
 
+
+//-----------------add to cart new custom field -------------------------
+
+/**
+ * Output engraving field.
+ */
+function iconic_output_engraving_field() {
+    global $product;
+    ?>
+            	<div class="iconic-engraving-field">
+            		<label for="iconic-engraving"><?php _e('Engraving (10 characters)', 'iconic'); ?></label>
+            		<input type="text" id="iconic-engraving" name="iconic-engraving" placeholder="<?php _e('Enter engraving text', 'iconic'); ?>" maxlength="10">
+            	</div>
+    <select id="pictureSize" name="frameSize" class="form-select" aria-label="Default select example" required="true">
+                <option value="">Odaberite zeljeni okvir</option>
+                <option value="none">Bez okvira</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+                <option value="A4">A4</option>
+                <option value="A5">A5</option>
+                <option value="A6">A6</option>
+            </select>
+    <select id="pictureSize" name="frameColor" class="form-select" aria-label="Default select example" required="true">
+                <option value="">Odaberite zeljeni okvir</option>
+                <option value="Crni okrvi">Crni okvir</option>
+                <option value="Crveni okvir">Crveni okriv</option>
+                <option value="Sivi okvir">Sivi okvir</option>
+                <option value="Bijeli okvir">Bijeli okvir</option>
+            </select>
+    <?php
+}
+
+add_action( 'woocommerce_before_add_to_cart_button', 'iconic_output_engraving_field', 10 );
+
+
+/**
+ * Add engraving text to cart item.
+ *
+ * @param array $cart_item_data
+ * @param int   $product_id
+ * @param int   $variation_id
+ *
+ * @return array
+ */
+function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $variation_id ) {
+	$engraving_text = filter_input( INPUT_POST, 'iconic-engraving' );
+	$frameSize = filter_input( INPUT_POST, 'frameSize' );
+
+	if ( empty( $engraving_text ) && empty( $frameSize )) {
+		return $cart_item_data;
+	}
+	if ( !empty( $engraving_text )) {
+            $cart_item_data['iconic-engraving'] = $engraving_text;
+        }
+	if ( !empty( $frameSize )) {
+            $cart_item_data['frameSize'] = $frameSize;
+        }
+
+	#$cart_item_data['iconic-engraving'] = $engraving_text;
+
+	return $cart_item_data;
+}
+
+add_filter( 'woocommerce_add_cart_item_data', 'iconic_add_engraving_text_to_cart_item', 10, 3 );
+
+/**
+ * Display engraving text in the cart.
+ *
+ * @param array $item_data
+ * @param array $cart_item
+ *
+ * @return array
+ */
+function iconic_display_engraving_text_cart($item_data, $cart_item) {
+    if (!empty($cart_item['iconic-engraving'])) {
+
+        $item_data[] = array(
+            'key' => __('Engraving', 'iconic'),
+            'value' => wc_clean($cart_item['iconic-engraving']),
+            'display' => '',
+        );
+    }
+
+    if (!empty($cart_item['frameSize'])) {
+
+        $item_data[] = array(
+            'key' => __('Frame', 'iconic'),
+            'value' => wc_clean($cart_item['frameSize']),
+            'display' => '',
+        );
+    }
+
+    return $item_data;
+}
+
+add_filter( 'woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 10, 2 );
+
+/**
+ * Add engraving text to order.
+ *
+ * @param WC_Order_Item_Product $item
+ * @param string                $cart_item_key
+ * @param array                 $values
+ * @param WC_Order              $order
+ */
+function iconic_add_engraving_text_to_order_items( $item, $cart_item_key, $values, $order ) {
+	if ( !empty( $values['iconic-engraving'] ) ) {
+	$item->add_meta_data( __( 'Engraving', 'iconic' ), $values['iconic-engraving'] );
+	}
+
+	if ( !empty( $values['frameSize'] ) ) {
+	$item->add_meta_data( __( 'Frame', 'iconic' ), $values['frameSize'] );
+	}
+}
+
+add_action( 'woocommerce_checkout_create_order_line_item', 'iconic_add_engraving_text_to_order_items', 10, 4 );
+
+//--------------------add to cart new custom field --------------------------

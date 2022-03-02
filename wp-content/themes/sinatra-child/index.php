@@ -118,6 +118,8 @@
     </div>
 </div>
 
+<?php echo logToConsole(); ?>
+
 <div class="container-fluid">
     <div class="container mt-5" >
         <div class="row">

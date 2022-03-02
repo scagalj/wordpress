@@ -84,13 +84,6 @@ body h6{
     font-size: 0.8rem;  
 }
 
-h1,h2{
-    margin: 15px;
-}
-h3,h4,h5,h6,p{
-    margin: 10px !important;
-}
-
 a:hover{
     color: white;
     text-decoration: none;
@@ -1618,6 +1611,10 @@ span.si-loop-product__category-wrap{
 
 .woocommerce ul.products li.product .meta-wrap>*{
     margin: 0.3em !important;
+}
+
+.woocommerce-input-wrapper{
+  width: 100%;   
 }
 
 span.onsale{

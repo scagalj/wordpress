@@ -12,7 +12,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?><?php sinatra_schema_markup( 'article' ); ?>>
-<h2>content-page</h2>
 <?php
 if ( sinatra_show_post_thumbnail() ) {
 	get_template_part( 'template-parts/entry/format/media', 'page' );
