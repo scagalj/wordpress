@@ -507,7 +507,72 @@ function add_custom_price( $cart_object ) {
     }
 }
 
+add_filter('woocommerce_package_rates','hide_shipping_when_free_is_available',100,2);
+
+function test_overwrite_fedex($rates,$package) {
+
+    $cart = WC()->cart;
+//    $cart_item_count = WC()->cart->get_cart_contents_count();
+    $totalproductprice = 0;
+    
+    foreach ( $cart->get_cart() as $cart_item_key => $cart_item ) {
+        $product = $cart_item['data'];
+        $productPrice2 = $cart_item['data']->get_price();
+        $imageSize = $cart_item['imageSize'];
+        $frameType  = $cart_item['frameType'];
+        $setType  = $cart_item['setType'];
+        
+        $product_id = $cart_item['product_id'];
+        $quantity = $cart_item['quantity'];
+
+        $totalproductprice = $totalproductprice + $productPrice2;
+}
+    foreach ($rates as $rate) {
+
+        if($totalproductprice > 100 && $rate->label == 'Dostava'){
+            continue;
+        }
+        
+        //Set the price
+        if ( $rate->label == 'Dostava' ) {
+            $rate->cost = $totalproductprice;
+        }
+    }
+
+    return $rates;
+}
 
 
+function hide_shipping_when_free_is_available( $rates, $package ) {
+	$new_rates = array();
+	foreach ( $rates as $rate_id => $rate ) {
+		// Only modify rates if free_shipping is present.
+		if ( 'free_shipping' === $rate->method_id ) {
+			$new_rates[ $rate_id ] = $rate;
+			break;
+		}
+	}
+
+	if ( ! empty( $new_rates ) ) {
+		//Save local pickup if it's present.
+		foreach ( $rates as $rate_id => $rate ) {
+			if ('local_pickup' === $rate->method_id ) {
+				$new_rates[ $rate_id ] = $rate;
+				break;
+			}
+		}
+		return $new_rates;
+	}
+        
+        
+        foreach ($rates as $rate) {
+        
+            if ( $rate->label == 'Dostava' ) {
+                $rate->cost = 99;
+            }
+        }
+
+	return $rates;
+}
 
 //--------------------add to cart new custom field --------------------------
