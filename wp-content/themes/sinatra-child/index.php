@@ -118,66 +118,22 @@
     </div>
 </div>
 
-<?php echo logToConsole(); ?>
-
-<div class="container-fluid">
-    <div class="container mt-5" >
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
-                <div class="importantNoticeIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-alt" viewBox="0 0 16 16">
-                    <path d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5zm10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5z"/>
-                    </svg>
-                </div>
-                <div class="importantNoticeTitle">
-                    <h6>FAST DELIVERY</h6>
-                </div>
-                <div class="importantNoticeDescription">
-                    <span>Delivery will be done in 3-5 working days</span>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
-                <div class="importantNoticeIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/>
-                    </svg>
-                </div>
-                <div class="importantNoticeTitle">
-                    <h6>FAST DELIVERY</h6>
-                </div>
-                <div class="importantNoticeDescription">
-                    <span>Delivery will be done in 3-5 working days</span>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
-                <div class="importantNoticeIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
-                    </svg>
-                </div>
-                <div class="importantNoticeTitle">
-                    <h6>FAST DELIVERY</h6>
-                </div>
-                <div class="importantNoticeDescription">
-                    <span>Delivery will be done in 3-5 working days</span>
-                </div>
-            </div><div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-3 justify-content-center text-center">
-                <div class="importantNoticeIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
-                    <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
-                    </svg>
-                </div>
-                <div class="importantNoticeTitle">
-                    <h6>FAST DELIVERY</h6>
-                </div>
-                <div class="importantNoticeDescription">
-                    <span>Delivery will be done in 3-5 working days</span>
-                </div>
-            </div>
+<div class="container">
+    <div class=" mt-5 mb-5" style="padding-left: 15%; padding-right: 15%;">
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+                
+            <p class="text-center">
+                Upoznajte i otkrijte našu široku kolekciju modernih postera. </p>
+            <p class="text-center">
+                Naši posteri obuhvaćaju sve Vaše potrebe; ukoliko trebate upotpuniti svoj dom te ga učiniti toplijim, ako trebate personalizirani poster kao iznenađenje ili poklon, uspomenu za rođenje djeteta, uređenje dječje sobice...</p>
+            <p class="text-center">
+Osvježite svoje zidove sa našim posterima te dajte svom domu dašak topline.
+            </p>
         </div>
-    </div>  
+            </div>
 </div>
-
+</div>
 <div class="container-fluid">
     <div class="container mt-5">
 
@@ -288,6 +244,63 @@
 </div>
 </div>
 
+<div class="container-fluid">
+    <div class="container mt-5" >
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
+                <div class="importantNoticeIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-alt" viewBox="0 0 16 16">
+                    <path d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5zm10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5z"/>
+                    </svg>
+                </div>
+                <div class="importantNoticeTitle">
+                    <h6>FAST DELIVERY</h6>
+                </div>
+                <div class="importantNoticeDescription">
+                    <span>Delivery will be done in 3-5 working days</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
+                <div class="importantNoticeIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/>
+                    </svg>
+                </div>
+                <div class="importantNoticeTitle">
+                    <h6>FAST DELIVERY</h6>
+                </div>
+                <div class="importantNoticeDescription">
+                    <span>Delivery will be done in 3-5 working days</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
+                <div class="importantNoticeIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+                    </svg>
+                </div>
+                <div class="importantNoticeTitle">
+                    <h6>FAST DELIVERY</h6>
+                </div>
+                <div class="importantNoticeDescription">
+                    <span>Delivery will be done in 3-5 working days</span>
+                </div>
+            </div><div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-3 justify-content-center text-center">
+                <div class="importantNoticeIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
+                    <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                    </svg>
+                </div>
+                <div class="importantNoticeTitle">
+                    <h6>FAST DELIVERY</h6>
+                </div>
+                <div class="importantNoticeDescription">
+                    <span>Delivery will be done in 3-5 working days</span>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
 
 <div class="mt-3">
 

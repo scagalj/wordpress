@@ -1022,13 +1022,6 @@ em{
     text-align: center;
 }
 
-.text {
-    /*background-color: #4CAF50;*/
-    color: #4DA8DA;
-    font-size: 30px;
-    padding: 16px 32px;
-}
-
 /*---------------News content --------------*/
 
 body .wpcp-carousel-section.nav-vertical-center .slick-next, .wpcp-carousel-section.nav-vertical-center .slick-prev {
@@ -1552,6 +1545,25 @@ body .doctorDescription{
     font-size: 10pt;
     
 }
+
+.productAdditionalFields{
+    margin-bottom: 10px;
+}
+
+dl.variation > dd p{
+    display: inline;
+}
+
+.entry-summary > form.cart > .quantity{
+    display: none !important;
+}
+.entry-summary > form.cart > .single_add_to_cart_button{
+    width: 100%;
+}
+
+/*.quantity{
+    display: none !important;
+}*/
 
 /*-------------------------*/
 

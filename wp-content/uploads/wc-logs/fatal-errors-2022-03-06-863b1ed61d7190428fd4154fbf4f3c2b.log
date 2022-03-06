@@ -1,0 +1,2 @@
+2022-03-06T10:00:49+00:00 CRITICAL require(): Failed opening required '/wordpress/wp-content/themes/sinatra-child/calculatePrice.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 3
+

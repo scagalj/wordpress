@@ -1,0 +1,11 @@
+2022-03-05T11:04:51+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_filter(), 1 passed in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 474 and at least 2 expected in C:\xampp\htdocs\wordpress\wp-includes\plugin.php:290
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php(474): remove_filter('woocommerce_get...')
+#1 C:\xampp\htdocs\wordpress\wp-settings.php(555): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\wordpress\wp-config.php(90): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\wordpress\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\wordpress\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\wordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-includes\plugin.php on line 290
+

@@ -1,5 +1,7 @@
 <?php
 
+require 'calculatePrice.php';
+
 //Child Theme Functions File
 add_action("wp_enqueue_scripts", "enqueue_wp_child_theme");
 
@@ -226,9 +228,9 @@ function generateProductPriceHtml($product) {
 
     $result .= '<div class="imagePrice priceWrapper">';
     if ($product->is_on_sale()) {
-        $result .= '<span class="regularPrice">' . number_format($sale_price, 2) . ' HRK' . '</span><span class="salePrice">' . number_format($regular_price, 2) . ' HRK' . '</span>';
+        $result .= '<span class="regularPrice">' . number_format($sale_price, 2 , ',', '.') . ' HRK' . '</span><span class="salePrice">' . number_format($regular_price, 2, ',', '.') . ' HRK' . '</span>';
     } else {
-        $result .= '<span class="regularPrice">' . number_format($sale_price, 2) . ' HRK' . '</span>';
+        $result .= '<span class="regularPrice">' . number_format($sale_price, 2 , ',', '.') . ' HRK' . '</span>';
     }
     $result .= '</div>';
     return $result;
@@ -314,34 +316,61 @@ add_action('wp_enqueue_scripts', 'wpb_load_fa');
 
 //-----------------add to cart new custom field -------------------------
 
+function custom_single_product_price($product){
+    
+    $regular_price = (float) $product->get_regular_price(); // Regular price
+        $sale_price = (float) $product->get_price(); // Active price (the "Sale price" when on-sale)
+    return '<span id="single_product_price"> ' . number_format($sale_price , 2, ',', '.') . '</span><span> ' . get_woocommerce_currency_symbol() . '</span>';
+}
+
 /**
  * Output engraving field.
  */
 function iconic_output_engraving_field() {
     global $product;
+
+//    spremiti tagove proizvoda u input i izracun cijene za setove i ne 
+    
     ?>
-            	<div class="iconic-engraving-field">
-            		<label for="iconic-engraving"><?php _e('Engraving (10 characters)', 'iconic'); ?></label>
-            		<input type="text" id="iconic-engraving" name="iconic-engraving" placeholder="<?php _e('Enter engraving text', 'iconic'); ?>" maxlength="10">
-            	</div>
-    <select id="pictureSize" name="frameSize" class="form-select" aria-label="Default select example" required="true">
-                <option value="">Odaberite zeljeni okvir</option>
-                <option value="none">Bez okvira</option>
-                <option value="A1">A1</option>
-                <option value="A2">A2</option>
-                <option value="A3">A3</option>
-                <option value="A4">A4</option>
-                <option value="A5">A5</option>
-                <option value="A6">A6</option>
+        <div class="productAdditionalFields">
+                <label for="customText"><?php _e('Željeni tekst'); ?></label>
+                <input type="text" id="iconic-engraving" name="customText" placeholder="<?php _e('Unesite željeni tekst'); ?>">
+        </div>
+
+        <div class="productAdditionalFields">
+            <label for="imageSizeId"><?php _e('Veličina slike'); ?></label>
+            <select id="imageSizeId" name="imageSize" class="form-select" required="true" style="width: 100%">
+                <option value=""><?php _e('Odaberite veličinu slike'); ?></option>
+                <option selected="true" value="21x30">21 x 30 cm</option>
+                <option value="30x40">30 x 40 cm</option>
+                <option value="40x50">40 x 50 cm</option>
+                <option value="50x70">50 x 70 cm</option>
             </select>
-    <select id="pictureSize" name="frameColor" class="form-select" aria-label="Default select example" required="true">
-                <option value="">Odaberite zeljeni okvir</option>
-                <option value="Crni okrvi">Crni okvir</option>
-                <option value="Crveni okvir">Crveni okriv</option>
-                <option value="Sivi okvir">Sivi okvir</option>
-                <option value="Bijeli okvir">Bijeli okvir</option>
+        </div>
+        <div class="productAdditionalFields">
+            <label for="imageFrameId"><?php _e('Vrsta okvira'); ?></label>
+            <select id="imageFrameId" name="frameType" class="form-select" required="true" style="width: 100%">
+                <option value=""><?php _e('Odaberite vrstu okvira'); ?></option>
+                <option selected="" value="none">Bez okvira</option>
+                <option value="BijeliOkvir">Bijeli okvir</option>
+                <option value="CrniOkvir">Crni okvir</option>
+                <option value="SvijtloSmeđiOkvir">Svijetlo smeđi</option>
             </select>
+        </div>
+
+        <input type="hidden" id="reguladPriceInput" value="0" name="reguladPriceInput">
+        <input type="hidden" id="calculatedPriceInput" value="0" name="calculatedPriceInput">
+        <input type="hidden" id="setTypeInput" value="<?php echo resolveProductSetType($product) ?>" name="setType">
     <?php
+}
+
+function resolveProductSetType($product){
+    if(is_object_in_term($product->get_id(),'product_tag', 'setoftwo')){
+        return 2;
+    }else if(is_object_in_term($product->get_id(),'product_tag', 'setofthree')){
+        return 3;
+    }
+    return 1;
 }
 
 add_action( 'woocommerce_before_add_to_cart_button', 'iconic_output_engraving_field', 10 );
@@ -357,20 +386,25 @@ add_action( 'woocommerce_before_add_to_cart_button', 'iconic_output_engraving_fi
  * @return array
  */
 function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $variation_id ) {
-	$engraving_text = filter_input( INPUT_POST, 'iconic-engraving' );
-	$frameSize = filter_input( INPUT_POST, 'frameSize' );
+	$customText = filter_input( INPUT_POST, 'customText' );
+	$imageSize = filter_input( INPUT_POST, 'imageSize' );
+	$frameType = filter_input( INPUT_POST, 'frameType' );
+	$setType = filter_input( INPUT_POST, 'setType' );
 
-	if ( empty( $engraving_text ) && empty( $frameSize )) {
-		return $cart_item_data;
-	}
-	if ( !empty( $engraving_text )) {
-            $cart_item_data['iconic-engraving'] = $engraving_text;
+	if ( !empty( $customText )) {
+            $cart_item_data['customText'] = $customText;
         }
-	if ( !empty( $frameSize )) {
-            $cart_item_data['frameSize'] = $frameSize;
+	if ( !empty( $imageSize )) {
+            $cart_item_data['imageSize'] = $imageSize;
         }
-
-	#$cart_item_data['iconic-engraving'] = $engraving_text;
+	if ( !empty( $frameType )) {
+            $cart_item_data['frameType'] = $frameType;
+        }
+	if ( !empty( $setType )) {
+            $cart_item_data['setType'] = $setType;
+        }
+        
+//        $cart_item_data['customPrice'] = (float) 22;
 
 	return $cart_item_data;
 }
@@ -386,25 +420,44 @@ add_filter( 'woocommerce_add_cart_item_data', 'iconic_add_engraving_text_to_cart
  * @return array
  */
 function iconic_display_engraving_text_cart($item_data, $cart_item) {
-    if (!empty($cart_item['iconic-engraving'])) {
+    if (!empty($cart_item['customText'])) {
 
         $item_data[] = array(
-            'key' => __('Engraving', 'iconic'),
-            'value' => wc_clean($cart_item['iconic-engraving']),
+            'key' => __('Tekst', 'iconic'),
+            'value' => wc_clean($cart_item['customText']),
             'display' => '',
         );
     }
 
-    if (!empty($cart_item['frameSize'])) {
-
+    if (!empty($cart_item['imageSize'])) {
         $item_data[] = array(
-            'key' => __('Frame', 'iconic'),
-            'value' => wc_clean($cart_item['frameSize']),
+            'key' => __('Veličina slike', 'iconic'),
+            'value' => wc_clean($cart_item['imageSize']),
+            'display' => '',
+        );
+    }
+    
+    if (!empty($cart_item['frameType'])) {
+        $item_data[] = array(
+            'key' => __('Vrsta okvira', 'iconic'),
+            'value' => wc_clean(resolveFrameTypeValue($cart_item['frameType'])),
             'display' => '',
         );
     }
 
     return $item_data;
+}
+
+function resolveFrameTypeValue($frameType){
+    
+    if($frameType == 'BijeliOkvir'){
+        return _("Bijeli okvir");    
+    }else if($frameType == 'CrniOkvir'){
+        return _("Crni okvir");    
+    }else if($frameType == 'SvijtloSmeđiOkvir'){
+        return _("Svijetlo smeđi okvir");    
+    }
+    return _("Bez okvira");    
 }
 
 add_filter( 'woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 10, 2 );
@@ -418,15 +471,43 @@ add_filter( 'woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 1
  * @param WC_Order              $order
  */
 function iconic_add_engraving_text_to_order_items( $item, $cart_item_key, $values, $order ) {
-	if ( !empty( $values['iconic-engraving'] ) ) {
-	$item->add_meta_data( __( 'Engraving', 'iconic' ), $values['iconic-engraving'] );
+	if ( !empty( $values['customText'] ) ) {
+            $item->add_meta_data( __( 'Tekst', 'iconic' ), $values['customText'] );
 	}
 
-	if ( !empty( $values['frameSize'] ) ) {
-	$item->add_meta_data( __( 'Frame', 'iconic' ), $values['frameSize'] );
+	if ( !empty( $values['imageSize'] ) ) {
+            $item->add_meta_data( __( 'Veličina slike', 'iconic' ), $values['imageSize'] );
+	}
+	
+        if ( !empty( $values['frameType'] ) ) {
+            $item->add_meta_data( __( 'Vrsta okvira', 'iconic' ), $values['frameType'] );
+	}
+        
+        if ( !empty( $values['setType'] ) ) {
+            $item->add_meta_data( __( 'Vrsta seta', 'iconic' ), $values['setType'] );
 	}
 }
 
 add_action( 'woocommerce_checkout_create_order_line_item', 'iconic_add_engraving_text_to_order_items', 10, 4 );
+
+add_action( 'woocommerce_before_calculate_totals', 'add_custom_price' );
+
+function add_custom_price( $cart_object ) {
+    foreach ( $cart_object->cart_contents as $key => $value ) {
+//        $value['data']->price = $custom_price;
+        // for WooCommerce version 3+ use: 
+        
+        $imageSize = $value['imageSize'];
+        $frameType  = $value['frameType'];
+        $setType  = $value['setType'];
+        $price = $value['data']->get_price();
+        
+         $customPrice = calculatePrice(null, $imageSize, $frameType, $setType, $price);
+         $value['data']->set_price($customPrice);
+    }
+}
+
+
+
 
 //--------------------add to cart new custom field --------------------------
