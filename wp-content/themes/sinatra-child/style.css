@@ -161,7 +161,7 @@ a:hover{
 }
 
 #headerContent > .container-fluid > .row{
-	margin-right:0px;
+    margin-right:0px;
 }
 
 
@@ -1450,14 +1450,14 @@ body .doctorDescription{
     .container{
         width: 100%;
     }
-	
-	.benefitIconBorder:after{
-		border-right: 0px solid rgba(0,0,0,0.1);
-	}
+
+    .benefitIconBorder:after{
+        border-right: 0px solid rgba(0,0,0,0.1);
+    }
 
     .container-fluid{
         padding-top: 5px !important;
-		padding-bottom: 5px !important;
+        padding-bottom: 5px !important;
     }
 
     .servicePadding{
@@ -1508,7 +1508,7 @@ body .doctorDescription{
 /*------------SELECT CATEGORIES IN PRODUCTS SHOP------------*/
 
 .selectCategoriesGroup{
-    
+
 }
 
 .selectCategoriesLabel{
@@ -1526,10 +1526,10 @@ body .doctorDescription{
 }
 
 @media screen and (max-width: 960px){
-    
-#primary {
-    margin-top: 80px !important;
-}
+
+    #primary {
+        margin-top: 80px !important;
+    }
 
 }
 /*------------------------*/
@@ -1543,7 +1543,7 @@ body .doctorDescription{
 
 .importantNoticeDescription{
     font-size: 10pt;
-    
+
 }
 
 .productAdditionalFields{
@@ -1576,12 +1576,19 @@ dl.variation > dd p{
     text-align: center;
 }
 .discountAmountValue{
-    background-color: green;
+    background-color: #229f1f;
     padding: 6px 9px 6px 9px;
-    position: relative;
+    top: 12px;
+    left: 12px;
+    position: absolute;
     color: white;
     font-size: 8pt;
-    font-weight: 600;
+    border-radius: 2px;
+    line-height: inherit;
+    padding: 3px 10px;
+    font-size: .8125rem;
+    font-weight: 500;
+    z-index: 2;
 }
 
 .priceWrapper{
@@ -1626,9 +1633,9 @@ span.si-loop-product__category-wrap{
 }
 
 .woocommerce-input-wrapper{
-  width: 100%;   
+    width: 100%;   
 }
 
 span.onsale{
-    background-color: darkgreen !important;
+    background-color: #229f1f !important;
 }
