@@ -1,29 +1,30 @@
 # Copyright (C) 2022 WooCommerce
 # This file is distributed under the same license as the WooCommerce Admin package.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Admin 3.0.3\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/woocommerce-admin\n"
-"POT-Creation-Date: 2022-01-06 22:45:37+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-"
+"admin\n"
+"POT-Creation-Date: 2022-10-08 19:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: en\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Poedit-Country: United States\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: grunt-wp-i18n 1.0.3\n"
+"X-Generator: Loco https://localise.biz/"
 
 #: docs/examples/extensions/add-report/woocommerce-admin-add-report-example.php:39
 msgid "Example"
@@ -208,18 +209,18 @@ msgstr ""
 msgid "Edit attribute"
 msgstr ""
 
-#: includes/emails/html-admin-report-export-download.php:19
 #. translators: %s: report name
+#: includes/emails/html-admin-report-export-download.php:19
 msgid "Download your %s Report"
 msgstr ""
 
-#: includes/emails/plain-admin-report-export-download.php:15
 #. translators: %1$s: report name, %2$s: download URL
+#: includes/emails/plain-admin-report-export-download.php:15
 msgid "Download your %1$s Report: %2$s"
 msgstr ""
 
-#: includes/emails/plain-merchant-notification.php:19
 #. translators: %1$s: action label, %2$s: action URL
+#: includes/emails/plain-merchant-notification.php:19
 msgid "%1$s: %2$s"
 msgstr ""
 
@@ -244,7 +245,8 @@ msgid "Invalid request. Please pass the match parameter."
 msgstr ""
 
 #: src/API/DataDownloadIPs.php:136
-msgid "A partial IP address can be passed and matching results will be returned."
+msgid ""
+"A partial IP address can be passed and matching results will be returned."
 msgstr ""
 
 #: src/API/DataDownloadIPs.php:157
@@ -391,7 +393,8 @@ msgstr ""
 #: src/API/Reports/Taxes/Stats/Controller.php:326
 #: src/API/Reports/Variations/Controller.php:276
 #: src/API/Reports/Variations/Stats/Controller.php:328
-msgid "Limit response to resources published after a given ISO8601 compliant date."
+msgid ""
+"Limit response to resources published after a given ISO8601 compliant date."
 msgstr ""
 
 #: src/API/Leaderboards.php:470 src/API/Reports/Categories/Controller.php:242
@@ -409,7 +412,8 @@ msgstr ""
 #: src/API/Reports/Taxes/Stats/Controller.php:332
 #: src/API/Reports/Variations/Controller.php:282
 #: src/API/Reports/Variations/Stats/Controller.php:334
-msgid "Limit response to resources published before a given ISO8601 compliant date."
+msgid ""
+"Limit response to resources published before a given ISO8601 compliant date."
 msgstr ""
 
 #: src/API/Leaderboards.php:476
@@ -726,8 +730,8 @@ msgstr ""
 msgid "Sorry, the sample products data file was not found."
 msgstr ""
 
-#: src/API/OnboardingTasks.php:352
 #. translators: %s is template name
+#: src/API/OnboardingTasks.php:352
 msgid "Sorry, creating the product with template failed."
 msgstr ""
 
@@ -811,18 +815,18 @@ msgstr ""
 msgid "Invalid theme."
 msgstr ""
 
-#: src/API/OnboardingThemes.php:123
 #. translators: %s: theme slug (example: woocommerce-services)
+#: src/API/OnboardingThemes.php:123
 msgid "The requested theme `%s` could not be installed. Theme API call failed."
 msgstr ""
 
-#: src/API/OnboardingThemes.php:138
 #. translators: %s: theme slug (example: woocommerce-services)
+#: src/API/OnboardingThemes.php:138
 msgid "The requested theme `%s` could not be installed."
 msgstr ""
 
-#: src/API/OnboardingThemes.php:171
 #. translators: %s: theme slug (example: woocommerce-services)
+#: src/API/OnboardingThemes.php:171
 msgid "Invalid theme %s."
 msgstr ""
 
@@ -870,19 +874,21 @@ msgstr ""
 msgid "Plugins must be a non-empty array."
 msgstr ""
 
-#: src/API/Plugins.php:280 src/API/Plugins.php:292
 #. translators: %s: plugin slug (example: woocommerce-services)
-msgid "The requested plugin `%s` could not be installed. Plugin API call failed."
+#: src/API/Plugins.php:280 src/API/Plugins.php:292
+msgid ""
+"The requested plugin `%s` could not be installed. Plugin API call failed."
 msgstr ""
 
-#: src/API/Plugins.php:307
 #. translators: %s: plugin slug (example: woocommerce-services)
+#: src/API/Plugins.php:307
 msgid "The requested plugin `%s` could not be installed."
 msgstr ""
 
-#: src/API/Plugins.php:321
 #. translators: %s: plugin slug (example: woocommerce-services)
-msgid "The requested plugin `%s` could not be installed. Upgrader install failed."
+#: src/API/Plugins.php:321
+msgid ""
+"The requested plugin `%s` could not be installed. Upgrader install failed."
 msgstr ""
 
 #: src/API/Plugins.php:339
@@ -893,13 +899,13 @@ msgstr ""
 msgid "There was a problem installing some of the requested plugins."
 msgstr ""
 
-#: src/API/Plugins.php:411
 #. translators: %s: plugin slug (example: woocommerce-services)
+#: src/API/Plugins.php:411
 msgid "The requested plugin `%s`. is not yet installed."
 msgstr ""
 
-#: src/API/Plugins.php:423
 #. translators: %s: plugin slug (example: woocommerce-services)
+#: src/API/Plugins.php:423
 msgid "The requested plugin `%s` could not be activated."
 msgstr ""
 
@@ -915,8 +921,7 @@ msgstr ""
 msgid "Jetpack is not installed or active."
 msgstr ""
 
-#: src/API/Plugins.php:489
-#: packages/data/build-module/plugins/constants.js:12
+#: src/API/Plugins.php:489 packages/data/build-module/plugins/constants.js:12
 #: packages/data/src/plugins/constants.ts:17
 msgid "Jetpack"
 msgstr ""
@@ -983,7 +988,8 @@ msgid "Product parent ID."
 msgstr ""
 
 #: src/API/Products.php:56
-msgid "The date the last order for this product was placed, in the site's timezone."
+msgid ""
+"The date the last order for this product was placed, in the site's timezone."
 msgstr ""
 
 #: src/API/Products.php:73
@@ -1462,8 +1468,8 @@ msgstr ""
 #: src/API/Reports/Customers/Stats/Controller.php:191
 #: src/API/Reports/Customers/Stats/Controller.php:288
 msgid ""
-"Limit response to objects registered after (or at) a given ISO8601 "
-"compliant datetime."
+"Limit response to objects registered after (or at) a given ISO8601 compliant "
+"datetime."
 msgstr ""
 
 #: src/API/Reports/Customers/Controller.php:339
@@ -1487,8 +1493,8 @@ msgstr ""
 #: src/API/Reports/Variations/Stats/Controller.php:340
 msgid ""
 "Indicates whether all the conditions should be true for the resulting set, "
-"or if any one of them is sufficient. Match affects the following "
-"parameters: status_is, status_is_not, product_includes, product_excludes, "
+"or if any one of them is sufficient. Match affects the following parameters: "
+"status_is, status_is_not, product_includes, product_excludes, "
 "coupon_includes, coupon_excludes, customer, categories"
 msgstr ""
 
@@ -1565,8 +1571,8 @@ msgstr ""
 #: src/API/Reports/Customers/Controller.php:499
 #: src/API/Reports/Customers/Stats/Controller.php:302
 msgid ""
-"Limit response to objects with an order count greater than or equal to "
-"given integer."
+"Limit response to objects with an order count greater than or equal to given "
+"integer."
 msgstr ""
 
 #: src/API/Reports/Customers/Controller.php:505
@@ -1578,7 +1584,8 @@ msgstr ""
 
 #: src/API/Reports/Customers/Controller.php:511
 #: src/API/Reports/Customers/Stats/Controller.php:314
-msgid "Limit response to objects with an order count between two given integers."
+msgid ""
+"Limit response to objects with an order count between two given integers."
 msgstr ""
 
 #: src/API/Reports/Customers/Controller.php:519
@@ -1598,8 +1605,7 @@ msgstr ""
 #: src/API/Reports/Customers/Controller.php:529
 #: src/API/Reports/Customers/Stats/Controller.php:332
 msgid ""
-"Limit response to objects with a total order spend between two given "
-"numbers."
+"Limit response to objects with a total order spend between two given numbers."
 msgstr ""
 
 #: src/API/Reports/Customers/Controller.php:537
@@ -1770,8 +1776,8 @@ msgstr ""
 #: src/API/Reports/Downloads/Controller.php:298
 msgid ""
 "Indicates whether all the conditions should be true for the resulting set, "
-"or if any one of them is sufficient. Match affects the following "
-"parameters: products, orders, username, ip_address."
+"or if any one of them is sufficient. Match affects the following parameters: "
+"products, orders, username, ip_address."
 msgstr ""
 
 #: src/API/Reports/Downloads/Controller.php:308
@@ -1785,7 +1791,8 @@ msgstr ""
 #: src/API/Reports/Downloads/Stats/Controller.php:309
 #: src/API/Reports/Orders/Controller.php:325
 #: src/API/Reports/Orders/Stats/Controller.php:436
-msgid "Limit result set to items that don't have the specified product(s) assigned."
+msgid ""
+"Limit result set to items that don't have the specified product(s) assigned."
 msgstr ""
 
 #: src/API/Reports/Downloads/Controller.php:328
@@ -1858,8 +1865,7 @@ msgstr ""
 
 #: src/API/Reports/Downloads/Stats/Controller.php:144
 #: src/Features/Analytics.php:278 src/Features/Onboarding.php:443
-#: src/ReportCSVEmail.php:35
-#: client/analytics/report/downloads/config.js:25
+#: src/ReportCSVEmail.php:35 client/analytics/report/downloads/config.js:25
 #: client/analytics/report/downloads/table.js:197
 #: client/analytics/report/get-reports.js:125
 #: client/dashboard/dashboard-charts/config.js:90
@@ -1987,7 +1993,8 @@ msgstr ""
 
 #: src/API/Reports/Orders/Controller.php:335
 #: src/API/Reports/Orders/Stats/Controller.php:445
-msgid "Limit result set to items that have the specified variation(s) assigned."
+msgid ""
+"Limit result set to items that have the specified variation(s) assigned."
 msgstr ""
 
 #: src/API/Reports/Orders/Controller.php:345
@@ -2004,7 +2011,8 @@ msgstr ""
 
 #: src/API/Reports/Orders/Controller.php:365
 #: src/API/Reports/Orders/Stats/Controller.php:474
-msgid "Limit result set to items that don't have the specified coupon(s) assigned."
+msgid ""
+"Limit result set to items that don't have the specified coupon(s) assigned."
 msgstr ""
 
 #: src/API/Reports/Orders/Controller.php:375
@@ -2015,8 +2023,7 @@ msgstr ""
 #: src/API/Reports/Orders/Controller.php:385
 #: src/API/Reports/Orders/Stats/Controller.php:493
 msgid ""
-"Limit result set to items that don't have the specified tax rate(s) "
-"assigned."
+"Limit result set to items that don't have the specified tax rate(s) assigned."
 msgstr ""
 
 #: src/API/Reports/Orders/Controller.php:415
@@ -2044,8 +2051,8 @@ msgid ""
 "attributes."
 msgstr ""
 
-#: src/API/Reports/Orders/Controller.php:507
 #. translators: 1: numeric product quantity, 2: name of product
+#: src/API/Reports/Orders/Controller.php:507
 msgid "%1$s× %2$s"
 msgstr ""
 
@@ -2173,8 +2180,8 @@ msgstr ""
 msgid "There was an issue loading the report endpoints"
 msgstr ""
 
-#: src/API/Reports/PerformanceIndicators/Controller.php:661
 #. translators: Allowed values is a list of stat endpoints.
+#: src/API/Reports/PerformanceIndicators/Controller.php:661
 msgid "Limit response to specific report stats. Allowed values: %s."
 msgstr ""
 
@@ -2261,8 +2268,7 @@ msgid "SKU"
 msgstr ""
 
 #: src/API/Reports/Products/Controller.php:394 src/Features/Analytics.php:238
-#: src/ReportCSVEmail.php:41
-#: client/analytics/report/get-reports.js:70
+#: src/ReportCSVEmail.php:41 client/analytics/report/get-reports.js:70
 #: client/analytics/report/orders/config.js:162
 #: client/analytics/report/products/table.js:79
 #: client/analytics/report/variations/table.js:277
@@ -2272,8 +2278,7 @@ msgstr ""
 #: src/API/Reports/Products/Controller.php:399
 #: src/API/Reports/Stock/Controller.php:541
 #: src/API/Reports/Variations/Controller.php:421 src/Features/Analytics.php:288
-#: src/ReportCSVEmail.php:39
-#: client/analytics/report/get-reports.js:111
+#: src/ReportCSVEmail.php:39 client/analytics/report/get-reports.js:111
 #: client/analytics/report/products/table.js:91
 #: client/analytics/report/stock/table.js:198
 #: client/analytics/report/variations/table.js:79
@@ -2281,8 +2286,8 @@ msgstr ""
 msgid "Stock"
 msgstr ""
 
-#: src/API/Reports/Products/DataStore.php:227
 #. translators: %s is product name
+#: src/API/Reports/Products/DataStore.php:227
 msgid "%s (Deleted)"
 msgstr ""
 
@@ -2305,8 +2310,8 @@ msgstr ""
 msgid "Limit result to items with specified variation ids."
 msgstr ""
 
-#: src/API/Reports/Query.php:22
 #. translators: %s: Method name
+#: src/API/Reports/Query.php:22
 msgid "Method '%s' not implemented. Must be overridden in subclass."
 msgstr ""
 
@@ -2426,8 +2431,8 @@ msgstr ""
 msgid "Number of low stock products."
 msgstr ""
 
-#: src/API/Reports/Stock/Stats/Controller.php:102
 #. translators: Stock status. Example: "Number of low stock products
+#: src/API/Reports/Stock/Stats/Controller.php:102
 msgid "Number of %s products."
 msgstr ""
 
@@ -2515,18 +2520,18 @@ msgstr ""
 msgid "Sorry, fetching tax data failed."
 msgstr ""
 
-#: src/API/Reports/TimeInterval.php:585 src/API/Reports/TimeInterval.php:617
 #. translators: 1: parameter name
+#: src/API/Reports/TimeInterval.php:585 src/API/Reports/TimeInterval.php:617
 msgid "%1$s is not a numerically indexed array."
 msgstr ""
 
-#: src/API/Reports/TimeInterval.php:597
 #. translators: %s: parameter name
+#: src/API/Reports/TimeInterval.php:597
 msgid "%s must contain 2 numbers."
 msgstr ""
 
-#: src/API/Reports/TimeInterval.php:629
 #. translators: %s: parameter name
+#: src/API/Reports/TimeInterval.php:629
 msgid "%s must contain 2 valid dates."
 msgstr ""
 
@@ -2541,7 +2546,8 @@ msgstr ""
 
 #: src/API/Reports/Variations/Controller.php:328
 #: src/API/Reports/Variations/Stats/Controller.php:416
-msgid "Limit result set to items that don't have the specified parent product(s)."
+msgid ""
+"Limit result set to items that don't have the specified parent product(s)."
 msgstr ""
 
 #: src/API/Reports/Variations/Controller.php:347
@@ -2553,7 +2559,8 @@ msgid "Limit result set to variations that include the specified attributes."
 msgstr ""
 
 #: src/API/Reports/Variations/Controller.php:363
-msgid "Limit result set to variations that don't include the specified attributes."
+msgid ""
+"Limit result set to variations that don't include the specified attributes."
 msgstr ""
 
 #: src/API/Reports/Variations/Controller.php:372
@@ -2610,20 +2617,20 @@ msgstr ""
 msgid "A zip file of the theme to be uploaded."
 msgstr ""
 
-#: src/FeaturePlugin.php:229
 #. translators: 1: URL of WooCommerce plugin, 2: The minimum WooCommerce
 #. version number
+#: src/FeaturePlugin.php:229
 msgid ""
-"The WooCommerce Admin feature plugin requires <a "
-"href=\"%1$s\">WooCommerce</a> %2$s or greater to be installed and active."
+"The WooCommerce Admin feature plugin requires <a href=\"%1$s\">"
+"WooCommerce</a> %2$s or greater to be installed and active."
 msgstr ""
 
-#: src/FeaturePlugin.php:238
 #. translators: 1: URL of WordPress.org, 2: The minimum WordPress version
 #. number
+#: src/FeaturePlugin.php:238
 msgid ""
-"The WooCommerce Admin feature plugin requires <a "
-"href=\"%1$s\">WordPress</a> %2$s or greater to be installed and active."
+"The WooCommerce Admin feature plugin requires <a href=\"%1$s\">WordPress</a> "
+"%2$s or greater to be installed and active."
 msgstr ""
 
 #: src/Features/Analytics.php:67
@@ -2632,8 +2639,7 @@ msgstr ""
 
 #: src/Features/Analytics.php:73 src/Features/Analytics.php:188
 #: src/Features/Analytics.php:308 src/Features/Navigation/CoreMenu.php:107
-#: client/layout/controller.js:137
-#: client/layout/navigation.js:46
+#: client/layout/controller.js:137 client/layout/navigation.js:46
 msgid "Analytics"
 msgstr ""
 
@@ -2645,8 +2651,8 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: src/Features/Analytics.php:160
 #. translators: 1: opening link tag, 2: closing tag
+#: src/Features/Analytics.php:160
 msgid ""
 "This tool will reset the cached values used in WooCommerce Analytics. If "
 "numbers still look off, try %1$sReimporting Historical Data%2$s."
@@ -2671,10 +2677,8 @@ msgid "Categories"
 msgstr ""
 
 #: src/Features/Analytics.php:298 src/Features/Navigation/CoreMenu.php:206
-#: src/ReportCSVEmail.php:34
-#: client/analytics/report/customers/table.js:290
-#: client/analytics/report/get-reports.js:120
-#: client/layout/controller.js:115
+#: src/ReportCSVEmail.php:34 client/analytics/report/customers/table.js:290
+#: client/analytics/report/get-reports.js:120 client/layout/controller.js:115
 msgid "Customers"
 msgstr ""
 
@@ -2732,8 +2736,7 @@ msgid "Home"
 msgstr ""
 
 #: src/Features/Marketing.php:75 src/Features/Marketing.php:76
-#: src/Features/Navigation/CoreMenu.php:119
-#: client/layout/controller.js:153
+#: src/Features/Navigation/CoreMenu.php:119 client/layout/controller.js:153
 #: client/store-management-links/index.js:34
 msgid "Marketing"
 msgstr ""
@@ -2768,9 +2771,9 @@ msgstr ""
 msgid "Adds the new WooCommerce navigation experience to the dashboard"
 msgstr ""
 
-#: src/Features/Navigation/Init.php:57
 #. translators: 1: line break tag, 2: open link to WordPress update link, 3:
 #. close link tag.
+#: src/Features/Navigation/Init.php:57
 msgid "%1$s %2$sUpdate WordPress to enable the new navigation%3$s"
 msgstr ""
 
@@ -2778,20 +2781,19 @@ msgstr ""
 msgid "Navigation"
 msgstr ""
 
-#: src/Features/Navigation/Menu.php:189
-#: client/header/index.js:31
+#: src/Features/Navigation/Menu.php:189 client/header/index.js:31
 msgid "WooCommerce Home"
 msgstr ""
 
-#: src/Features/Navigation/Menu.php:229
 #. translators: 1: Duplicate menu item path.
+#: src/Features/Navigation/Menu.php:229
 msgid ""
-"You have attempted to register a duplicate item with WooCommerce "
-"Navigation: %1$s"
+"You have attempted to register a duplicate item with WooCommerce Navigation: "
+"%1$s"
 msgstr ""
 
-#: src/Features/Navigation/Menu.php:374
 #. translators: 1: Duplicate menu item path.
+#: src/Features/Navigation/Menu.php:374
 msgid ""
 "The item ID %1$s attempted to register using an invalid option. The "
 "arguments `menuId` and `parent` are not allowed for add_setting_item()"
@@ -2858,9 +2860,9 @@ msgstr ""
 msgid "Customizable products"
 msgstr ""
 
-#: src/Features/Onboarding.php:634
 #. translators: site currency symbol (used to show that the product costs
 #. money)
+#: src/Features/Onboarding.php:634
 msgid " — %s"
 msgstr ""
 
@@ -2957,8 +2959,7 @@ msgstr ""
 
 #: src/Features/OnboardingTasks/Tasks/Marketing.php:46
 msgid ""
-"Add recommended marketing tools to reach new customers and grow your "
-"business"
+"Add recommended marketing tools to reach new customers and grow your business"
 msgstr ""
 
 #: src/Features/OnboardingTasks/Tasks/Marketing.php:58
@@ -2973,8 +2974,7 @@ msgid "Set up additional payment providers"
 msgstr ""
 
 #: src/Features/OnboardingTasks/Tasks/Payments.php:41
-#: src/Notes/SetUpAdditionalPaymentTypes.php:104
-#: client/header/index.js:70
+#: src/Notes/SetUpAdditionalPaymentTypes.php:104 client/header/index.js:70
 #: client/two-column-tasks/headers/payments.js:30
 msgid "Set up payments"
 msgstr ""
@@ -2997,9 +2997,9 @@ msgstr ""
 msgid "1 minute per product"
 msgstr ""
 
-#: src/Features/OnboardingTasks/Tasks/Purchase.php:67
 #. translators: %1$s: list of product names comma separated, %2%s the last
 #. product name
+#: src/Features/OnboardingTasks/Tasks/Purchase.php:67
 msgid "Add %s to my store"
 msgstr ""
 
@@ -3007,9 +3007,9 @@ msgstr ""
 msgid "Add paid extensions to my store"
 msgstr ""
 
-#: src/Features/OnboardingTasks/Tasks/Purchase.php:91
 #. translators: %1$s: list of product names comma separated, %2%s the last
 #. product name
+#: src/Features/OnboardingTasks/Tasks/Purchase.php:91
 msgid "Good choice! You chose to add %1$s and %2$s to your store."
 msgstr ""
 
@@ -3066,8 +3066,8 @@ msgstr ""
 #: src/Features/OnboardingTasks/Tasks/WooCommercePayments.php:46
 #: client/two-column-tasks/headers/woocommerce-payments.js:52
 msgid ""
-"You're only one step away from getting paid. Verify your business details "
-"to start managing transactions with WooCommerce Payments."
+"You're only one step away from getting paid. Verify your business details to "
+"start managing transactions with WooCommerce Payments."
 msgstr ""
 
 #: src/Features/OnboardingTasks/Tasks/WooCommercePayments.php:67
@@ -3079,8 +3079,8 @@ msgstr ""
 
 #: src/Features/OnboardingTasks/Tasks/WooCommercePayments.php:76
 msgid ""
-"By setting up, you are agreeing to the <a "
-"href=\"https://wordpress.com/tos/\" target=\"_blank\">Terms of Service</a>"
+"By setting up, you are agreeing to the <a href=\"https://wordpress."
+"com/tos/\" target=\"_blank\">Terms of Service</a>"
 msgstr ""
 
 #: src/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php:26
@@ -3090,10 +3090,9 @@ msgstr ""
 #: src/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php:27
 msgid ""
 "The PayFast extension for WooCommerce enables you to accept payments by "
-"Credit Card and EFT via one of South Africa’s most popular payment "
-"gateways. No setup fees or monthly subscription costs. Selecting this "
-"extension will configure your store to use South African rands as the "
-"selected currency."
+"Credit Card and EFT via one of South Africa’s most popular payment gateways. "
+"No setup fees or monthly subscription costs. Selecting this extension will "
+"configure your store to use South African rands as the selected currency."
 msgstr ""
 
 #: src/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php:41
@@ -3147,9 +3146,9 @@ msgstr ""
 
 #: src/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php:169
 msgid ""
-"Accept credit and debit cards, offline (cash or bank transfer) and "
-"logged-in payments with money in Mercado Pago. Safe and secure payments "
-"with the leading payment processor in LATAM."
+"Accept credit and debit cards, offline (cash or bank transfer) and logged-in "
+"payments with money in Mercado Pago. Safe and secure payments with the "
+"leading payment processor in LATAM."
 msgstr ""
 
 #: src/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php:180
@@ -3239,8 +3238,8 @@ msgid ""
 "inventory in one place."
 msgstr ""
 
-#: src/Features/PaymentGatewaySuggestions/PaymentGatewaysController.php:134
 #. translators: the title of the payment gateway
+#: src/Features/PaymentGatewaySuggestions/PaymentGatewaysController.php:134
 msgid "%s connected successfully"
 msgstr ""
 
@@ -3262,15 +3261,15 @@ msgstr ""
 msgid "Google Listings & Ads"
 msgstr ""
 
-#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:76
 #. translators: 1: opening product link tag. 2: closing link tag
+#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:76
 msgid "Drive sales with %1$sGoogle Listings and Ads%2$s"
 msgstr ""
 
 #: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:85
 msgid ""
-"Reach more shoppers and drive sales for your store. Integrate with Google "
-"to list your products for free and launch paid ad campaigns."
+"Reach more shoppers and drive sales for your store. Integrate with Google to "
+"list your products for free and launch paid ad campaigns."
 msgstr ""
 
 #: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:90
@@ -3310,28 +3309,28 @@ msgid ""
 "retargeting with Creative Mail."
 msgstr ""
 
-#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:110
 #. translators: 1: opening product link tag. 2: closing link tag
+#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:110
 msgid "Accept credit cards with %1$sWooCommerce Payments%2$s"
 msgstr ""
 
-#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:247
 #. translators: 1: opening product link tag. 2: closing link tag
+#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:247
 msgid "Print shipping labels with %1$sWooCommerce Shipping%2$s"
 msgstr ""
 
-#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:313
 #. translators: 1: opening product link tag. 2: closing link tag
+#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:313
 msgid "Get automated sales tax with %1$sWooCommerce Tax%2$s"
 msgstr ""
 
-#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:392
 #. translators: 1: opening product link tag. 2: closing link tag
+#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:392
 msgid "Enhance speed and security with %1$sJetpack%2$s"
 msgstr ""
 
-#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:412
 #. translators: 1: opening product link tag. 2: closing link tag
+#: src/Features/RemoteFreeExtensions/DefaultFreeExtensions.php:412
 msgid "Level up your email marketing with %1$sMailPoet%2$s"
 msgstr ""
 
@@ -3356,18 +3355,17 @@ msgstr ""
 msgid "Dismiss the gateway"
 msgstr ""
 
-#: src/Loader.php:129
 #. translators: %s: is referring to the plugin's name.
+#: src/Loader.php:129
 msgid "You have the %s plugin activated but it is not being used."
 msgstr ""
 
-#: src/Loader.php:322
-#: client/layout/controller.js:170
+#: src/Loader.php:322 client/layout/controller.js:170
 msgid "Setup Wizard"
 msgstr ""
 
-#: src/Loader.php:978
 #. translators: %1$s: updated title, %2$s: blog info name
+#: src/Loader.php:978
 msgid "%1$s &lsaquo; %2$s"
 msgstr ""
 
@@ -3399,8 +3397,8 @@ msgstr ""
 msgid "Default Date Range"
 msgstr ""
 
-#: src/Notes/AddFirstProduct.php:64
 #. translators: %s: line break
+#: src/Notes/AddFirstProduct.php:64
 msgid ""
 "Nice one; you've created a WooCommerce store! Now it's time to add your "
 "first product and get ready to start selling.%s"
@@ -3409,13 +3407,13 @@ msgstr ""
 #: src/Notes/AddFirstProduct.php:65
 msgid ""
 "There are three ways to add your products: you can <strong>create products "
-"manually, import them at once via CSV file</strong>, or <strong>migrate "
-"them from another service</strong>.<br/><br/>"
+"manually, import them at once via CSV file</strong>, or <strong>migrate them "
+"from another service</strong>.<br/><br/>"
 msgstr ""
 
-#: src/Notes/AddFirstProduct.php:67
 #. translators: %1$s is an open anchor tag (<a>) and %2$s is a close link tag
 #. (</a>).
+#: src/Notes/AddFirstProduct.php:67
 msgid "%1$1sExplore our docs%2$2s for more information, or just get started!"
 msgstr ""
 
@@ -3522,8 +3520,8 @@ msgstr ""
 #: src/Notes/CustomizeStoreWithBlocks.php:70
 msgid ""
 "With our blocks, you can select and display products, categories, filters, "
-"and more virtually anywhere on your site — no need to use shortcodes or "
-"edit lines of code. Learn more about how to use each one of them."
+"and more virtually anywhere on your site — no need to use shortcodes or edit "
+"lines of code. Learn more about how to use each one of them."
 msgstr ""
 
 #: src/Notes/CustomizingProductCatalog.php:66
@@ -3547,9 +3545,9 @@ msgstr ""
 
 #: src/Notes/DeactivatePlugin.php:41
 msgid ""
-"Your current version of WooCommerce Admin is outdated and a newer version "
-"is included with WooCommerce. We recommend deactivating the plugin and "
-"using the stable version included with WooCommerce."
+"Your current version of WooCommerce Admin is outdated and a newer version is "
+"included with WooCommerce. We recommend deactivating the plugin and using "
+"the stable version included with WooCommerce."
 msgstr ""
 
 #: src/Notes/DeactivatePlugin.php:48
@@ -3592,8 +3590,8 @@ msgstr ""
 
 #: src/Notes/FilterByProductVariationsInReports.php:36
 msgid ""
-"One of the most awaited features has just arrived! You can now have "
-"insights into each product variation in the orders and products reports."
+"One of the most awaited features has just arrived! You can now have insights "
+"into each product variation in the orders and products reports."
 msgstr ""
 
 #: src/Notes/FirstDownlaodableProduct.php:49
@@ -3627,8 +3625,8 @@ msgstr ""
 #: src/Notes/GettingStartedInEcommerceWebinar.php:69
 msgid ""
 "We want to make eCommerce and this process of getting started as easy as "
-"possible for you. Watch this webinar to get tips on how to have our store "
-"up and running in a breeze."
+"possible for you. Watch this webinar to get tips on how to have our store up "
+"and running in a breeze."
 msgstr ""
 
 #: src/Notes/GettingStartedInEcommerceWebinar.php:76
@@ -3660,8 +3658,8 @@ msgstr ""
 #: src/Notes/InsightFirstProductAndPayment.php:41
 msgid ""
 "More than 80% of new merchants add the first product and have at least one "
-"payment method set up during the first week.<br><br>Do you find this type "
-"of insight useful?"
+"payment method set up during the first week.<br><br>Do you find this type of "
+"insight useful?"
 msgstr ""
 
 #: src/Notes/InsightFirstProductAndPayment.php:48
@@ -3695,9 +3693,9 @@ msgstr ""
 msgid ""
 "We noticed that there was a problem during the Jetpack and WooCommerce "
 "Shipping & Tax install. Please try again and enjoy all the advantages of "
-"having the plugins connected to your store! Sorry for the inconvenience. "
-"The \"Jetpack\" and \"WooCommerce Shipping & Tax\" plugins will be "
-"installed & activated for free."
+"having the plugins connected to your store! Sorry for the inconvenience. The "
+"\"Jetpack\" and \"WooCommerce Shipping & Tax\" plugins will be installed & "
+"activated for free."
 msgstr ""
 
 #: src/Notes/InstallJPAndWCSPlugins.php:47
@@ -3712,8 +3710,8 @@ msgstr ""
 
 #: src/Notes/LaunchChecklist.php:45
 msgid ""
-"To make sure you never get that sinking \"what did I forget\" feeling, "
-"we've put together the essential pre-launch checklist."
+"To make sure you never get that sinking \"what did I forget\" feeling, we've "
+"put together the essential pre-launch checklist."
 msgstr ""
 
 #: src/Notes/LaunchChecklist.php:48
@@ -3727,9 +3725,9 @@ msgstr ""
 #: src/Notes/LearnMoreAboutVariableProducts.php:66
 msgid ""
 "Variable products are a powerful product type that lets you offer a set of "
-"variations on a product, with control over prices, stock, image and more "
-"for each variation. They can be used for a product like a shirt, where you "
-"can offer a large, medium and small and in different colors."
+"variations on a product, with control over prices, stock, image and more for "
+"each variation. They can be used for a product like a shirt, where you can "
+"offer a large, medium and small and in different colors."
 msgstr ""
 
 #: src/Notes/ManageOrdersOnTheGo.php:47
@@ -3785,8 +3783,8 @@ msgstr ""
 msgid "Hi there,"
 msgstr ""
 
-#: src/Notes/MerchantEmailNotifications/NotificationEmail.php:209
 #. translators: %s = merchant name
+#: src/Notes/MerchantEmailNotifications/NotificationEmail.php:209
 msgid "Hi %s,"
 msgstr ""
 
@@ -3825,8 +3823,8 @@ msgstr ""
 #: src/Notes/NavigationFeedbackFollowUp.php:58
 msgid ""
 "We recently introduced the new navigation for a more intuitive and improved "
-"user experience. Now that you've had some time to give it a try, let us "
-"know how this will impact your store."
+"user experience. Now that you've had some time to give it a try, let us know "
+"how this will impact your store."
 msgstr ""
 
 #: src/Notes/NavigationFeedbackFollowUp.php:61
@@ -3862,9 +3860,9 @@ msgstr ""
 msgid "See success stories"
 msgstr ""
 
-#: src/Notes/NewSalesRecord.php:101
 #. translators: 1 and 4: Date (e.g. October 16th), 2 and 3: Amount (e.g.
 #. $160.00)
+#: src/Notes/NewSalesRecord.php:101
 msgid ""
 "Woohoo, %1$s was your record day for sales! Net sales was %2$s beating the "
 "previous record of %3$s set on %4$s."
@@ -3886,8 +3884,8 @@ msgstr ""
 msgid "The admin note type prop cannot be empty."
 msgstr ""
 
-#: src/Notes/Note.php:378
 #. translators: %s: admin note type.
+#: src/Notes/Note.php:378
 msgid "The admin note type prop (%s) is not one of the supported types."
 msgstr ""
 
@@ -3911,8 +3909,8 @@ msgstr ""
 msgid "The admin note status prop cannot be empty."
 msgstr ""
 
-#: src/Notes/Note.php:485
 #. translators: %s: admin note status property.
+#: src/Notes/Note.php:485
 msgid "The admin note status prop (%s) is not one of the supported statuses."
 msgstr ""
 
@@ -3938,8 +3936,7 @@ msgstr ""
 
 #: src/Notes/Notes.php:460
 msgid ""
-"Notes are unavailable because the \"admin-note\" data store cannot be "
-"loaded."
+"Notes are unavailable because the \"admin-note\" data store cannot be loaded."
 msgstr ""
 
 #: src/Notes/OnboardingPayments.php:50
@@ -3958,18 +3955,18 @@ msgstr ""
 
 #: src/Notes/OnlineClothingStore.php:82
 msgid ""
-"Starting a fashion website is exciting but it may seem overwhelming as "
-"well. In this article, we'll walk you through the setup process, teach you "
-"to create successful product listings, and show you how to market to your "
-"ideal audience."
+"Starting a fashion website is exciting but it may seem overwhelming as well. "
+"In this article, we'll walk you through the setup process, teach you to "
+"create successful product listings, and show you how to market to your ideal "
+"audience."
 msgstr ""
 
 #: src/Notes/OrderMilestones.php:182
 msgid "First order received"
 msgstr ""
 
-#: src/Notes/OrderMilestones.php:194
 #. translators: Number of orders processed.
+#: src/Notes/OrderMilestones.php:194
 msgid "Congratulations on processing %s orders!"
 msgstr ""
 
@@ -4010,8 +4007,8 @@ msgstr ""
 #: src/Notes/PersonalizeStore.php:48
 msgid ""
 "The homepage is one of the most important entry points in your store. When "
-"done right it can lead to higher conversions and engagement. Don't forget "
-"to personalize the homepage that we created for your store during the "
+"done right it can lead to higher conversions and engagement. Don't forget to "
+"personalize the homepage that we created for your store during the "
 "onboarding."
 msgstr ""
 
@@ -4040,10 +4037,10 @@ msgstr ""
 #: src/Notes/SellingOnlineCourses.php:69
 msgid ""
 "Online courses are a great solution for any business that can teach a new "
-"skill. Since courses don’t require physical product development or "
-"shipping, they’re affordable, fast to create, and can generate passive "
-"income for years to come. In this article, we provide you more information "
-"about selling courses using WooCommerce."
+"skill. Since courses don’t require physical product development or shipping, "
+"they’re affordable, fast to create, and can generate passive income for "
+"years to come. In this article, we provide you more information about "
+"selling courses using WooCommerce."
 msgstr ""
 
 #: src/Notes/SetUpAdditionalPaymentTypes.php:92
@@ -4060,8 +4057,8 @@ msgstr ""
 msgid ""
 "The ability to add inventory without having to deal with production, "
 "stocking, or fulfilling orders may seem like a dream. But is dropshipping "
-"worth it? Let’s explore some of the advantages and disadvantages to help "
-"you make the best decision for your business."
+"worth it? Let’s explore some of the advantages and disadvantages to help you "
+"make the best decision for your business."
 msgstr ""
 
 #: src/Notes/TestCheckout.php:89
@@ -4079,9 +4076,9 @@ msgstr ""
 msgid "Test checkout"
 msgstr ""
 
-#: src/Notes/TrackingOptIn.php:50
 #. translators: 1: open link to WooCommerce.com settings, 2: open link to
 #. WooCommerce.com tracking documentation, 3: close link tag.
+#: src/Notes/TrackingOptIn.php:50
 msgid ""
 "Gathering usage data allows us to improve WooCommerce. Your store will be "
 "considered as we evaluate new features, judge the quality of an update, or "
@@ -4102,8 +4099,8 @@ msgstr ""
 msgid "Potentially unsecured files were found in your uploads directory"
 msgstr ""
 
-#: src/Notes/UnsecuredReportFiles.php:37
 #. translators: 1: opening analytics docs link tag. 2: closing link tag
+#: src/Notes/UnsecuredReportFiles.php:37
 msgid ""
 "Files that may contain %1$sstore analytics%2$s reports were found in your "
 "uploads directory - we recommend assessing and deleting any such files."
@@ -4115,8 +4112,8 @@ msgstr ""
 
 #: src/Notes/UpdateStoreDetails.php:44
 msgid ""
-"Nice work completing your store profile! You can always go back and edit "
-"the details you just shared, as needed."
+"Nice work completing your store profile! You can always go back and edit the "
+"details you just shared, as needed."
 msgstr ""
 
 #: src/Notes/UpdateStoreDetails.php:51
@@ -4145,8 +4142,8 @@ msgid ""
 "Payments</strong>."
 msgstr ""
 
-#: src/Notes/WooCommercePayments.php:108
 #. translators: 1: opening link tag, 2: closing tag
+#: src/Notes/WooCommercePayments.php:108
 msgid "By clicking \"Get started\", you agree to our %1$sTerms of Service%2$s"
 msgstr ""
 
@@ -4163,11 +4160,10 @@ msgstr ""
 
 #: src/Notes/WooCommerceSubscriptions.php:46
 msgid ""
-"WooCommerce Subscriptions allows you to introduce a variety of "
-"subscriptions for physical or virtual products and services. Create "
-"product-of-the-month clubs, weekly service subscriptions or even yearly "
-"software billing packages. Add sign-up fees, offer free trials, or set "
-"expiration periods."
+"WooCommerce Subscriptions allows you to introduce a variety of subscriptions "
+"for physical or virtual products and services. Create product-of-the-month "
+"clubs, weekly service subscriptions or even yearly software billing packages."
+" Add sign-up fees, offer free trials, or set expiration periods."
 msgstr ""
 
 #: src/Notes/WooCommerceSubscriptions.php:53
@@ -4188,13 +4184,13 @@ msgstr ""
 msgid "Connect"
 msgstr ""
 
-#: src/Notes/WooSubscriptionsNotes.php:311
 #. translators: name of the extension subscription expiring soon
+#: src/Notes/WooSubscriptionsNotes.php:311
 msgid "%s subscription expiring soon"
 msgstr ""
 
-#: src/Notes/WooSubscriptionsNotes.php:317
 #. translators: number of days until the subscription expires
+#: src/Notes/WooSubscriptionsNotes.php:317
 msgid ""
 "Your subscription expires in %d days. Enable autorenew to avoid losing "
 "updates and access to support."
@@ -4204,13 +4200,13 @@ msgstr ""
 msgid "Enable Autorenew"
 msgstr ""
 
-#: src/Notes/WooSubscriptionsNotes.php:372
 #. translators: name of the extension subscription that expired
+#: src/Notes/WooSubscriptionsNotes.php:372
 msgid "%s subscription expired"
 msgstr ""
 
-#: src/Notes/WooSubscriptionsNotes.php:378
 #. translators: date the subscription expired, e.g. Jun 7th 2018
+#: src/Notes/WooSubscriptionsNotes.php:378
 msgid ""
 "Your subscription expired on %s. Get a new subscription to continue "
 "receiving updates and access to support."
@@ -4248,8 +4244,8 @@ msgstr ""
 
 #: src/ReportsSync.php:95
 msgid ""
-"Report table data is being rebuilt. Please allow some time for data to "
-"fully populate."
+"Report table data is being rebuilt. Please allow some time for data to fully "
+"populate."
 msgstr ""
 
 #: src/ReportsSync.php:179
@@ -4260,32 +4256,32 @@ msgstr ""
 msgid "[deleted]"
 msgstr ""
 
-#: woocommerce-admin.php:38 woocommerce-admin.php:56
 #. translators: 1: composer command. 2: plugin directory
+#: woocommerce-admin.php:38 woocommerce-admin.php:56
 msgid ""
 "Your installation of the WooCommerce Admin feature plugin is incomplete. "
 "Please run %1$s within the %2$s directory."
 msgstr ""
 
-#: woocommerce-admin.php:108
 #. Translators: %1$s is referring to a php constant name, %2$s is referring to
 #. the wp-config.php file.
+#: woocommerce-admin.php:108
 msgid ""
 "WooCommerce Admin development mode requires the %1$s constant to be defined "
-"and true in your %2$s file. Otherwise you are loading the admin package "
-"from WooCommerce core."
+"and true in your %2$s file. Otherwise you are loading the admin package from "
+"WooCommerce core."
 msgstr ""
 
-#: woocommerce-admin.php:127
 #. Translators: %1$s, %2$s, and %3$s are all build commands to be run in order.
+#: woocommerce-admin.php:127
 msgid ""
-"You have installed a development version of WooCommerce Admin which "
-"requires files to be built. From the plugin directory, run %1$s and %2$s to "
-"install dependencies, then %3$s to build the files."
+"You have installed a development version of WooCommerce Admin which requires "
+"files to be built. From the plugin directory, run %1$s and %2$s to install "
+"dependencies, then %3$s to build the files."
 msgstr ""
 
-#: woocommerce-admin.php:134
 #. translators: 1: URL of GitHub Repository build page
+#: woocommerce-admin.php:134
 msgid ""
 "Or you can download a pre-built version of the plugin by visiting <a "
 "href=\"%1$s\">the releases page in the repository</a>."
@@ -4784,14 +4780,6 @@ msgstr ""
 msgid "All downloads"
 msgstr ""
 
-#: client/analytics/report/orders/table.js:274
-#: client/analytics/report/products/table.js:286
-#: client/analytics/report/stock/table.js:149
-msgid "Product"
-msgid_plural "Products"
-msgstr[0] ""
-msgstr[1] ""
-
 #: client/analytics/report/downloads/config.js:60
 msgid "Remove product filter"
 msgstr ""
@@ -5269,8 +5257,8 @@ msgstr ""
 
 #: client/analytics/settings/config.js:81
 msgid ""
-"Orders with these statuses are excluded from the totals in your reports. "
-"The {{strong}}Refunded{{/strong}} status can not be excluded."
+"Orders with these statuses are excluded from the totals in your reports. The "
+"{{strong}}Refunded{{/strong}} status can not be excluded."
 msgstr ""
 
 #: client/analytics/settings/config.js:93
@@ -5628,8 +5616,7 @@ msgid "Display stats:"
 msgstr ""
 
 #: client/header/activity-panel/display-options/icons/display.js:41
-#: client/tasks/tasks.tsx:135
-#: client/two-column-tasks/extended-task.tsx:161
+#: client/tasks/tasks.tsx:135 client/two-column-tasks/extended-task.tsx:161
 msgid "Display"
 msgstr ""
 
@@ -5885,8 +5872,7 @@ msgstr ""
 msgid "Personalize your store"
 msgstr ""
 
-#: client/header/index.js:74
-#: client/store-management-links/index.js:43
+#: client/header/index.js:74 client/store-management-links/index.js:43
 #: client/two-column-tasks/headers/products.js:29
 msgid "Add products"
 msgstr ""
@@ -5933,10 +5919,8 @@ msgstr ""
 
 #: client/homescreen/activity-panel/reviews/index.js:115
 #: client/homescreen/activity-panel/stock/card.js:102
-#: client/inbox-panel/dissmiss-all-modal.js:29
-#: client/inbox-panel/index.js:247
-#: client/tasks/task-list-item.tsx:86
-#: client/two-column-tasks/task-list.js:78
+#: client/inbox-panel/dissmiss-all-modal.js:29 client/inbox-panel/index.js:247
+#: client/tasks/task-list-item.tsx:86 client/two-column-tasks/task-list.js:78
 msgid "Undo"
 msgstr ""
 
@@ -6414,15 +6398,13 @@ msgstr ""
 
 #: client/payments/payment-recommendations.tsx:198
 #: client/settings-recommendations/dismissable-list.tsx:40
-#: client/tasks/task-list-menu.tsx:20
-#: client/two-column-tasks/task-list.js:119
+#: client/tasks/task-list-menu.tsx:20 client/two-column-tasks/task-list.js:119
 msgid "Task List Options"
 msgstr ""
 
 #: client/payments/payment-recommendations.tsx:204
 #: client/settings-recommendations/dismissable-list.tsx:44
-#: client/tasks/task-list-menu.tsx:24
-#: client/two-column-tasks/task-list.js:132
+#: client/tasks/task-list-menu.tsx:24 client/two-column-tasks/task-list.js:132
 msgid "Hide this"
 msgstr ""
 
@@ -6626,8 +6608,8 @@ msgstr ""
 
 #: client/profile-wizard/steps/business-details/flows/selective-bundle/selective-extensions-bundle/index.js:101
 msgid ""
-"By installing Jetpack and WooCommerce Shipping plugins for free you agree "
-"to our {{link}}Terms of Service{{/link}}."
+"By installing Jetpack and WooCommerce Shipping plugins for free you agree to "
+"our {{link}}Terms of Service{{/link}}."
 msgstr ""
 
 #: client/profile-wizard/steps/business-details/flows/selective-bundle/selective-extensions-bundle/index.js:280
@@ -6953,8 +6935,8 @@ msgstr ""
 
 #: client/tasks/fills/Marketing/index.tsx:206
 msgid ""
-"We recommend adding one of the following marketing tools for your store. "
-"The extension will be installed and activated for you when you click \"Get "
+"We recommend adding one of the following marketing tools for your store. The "
+"extension will be installed and activated for you when you click \"Get "
 "started\"."
 msgstr ""
 
@@ -6971,7 +6953,8 @@ msgid "Proceed"
 msgstr ""
 
 #: client/tasks/fills/PaymentGatewaySuggestions/components/Setup/Configure.js:155
-msgid "You can manage this payment gateway's settings by clicking the button below"
+msgid ""
+"You can manage this payment gateway's settings by clicking the button below"
 msgstr ""
 
 # %s = title of the payment gateway
@@ -7087,7 +7070,8 @@ msgid "Store logo updated sucessfully"
 msgstr ""
 
 #: client/tasks/fills/appearance.js:234
-msgid "🎨 Your store is looking great! Don't forget to continue personalizing it"
+msgid ""
+"🎨 Your store is looking great! Don't forget to continue personalizing it"
 msgstr ""
 
 #: client/tasks/fills/appearance.js:257
@@ -7147,8 +7131,8 @@ msgstr ""
 
 #: client/tasks/fills/connect.js:22
 msgid ""
-"You must click approve to install your extensions and connect to "
-"WooCommerce.com"
+"You must click approve to install your extensions and connect to WooCommerce."
+"com"
 msgstr ""
 
 #: client/tasks/fills/connect.js:49
@@ -7203,7 +7187,8 @@ msgid ""
 msgstr ""
 
 #: client/tasks/fills/products/products.js:132
-msgid "Use a template to add physical, digital, variable, and subscription products"
+msgid ""
+"Use a template to add physical, digital, variable, and subscription products"
 msgstr ""
 
 #: client/tasks/fills/products/products.js:42
@@ -7223,7 +7208,8 @@ msgid "Import via CSV"
 msgstr ""
 
 #: client/tasks/fills/products/products.js:71
-msgid "For larger stores we recommend importing all products at once via CSV file"
+msgid ""
+"For larger stores we recommend importing all products at once via CSV file"
 msgstr ""
 
 #: client/tasks/fills/products/products.js:85
@@ -7267,8 +7253,8 @@ msgstr ""
 #: client/tasks/fills/shipping/index.js:262
 msgid ""
 "We recommend using ShipStation to save time at the post office by printing "
-"your shipping labels at home. Try ShipStation free for 30 days. "
-"{{link}}Learn more{{/link}}."
+"your shipping labels at home. Try ShipStation free for 30 days. {{link}}"
+"Learn more{{/link}}."
 msgstr ""
 
 #: client/tasks/fills/shipping/index.js:277
@@ -7449,7 +7435,8 @@ msgid ""
 msgstr ""
 
 #: client/tasks/fills/tax/woocommerce-tax/plugins.tsx:59
-msgid "By installing Jetpack you agree to the {{link}}Terms of Service{{/link}}."
+msgid ""
+"By installing Jetpack you agree to the {{link}}Terms of Service{{/link}}."
 msgstr ""
 
 #: client/tasks/fills/tax/woocommerce-tax/plugins.tsx:90
@@ -7465,7 +7452,8 @@ msgid "Install Jetpack"
 msgstr ""
 
 #: client/tasks/fills/tax/woocommerce-tax/setup.tsx:114
-msgid "Jetpack and WooCommerce Tax allow you to automate sales tax calculations"
+msgid ""
+"Jetpack and WooCommerce Tax allow you to automate sales tax calculations"
 msgstr ""
 
 #: client/tasks/fills/tax/woocommerce-tax/setup.tsx:123
@@ -7474,8 +7462,7 @@ msgid ""
 "calculations"
 msgstr ""
 
-#: client/tasks/task-list-item.tsx:68
-#: client/two-column-tasks/task-list.js:75
+#: client/tasks/task-list-item.tsx:68 client/two-column-tasks/task-list.js:75
 msgid "Task dismissed"
 msgstr ""
 
@@ -7494,8 +7481,7 @@ msgid_plural "Show %d more tasks."
 msgstr[0] ""
 msgstr[1] ""
 
-#: client/tasks/tasks.tsx:144
-#: client/two-column-tasks/extended-task.tsx:170
+#: client/tasks/tasks.tsx:144 client/two-column-tasks/extended-task.tsx:170
 msgid "Show things to do next"
 msgstr ""
 
@@ -7540,7 +7526,8 @@ msgid "Get more sales"
 msgstr ""
 
 #: client/two-column-tasks/headers/marketing.js:20
-msgid "Add tools to grow your store such as email, social, and in-person selling"
+msgid ""
+"Add tools to grow your store such as email, social, and in-person selling"
 msgstr ""
 
 #: client/two-column-tasks/headers/marketing.js:30
@@ -7701,15 +7688,15 @@ msgstr ""
 
 #: client/wp-admin-scripts/print-shipping-label-banner/shipping-banner/index.js:265
 msgid ""
-"You've already installed WooCommerce Shipping. By clicking \"Create "
-"shipping label\", you agree to its {{tosLink}}Terms of Service{{/tosLink}}."
+"You've already installed WooCommerce Shipping. By clicking \"Create shipping "
+"label\", you agree to its {{tosLink}}Terms of Service{{/tosLink}}."
 msgstr ""
 
 #: client/wp-admin-scripts/print-shipping-label-banner/shipping-banner/index.js:270
 msgid ""
 "By clicking \"Create shipping label\", {{wcsLink}}WooCommerce "
-"Shipping{{/wcsLink}} will be installed and you agree to its "
-"{{tosLink}}Terms of Service{{/tosLink}}."
+"Shipping{{/wcsLink}} will be installed and you agree to its {{tosLink}}Terms "
+"of Service{{/tosLink}}."
 msgstr ""
 
 #: client/wp-admin-scripts/print-shipping-label-banner/shipping-banner/index.js:361
@@ -7877,7 +7864,8 @@ msgid "Return to the date input field."
 msgstr ""
 
 #: packages/components/build-module/calendar/phrases.js:26
-msgid "Press the down arrow key to interact with the calendar and select a date."
+msgid ""
+"Press the down arrow key to interact with the calendar and select a date."
 msgstr ""
 
 #: packages/components/build-module/calendar/phrases.js:27
@@ -8088,8 +8076,8 @@ msgstr ""
 
 #: packages/components/build-module/summary/menu.js:21
 msgid ""
-"List of data points available for filtering. Use arrow keys to cycle "
-"through the list. Click a data point for a detailed report."
+"List of data points available for filtering. Use arrow keys to cycle through "
+"the list. Click a data point for a detailed report."
 msgstr ""
 
 #: packages/components/build-module/summary/number.js:46
@@ -8195,9 +8183,9 @@ msgstr ""
 # %s = link to developer blog
 #: packages/data/build-module/notes/resolvers.js:34
 msgid ""
-"WooCommerce Admin will soon limit inbox note contents to 320 characters. "
-"For more information, please visit %s. The following notes currently "
-"exceeds that limit:"
+"WooCommerce Admin will soon limit inbox note contents to 320 characters. For "
+"more information, please visit %s. The following notes currently exceeds "
+"that limit:"
 msgstr ""
 
 # %(actionType): install or activate (the plugin). %(pluginName): a plugin slug (e.g. woocommerce-services). %(error): a single error message or in plural a comma separated error message list.
@@ -8452,8 +8440,8 @@ msgstr ""
 
 #: client/analytics/report/orders/config.js:70
 msgctxt ""
-"A sentence describing filters for Orders. See screen shot for context: "
-"https://cloudup.com/cSsUY9VeCVJ"
+"A sentence describing filters for Orders. See screen shot for context: https:"
+"//cloudup.com/cSsUY9VeCVJ"
 msgid "Orders match {{select /}} filters"
 msgstr ""
 
@@ -8495,8 +8483,8 @@ msgstr ""
 
 #: client/analytics/report/taxes/config.js:58
 msgctxt ""
-"A sentence describing filters for Taxes. See screen shot for context: "
-"https://cloudup.com/cSsUY9VeCVJ"
+"A sentence describing filters for Taxes. See screen shot for context: https:"
+"//cloudup.com/cSsUY9VeCVJ"
 msgid "Taxes match {{select /}} filters"
 msgstr ""
 
@@ -8539,3 +8527,9 @@ msgctxt "minimum value input"
 msgid "%(field)s minimum amount"
 msgstr ""
 
+msgctxt "Dodaj u košaricu"
+msgid "Add to cart"
+msgstr ""
+
+msgid "New message 2"
+msgstr ""

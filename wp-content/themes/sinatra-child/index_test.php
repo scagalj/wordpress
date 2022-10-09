@@ -73,7 +73,7 @@
                 <a href="<?php echo site_url() . '/shop/?product_cat=new-arrivals' ?>">
                     <div class="image-container">
                         <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor_v1.jpg" alt="Avatar" class="image" style="width:100%">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba2.jpg" alt="Avatar" class="image" style="width:100%">
                         <div class="middle">
                             <div class="headerButton">
                                 <button type="button" class="btn btn-lg btn-header">
@@ -87,7 +87,7 @@
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pr-1 pb-4">
                 <a href="<?php echo site_url() . '/shop/?product_cat=personalized' ?>">
                     <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/img7.jpg" alt="Avatar" class="image" style="width:100%">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/img10.jpg" alt="Avatar" class="image" style="width:100%">
                         <div class="middle">
                             <div class="headerButton">
                                 <button type="button" class="btn btn-lg btn-header">
@@ -102,7 +102,7 @@
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pr-0 pb-4">
                 <a href="<?php echo site_url() . '/shop/?product_cat=best-sellers' ?>">
                     <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/optika1.jpg" alt="Avatar" class="image img-fluid" style="width:100%">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba1.jpg" alt="Avatar" class="image img-fluid" style="width:100%">
                         <div class="middle">
                             <div class="headerButton">
                                 <a href="<?php echo site_url() ?>/kontakt" >
@@ -213,7 +213,7 @@ Osvježite svoje zidove sa našim posterima te dajte svom domu dašak topline.
             <a href="<?php echo site_url() . '/kontakt' ?>">
                 <div class="image-container">
                     <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor_v1.jpg" alt="Avatar" class="image" style="width:100%">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba6.jpg" alt="Avatar" class="image" style="width:100%">
                     <div class="verticalmiddle">
                         <div class="headerButton">
                             <button type="button" class="btn btn-lg btn-header">
@@ -229,7 +229,7 @@ Osvježite svoje zidove sa našim posterima te dajte svom domu dašak topline.
             <a href="<?php echo site_url() . '/kontakt' ?>">
                 <div class="image-container">
                     <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor_v1.jpg" alt="Avatar" class="image" style="width:100%">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba7.jpg" alt="Avatar" class="image" style="width:100%">
                     <div class="verticalmiddle">
                         <div class="headerButton">
                             <button type="button" class="btn btn-lg btn-header">
@@ -304,5 +304,45 @@ Osvježite svoje zidove sa našim posterima te dajte svom domu dašak topline.
 
 <div class="mt-3">
 
+    
+    <!-- wp:cover {"url":"http://localhost/wordpress/wp-content/uploads/2022/10/other-small.jpg","id":240,"dimRatio":0} -->
+			<div class="wp-block-cover" style="background-image:url(http://localhost/wordpress/wp-content/uploads/2022/10/other-small.jpg)"><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","textColor":"white","fontSize":"large"} -->
+			<p class="has-text-align-center has-large-font-size">Welcome to the store</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:paragraph {"align":"center","textColor":"white"} -->
+			<p class="has-text-color has-text-align-center">Write a short welcome message here</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:button {"align":"center"} -->
+			<div class="wp-block-button aligncenter"><a href="http://localhost/wordpress/shop/" class="wp-block-button__link">Go shopping</a></div>
+			<!-- /wp:button --></div></div>
+			<!-- /wp:cover -->
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">Shop by Category</h2>
+				<!-- /wp:heading -->
+				<!-- wp:shortcode -->
+				[product_categories number="0" parent="0"]
+				<!-- /wp:shortcode -->
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">New In</h2>
+				<!-- /wp:heading -->
+				<!-- wp:woocommerce/product-new {"columns":4} /-->
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">Fan Favorites</h2>
+				<!-- /wp:heading -->
+				<!-- wp:woocommerce/product-top-rated {"columns":4} /-->
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">On Sale</h2>
+				<!-- /wp:heading -->
+				<!-- wp:woocommerce/product-on-sale {"columns":4} /-->
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">Best Sellers</h2>
+				<!-- /wp:heading -->
+				<!-- wp:woocommerce/product-best-sellers {"columns":4} /-->
+			
+    
+    
+    
 </div>
 <?php get_footer(); ?> 

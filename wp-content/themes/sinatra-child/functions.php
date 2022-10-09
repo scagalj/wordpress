@@ -164,7 +164,7 @@ if ( ! function_exists( 'woocommerce_template_single_meta' ) ) {
 
 function createPostContentFomPost($product) {
     $productPost = '<div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pr-2 imageContainerBestSellers">'
-            . '<div class="imageContainerBestSellerImage">';
+            . '<div class="imageContainerBestSellerImage shadowBox">';
 
     $images = $product->get_gallery_image_ids('view');
     $hasSecondImage = !empty($images);
@@ -229,8 +229,10 @@ function generateProductPriceHtml($product) {
     $result .= '<div class="imagePrice priceWrapper">';
     if ($product->is_on_sale()) {
         $result .= '<span class="regularPrice">' . number_format($sale_price, 2 , ',', '.') . ' HRK' . '</span><span class="salePrice">' . number_format($regular_price, 2, ',', '.') . ' HRK' . '</span>';
+        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2 , ',', '.') . ' €' . '</span><span class="salePrice priceInEur">' . number_format($regular_price / 7.53450, 2, ',', '.') . ' €' . '</span></span>';
     } else {
         $result .= '<span class="regularPrice">' . number_format($sale_price, 2 , ',', '.') . ' HRK' . '</span>';
+        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2 , ',', '.') . ' €' . '</span></span>';
     }
     $result .= '</div>';
     return $result;

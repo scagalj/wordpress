@@ -1576,7 +1576,7 @@ dl.variation > dd p{
     text-align: center;
 }
 .discountAmountValue{
-    background-color: #229f1f;
+    background-color: #b0bf5f;
     padding: 6px 9px 6px 9px;
     top: 12px;
     left: 12px;
@@ -1585,10 +1585,11 @@ dl.variation > dd p{
     font-size: 8pt;
     border-radius: 2px;
     line-height: inherit;
-    padding: 3px 10px;
+    padding: 2px 8px;
     font-size: .8125rem;
     font-weight: 500;
     z-index: 2;
+    border: 2px solid #9da768;
 }
 
 .priceWrapper{
@@ -1609,7 +1610,11 @@ dl.variation > dd p{
     margin-right: 5px;
     font-size: 9pt;
     text-decoration: line-through;
-    color: darkblue;
+    color: black;
+}
+
+.priceInEur{
+    font-size: 9pt;
 }
 
 
@@ -1637,5 +1642,18 @@ span.si-loop-product__category-wrap{
 }
 
 span.onsale{
-    background-color: #229f1f !important;
+    background-color: #b0bf5f !important;
+    border: 2px solid #9da768 !important;
+}
+
+.woocommerce ul.products li.product .si-product-thumb{
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
+}
+
+.shadowBox{
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
 }

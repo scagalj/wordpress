@@ -73,7 +73,7 @@
                 <a href="<?php echo site_url() . '/shop/?product_cat=new-arrivals' ?>">
                     <div class="image-container">
                         <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor_v1.jpg" alt="Avatar" class="image" style="width:100%">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba2.jpg" alt="Avatar" class="image" style="width:100%">
                         <div class="middle">
                             <div class="headerButton">
                                 <button type="button" class="btn btn-lg btn-header">
@@ -87,7 +87,7 @@
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pr-1 pb-4">
                 <a href="<?php echo site_url() . '/shop/?product_cat=personalized' ?>">
                     <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/img7.jpg" alt="Avatar" class="image" style="width:100%">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/img10.jpg" alt="Avatar" class="image" style="width:100%">
                         <div class="middle">
                             <div class="headerButton">
                                 <button type="button" class="btn btn-lg btn-header">
@@ -102,7 +102,7 @@
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pr-0 pb-4">
                 <a href="<?php echo site_url() . '/shop/?product_cat=best-sellers' ?>">
                     <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/optika1.jpg" alt="Avatar" class="image img-fluid" style="width:100%">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba1.jpg" alt="Avatar" class="image img-fluid" style="width:100%">
                         <div class="middle">
                             <div class="headerButton">
                                 <a href="<?php echo site_url() ?>/kontakt" >
@@ -122,17 +122,17 @@
     <div class=" mt-5 mb-5" style="padding-left: 15%; padding-right: 15%;">
         <div class="row justify-content-center">
             <div class="col-sm-12">
-                
-            <p class="text-center">
-                Upoznajte i otkrijte našu široku kolekciju modernih postera. </p>
-            <p class="text-center">
-                Naši posteri obuhvaćaju sve Vaše potrebe; ukoliko trebate upotpuniti svoj dom te ga učiniti toplijim, ako trebate personalizirani poster kao iznenađenje ili poklon, uspomenu za rođenje djeteta, uređenje dječje sobice...</p>
-            <p class="text-center">
-Osvježite svoje zidove sa našim posterima te dajte svom domu dašak topline.
-            </p>
-        </div>
+
+                <p class="text-center">
+                    Upoznajte i otkrijte našu široku kolekciju modernih postera. </p>
+                <p class="text-center">
+                    Naši posteri obuhvaćaju sve Vaše potrebe; ukoliko trebate upotpuniti svoj dom te ga učiniti toplijim, ako trebate personalizirani poster kao iznenađenje ili poklon, uspomenu za rođenje djeteta, uređenje dječje sobice...</p>
+                <p class="text-center">
+                    Osvježite svoje zidove sa našim posterima te dajte svom domu dašak topline.
+                </p>
             </div>
-</div>
+        </div>
+    </div>
 </div>
 <div class="container-fluid">
     <div class="container mt-5">
@@ -207,41 +207,41 @@ Osvježite svoje zidove sa našim posterima te dajte svom domu dašak topline.
 </style>
 
 <div class="container-fluid">
-<div class="container mt-3 mb-3">
-    <div class="row d-flex">
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 pr-0 pb-4">
-            <a href="<?php echo site_url() . '/kontakt' ?>">
-                <div class="image-container">
-                    <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor_v1.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="verticalmiddle">
-                        <div class="headerButton">
-                            <button type="button" class="btn btn-lg btn-header">
-                                Best selling frames
-                            </button>
+    <div class="container mt-3 mb-3">
+        <div class="row d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 pr-0 pb-4">
+                <a href="<?php echo site_url() . '/kontakt' ?>">
+                    <div class="image-container">
+                        <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba6.jpg" alt="Avatar" class="image" style="width:100%">
+                        <div class="verticalmiddle">
+                            <div class="headerButton">
+                                <button type="button" class="btn btn-lg btn-header">
+                                    Best selling frames
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </a>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb-4">
-            <a href="<?php echo site_url() . '/kontakt' ?>">
-                <div class="image-container">
-                    <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor_v1.jpg" alt="Avatar" class="image" style="width:100%">
-                    <div class="verticalmiddle">
-                        <div class="headerButton">
-                            <button type="button" class="btn btn-lg btn-header">
-                                Inspiration home quote's
-                            </button>
+                </a>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb-4">
+                <a href="<?php echo site_url() . '/kontakt' ?>">
+                    <div class="image-container">
+                        <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba7.jpg" alt="Avatar" class="image" style="width:100%">
+                        <div class="verticalmiddle">
+                            <div class="headerButton">
+                                <button type="button" class="btn btn-lg btn-header">
+                                    Inspiration home quote's
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <div class="container-fluid">
