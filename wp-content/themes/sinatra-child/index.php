@@ -1,3 +1,4 @@
+<?php declare(strict_types=1) ?>
 <?php
 /**
  * The main template file.
@@ -18,7 +19,7 @@
 <?php get_header(); ?>
 
 <!---------------HEADER--------------------->
-<div id="fullPageHeader" class="container-fluid fullPageHeaderMain" style="background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header1.jpg); background-position: center; background-repeat: no-repeat; background-size: cover" >
+<div id="fullPageHeader" class="container-fluid fullPageHeaderMain" style="background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/framesforyouheader.jpg); background-position: center; background-repeat: no-repeat; background-size: cover" >
     <style>
         .headerButton{
             text-align: center;
@@ -303,6 +304,6 @@
 </div>
 
 <div class="mt-3">
-
+    
 </div>
 <?php get_footer(); ?> 

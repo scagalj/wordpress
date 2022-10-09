@@ -1,5 +1,4 @@
 <?php
-
 require 'calculatePrice.php';
 
 //Child Theme Functions File
@@ -40,11 +39,11 @@ function fetchAllProductCategories() {
 
 function logToConsole() {
     $to = 'stjepan_12@hotmail.com';
-$subject = 'The subject';
-$body = 'The email body content';
-$headers = array('Content-Type: text/html; charset=UTF-8');
- 
-wp_mail( $to, $subject, $body, $headers );
+    $subject = 'The subject';
+    $body = 'The email body content';
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+
+    wp_mail($to, $subject, $body, $headers);
 
 //return "<h1>Test</h1>";
 }
@@ -67,11 +66,11 @@ function fetchCategoriesForName() {
 }
 
 function woocommerce_template_loop_product_title() {
-    echo  '<div class="mt-2" style="text-align:center;">'
-            . '<span style="color:black;" class="imageTitle">'
-            . get_the_title()
-            . '</span>'
-            . '</div>';
+    echo '<div class="mt-2" style="text-align:center;">'
+    . '<span style="color:black;" class="imageTitle">'
+    . get_the_title()
+    . '</span>'
+    . '</div>';
 }
 
 function woocommerce_template_loop_product_link_open() {
@@ -94,48 +93,49 @@ function woocommerce_template_loop_category_link_close() {
     echo '';
 }
 
-if ( ! function_exists( 'woocommerce_template_single_rating' ) ) {
+if (!function_exists('woocommerce_template_single_rating')) {
 
-	/**
-	 * Output the product rating.
-	 */
-	function woocommerce_template_single_rating() {
-		if ( post_type_supports( 'product', 'comments' ) ) {
+    /**
+     * Output the product rating.
+     */
+    function woocommerce_template_single_rating() {
+        if (post_type_supports('product', 'comments')) {
 //			wc_get_template( 'single-product/rating.php' );
-		}
-	}
+        }
+    }
+
 }
 
-if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
+if (!function_exists('woocommerce_default_product_tabs')) {
 
-	/**
-	 * Add default product tabs to product pages.
-	 *
-	 * @param array $tabs Array of tabs.
-	 * @return array
-	 */
-	function woocommerce_default_product_tabs( $tabs = array() ) {
-		global $product, $post;
+    /**
+     * Add default product tabs to product pages.
+     *
+     * @param array $tabs Array of tabs.
+     * @return array
+     */
+    function woocommerce_default_product_tabs($tabs = array()) {
+        global $product, $post;
 
-		// Description tab - shows product content.
-		if ( $post->post_content ) {
-			$tabs['description'] = array(
-				'title'    => __( 'Description', 'woocommerce' ),
-				'priority' => 10,
-				'callback' => 'woocommerce_product_description_tab',
-			);
-		}
+        // Description tab - shows product content.
+        if ($post->post_content) {
+            $tabs['description'] = array(
+                'title' => __('Description', 'woocommerce'),
+                'priority' => 10,
+                'callback' => 'woocommerce_product_description_tab',
+            );
+        }
 
-		// Additional information tab - shows attributes.
-		if ( $product && ( $product->has_attributes() || apply_filters( 'wc_product_enable_dimensions_display', $product->has_weight() || $product->has_dimensions() ) ) ) {
-			$tabs['additional_information'] = array(
-				'title'    => __( 'Additional information', 'woocommerce' ),
-				'priority' => 20,
-				'callback' => 'woocommerce_product_additional_information_tab',
-			);
-		}
+        // Additional information tab - shows attributes.
+        if ($product && ( $product->has_attributes() || apply_filters('wc_product_enable_dimensions_display', $product->has_weight() || $product->has_dimensions()) )) {
+            $tabs['additional_information'] = array(
+                'title' => __('Additional information', 'woocommerce'),
+                'priority' => 20,
+                'callback' => 'woocommerce_product_additional_information_tab',
+            );
+        }
 
-		// Reviews tab - shows comments.
+        // Reviews tab - shows comments.
 //		if ( comments_open() ) {
 //			$tabs['reviews'] = array(
 //				/* translators: %s: reviews count */
@@ -145,22 +145,22 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 //			);
 //		}
 
-		return $tabs;
-	}
+        return $tabs;
+    }
+
 }
 
 
-if ( ! function_exists( 'woocommerce_template_single_meta' ) ) {
+if (!function_exists('woocommerce_template_single_meta')) {
 
-	/**
-	 * Output the product meta.
-	 */
-	function woocommerce_template_single_meta() {
+    /**
+     * Output the product meta.
+     */
+    function woocommerce_template_single_meta() {
 //		wc_get_template( 'single-product/meta.php' );
-	}
+    }
+
 }
-
-
 
 function createPostContentFomPost($product) {
     $productPost = '<div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pr-2 imageContainerBestSellers">'
@@ -228,15 +228,27 @@ function generateProductPriceHtml($product) {
 
     $result .= '<div class="imagePrice priceWrapper">';
     if ($product->is_on_sale()) {
-        $result .= '<span class="regularPrice">' . number_format($sale_price, 2 , ',', '.') . ' HRK' . '</span><span class="salePrice">' . number_format($regular_price, 2, ',', '.') . ' HRK' . '</span>';
-        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2 , ',', '.') . ' €' . '</span><span class="salePrice priceInEur">' . number_format($regular_price / 7.53450, 2, ',', '.') . ' €' . '</span></span>';
+        $result .= '<span class="regularPrice">' . number_format($sale_price, 2, ',', '.') . ' HRK' . '</span><span class="salePrice">' . number_format($regular_price, 2, ',', '.') . ' HRK' . '</span>';
+        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2, ',', '.') . ' €' . '</span><span class="salePrice priceInEur">' . number_format($regular_price / 7.53450, 2, ',', '.') . ' €' . '</span></span>';
     } else {
-        $result .= '<span class="regularPrice">' . number_format($sale_price, 2 , ',', '.') . ' HRK' . '</span>';
-        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2 , ',', '.') . ' €' . '</span></span>';
+        $result .= '<span class="regularPrice">' . number_format($sale_price, 2, ',', '.') . ' HRK' . '</span>';
+        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2, ',', '.') . ' €' . '</span></span>';
     }
     $result .= '</div>';
     return $result;
 }
+
+add_filter( 'wc_price', 'span_custom_prc', 10, 5 ); 
+
+function span_custom_prc($return, $price, $args, $unformatted_price, $original_price) {
+
+    $formatedPriceInEUR = '<span class="woocommerce-Price-amount amount"><bdi> ( ' . number_format($original_price / 7.53450, 2, ',', '.') . ' €' . ' ) </bdi></span>';
+    
+    return $return . $formatedPriceInEUR;
+    
+
+}
+
 
 function createImageTagFromImageId($imageId, $widht = null, $height = null, $id = null, $class = null, $style = null) {
     $imageTag = '<img ';
@@ -315,14 +327,16 @@ function wpb_load_fa() {
 
 add_action('wp_enqueue_scripts', 'wpb_load_fa');
 
-
 //-----------------add to cart new custom field -------------------------
 
-function custom_single_product_price($product){
-    
+function custom_single_product_price($product) {
+
+    $result = "";
     $regular_price = (float) $product->get_regular_price(); // Regular price
-        $sale_price = (float) $product->get_price(); // Active price (the "Sale price" when on-sale)
-    return '<span id="single_product_price"> ' . number_format($sale_price , 2, ',', '.') . '</span><span> ' . get_woocommerce_currency_symbol() . '</span>';
+    $sale_price = (float) $product->get_price(); // Active price (the "Sale price" when on-sale)
+    $result .= '<span id="single_product_price"> ' . number_format($sale_price, 2, ',', '.') . '</span><span> ' . get_woocommerce_currency_symbol() . '</span>';
+    $result .= '<span id="single_product_price"> ( ' . number_format($sale_price / 7.53450, 2, ',', '.') . '</span><span> ' . "€" . ' ) </span>';
+    return $result;
 }
 
 /**
@@ -332,51 +346,49 @@ function iconic_output_engraving_field() {
     global $product;
 
 //    spremiti tagove proizvoda u input i izracun cijene za setove i ne 
-    
     ?>
-        <div class="productAdditionalFields">
-                <label for="customText"><?php _e('Željeni tekst'); ?></label>
-                <input type="text" id="iconic-engraving" name="customText" placeholder="<?php _e('Unesite željeni tekst'); ?>">
-        </div>
+    <div class="productAdditionalFields">
+        <label for="customText"><?php _e('Željeni tekst'); ?></label>
+        <input type="text" id="iconic-engraving" name="customText" placeholder="<?php _e('Unesite željeni tekst'); ?>">
+    </div>
 
-        <div class="productAdditionalFields">
-            <label for="imageSizeId"><?php _e('Veličina slike'); ?></label>
-            <select id="imageSizeId" name="imageSize" class="form-select" required="true" style="width: 100%">
-                <option value=""><?php _e('Odaberite veličinu slike'); ?></option>
-                <option selected="true" value="21x30">21 x 30 cm</option>
-                <option value="30x40">30 x 40 cm</option>
-                <option value="40x50">40 x 50 cm</option>
-                <option value="50x70">50 x 70 cm</option>
-            </select>
-        </div>
-        <div class="productAdditionalFields">
-            <label for="imageFrameId"><?php _e('Vrsta okvira'); ?></label>
-            <select id="imageFrameId" name="frameType" class="form-select" required="true" style="width: 100%">
-                <option value=""><?php _e('Odaberite vrstu okvira'); ?></option>
-                <option selected="" value="none">Bez okvira</option>
-                <option value="BijeliOkvir">Bijeli okvir</option>
-                <option value="CrniOkvir">Crni okvir</option>
-                <option value="SvijtloSmeđiOkvir">Svijetlo smeđi</option>
-            </select>
-        </div>
+    <div class="productAdditionalFields">
+        <label for="imageSizeId"><?php _e('Veličina slike'); ?></label>
+        <select id="imageSizeId" name="imageSize" class="form-select" required="true" style="width: 100%">
+            <option value=""><?php _e('Odaberite veličinu slike'); ?></option>
+            <option selected="true" value="21x30">21 x 30 cm</option>
+            <option value="30x40">30 x 40 cm</option>
+            <option value="40x50">40 x 50 cm</option>
+            <option value="50x70">50 x 70 cm</option>
+        </select>
+    </div>
+    <div class="productAdditionalFields">
+        <label for="imageFrameId"><?php _e('Vrsta okvira'); ?></label>
+        <select id="imageFrameId" name="frameType" class="form-select" required="true" style="width: 100%">
+            <option value=""><?php _e('Odaberite vrstu okvira'); ?></option>
+            <option selected="" value="none">Bez okvira</option>
+            <option value="BijeliOkvir">Bijeli okvir</option>
+            <option value="CrniOkvir">Crni okvir</option>
+            <option value="SvijtloSmeđiOkvir">Svijetlo smeđi</option>
+        </select>
+    </div>
 
-        <input type="hidden" id="reguladPriceInput" value="0" name="reguladPriceInput">
-        <input type="hidden" id="calculatedPriceInput" value="0" name="calculatedPriceInput">
-        <input type="hidden" id="setTypeInput" value="<?php echo resolveProductSetType($product) ?>" name="setType">
+    <input type="hidden" id="reguladPriceInput" value="0" name="reguladPriceInput">
+    <input type="hidden" id="calculatedPriceInput" value="0" name="calculatedPriceInput">
+    <input type="hidden" id="setTypeInput" value="<?php echo resolveProductSetType($product) ?>" name="setType">
     <?php
 }
 
-function resolveProductSetType($product){
-    if(is_object_in_term($product->get_id(),'product_tag', 'setoftwo')){
+function resolveProductSetType($product) {
+    if (is_object_in_term($product->get_id(), 'product_tag', 'setoftwo')) {
         return 2;
-    }else if(is_object_in_term($product->get_id(),'product_tag', 'setofthree')){
+    } else if (is_object_in_term($product->get_id(), 'product_tag', 'setofthree')) {
         return 3;
     }
     return 1;
 }
 
-add_action( 'woocommerce_before_add_to_cart_button', 'iconic_output_engraving_field', 10 );
-
+add_action('woocommerce_before_add_to_cart_button', 'iconic_output_engraving_field', 10);
 
 /**
  * Add engraving text to cart item.
@@ -387,31 +399,31 @@ add_action( 'woocommerce_before_add_to_cart_button', 'iconic_output_engraving_fi
  *
  * @return array
  */
-function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $variation_id ) {
-	$customText = filter_input( INPUT_POST, 'customText' );
-	$imageSize = filter_input( INPUT_POST, 'imageSize' );
-	$frameType = filter_input( INPUT_POST, 'frameType' );
-	$setType = filter_input( INPUT_POST, 'setType' );
+function iconic_add_engraving_text_to_cart_item($cart_item_data, $product_id, $variation_id) {
+    $customText = filter_input(INPUT_POST, 'customText');
+    $imageSize = filter_input(INPUT_POST, 'imageSize');
+    $frameType = filter_input(INPUT_POST, 'frameType');
+    $setType = filter_input(INPUT_POST, 'setType');
 
-	if ( !empty( $customText )) {
-            $cart_item_data['customText'] = $customText;
-        }
-	if ( !empty( $imageSize )) {
-            $cart_item_data['imageSize'] = $imageSize;
-        }
-	if ( !empty( $frameType )) {
-            $cart_item_data['frameType'] = $frameType;
-        }
-	if ( !empty( $setType )) {
-            $cart_item_data['setType'] = $setType;
-        }
-        
+    if (!empty($customText)) {
+        $cart_item_data['customText'] = $customText;
+    }
+    if (!empty($imageSize)) {
+        $cart_item_data['imageSize'] = $imageSize;
+    }
+    if (!empty($frameType)) {
+        $cart_item_data['frameType'] = $frameType;
+    }
+    if (!empty($setType)) {
+        $cart_item_data['setType'] = $setType;
+    }
+
 //        $cart_item_data['customPrice'] = (float) 22;
 
-	return $cart_item_data;
+    return $cart_item_data;
 }
 
-add_filter( 'woocommerce_add_cart_item_data', 'iconic_add_engraving_text_to_cart_item', 10, 3 );
+add_filter('woocommerce_add_cart_item_data', 'iconic_add_engraving_text_to_cart_item', 10, 3);
 
 /**
  * Display engraving text in the cart.
@@ -438,7 +450,7 @@ function iconic_display_engraving_text_cart($item_data, $cart_item) {
             'display' => '',
         );
     }
-    
+
     if (!empty($cart_item['frameType'])) {
         $item_data[] = array(
             'key' => __('Vrsta okvira', 'iconic'),
@@ -450,19 +462,19 @@ function iconic_display_engraving_text_cart($item_data, $cart_item) {
     return $item_data;
 }
 
-function resolveFrameTypeValue($frameType){
-    
-    if($frameType == 'BijeliOkvir'){
-        return _("Bijeli okvir");    
-    }else if($frameType == 'CrniOkvir'){
-        return _("Crni okvir");    
-    }else if($frameType == 'SvijtloSmeđiOkvir'){
-        return _("Svijetlo smeđi okvir");    
+function resolveFrameTypeValue($frameType) {
+
+    if ($frameType == 'BijeliOkvir') {
+        return _("Bijeli okvir");
+    } else if ($frameType == 'CrniOkvir') {
+        return _("Crni okvir");
+    } else if ($frameType == 'SvijtloSmeđiOkvir') {
+        return _("Svijetlo smeđi okvir");
     }
-    return _("Bez okvira");    
+    return _("Bez okvira");
 }
 
-add_filter( 'woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 10, 2 );
+add_filter('woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 10, 2);
 
 /**
  * Add engraving text to order.
@@ -472,71 +484,71 @@ add_filter( 'woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 1
  * @param array                 $values
  * @param WC_Order              $order
  */
-function iconic_add_engraving_text_to_order_items( $item, $cart_item_key, $values, $order ) {
-	if ( !empty( $values['customText'] ) ) {
-            $item->add_meta_data( __( 'Tekst', 'iconic' ), $values['customText'] );
-	}
+function iconic_add_engraving_text_to_order_items($item, $cart_item_key, $values, $order) {
+    if (!empty($values['customText'])) {
+        $item->add_meta_data(__('Tekst', 'iconic'), $values['customText']);
+    }
 
-	if ( !empty( $values['imageSize'] ) ) {
-            $item->add_meta_data( __( 'Veličina slike', 'iconic' ), $values['imageSize'] );
-	}
-	
-        if ( !empty( $values['frameType'] ) ) {
-            $item->add_meta_data( __( 'Vrsta okvira', 'iconic' ), $values['frameType'] );
-	}
-        
-        if ( !empty( $values['setType'] ) ) {
-            $item->add_meta_data( __( 'Vrsta seta', 'iconic' ), $values['setType'] );
-	}
-}
+    if (!empty($values['imageSize'])) {
+        $item->add_meta_data(__('Veličina slike', 'iconic'), $values['imageSize']);
+    }
 
-add_action( 'woocommerce_checkout_create_order_line_item', 'iconic_add_engraving_text_to_order_items', 10, 4 );
+    if (!empty($values['frameType'])) {
+        $item->add_meta_data(__('Vrsta okvira', 'iconic'), $values['frameType']);
+    }
 
-add_action( 'woocommerce_before_calculate_totals', 'add_custom_price' );
-
-function add_custom_price( $cart_object ) {
-    foreach ( $cart_object->cart_contents as $key => $value ) {
-//        $value['data']->price = $custom_price;
-        // for WooCommerce version 3+ use: 
-        
-        $imageSize = $value['imageSize'];
-        $frameType  = $value['frameType'];
-        $setType  = $value['setType'];
-        $price = $value['data']->get_price();
-        
-         $customPrice = calculatePrice(null, $imageSize, $frameType, $setType, $price);
-         $value['data']->set_price($customPrice);
+    if (!empty($values['setType'])) {
+        $item->add_meta_data(__('Vrsta seta', 'iconic'), $values['setType']);
     }
 }
 
-add_filter('woocommerce_package_rates','hide_shipping_when_free_is_available',100,2);
+add_action('woocommerce_checkout_create_order_line_item', 'iconic_add_engraving_text_to_order_items', 10, 4);
 
-function test_overwrite_fedex($rates,$package) {
+add_action('woocommerce_before_calculate_totals', 'add_custom_price');
+
+function add_custom_price($cart_object) {
+    foreach ($cart_object->cart_contents as $key => $value) {
+//        $value['data']->price = $custom_price;
+        // for WooCommerce version 3+ use: 
+
+        $imageSize = $value['imageSize'];
+        $frameType = $value['frameType'];
+        $setType = $value['setType'];
+        $price = $value['data']->get_price();
+
+        $customPrice = calculatePrice(null, $imageSize, $frameType, $setType, $price);
+        $value['data']->set_price($customPrice);
+    }
+}
+
+add_filter('woocommerce_package_rates', 'hide_shipping_when_free_is_available', 100, 2);
+
+function test_overwrite_fedex($rates, $package) {
 
     $cart = WC()->cart;
 //    $cart_item_count = WC()->cart->get_cart_contents_count();
     $totalproductprice = 0;
-    
-    foreach ( $cart->get_cart() as $cart_item_key => $cart_item ) {
+
+    foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
         $product = $cart_item['data'];
         $productPrice2 = $cart_item['data']->get_price();
         $imageSize = $cart_item['imageSize'];
-        $frameType  = $cart_item['frameType'];
-        $setType  = $cart_item['setType'];
-        
+        $frameType = $cart_item['frameType'];
+        $setType = $cart_item['setType'];
+
         $product_id = $cart_item['product_id'];
         $quantity = $cart_item['quantity'];
 
         $totalproductprice = $totalproductprice + $productPrice2;
-}
+    }
     foreach ($rates as $rate) {
 
-        if($totalproductprice > 100 && $rate->label == 'Dostava'){
+        if ($totalproductprice > 100 && $rate->label == 'Dostava') {
             continue;
         }
-        
+
         //Set the price
-        if ( $rate->label == 'Dostava' ) {
+        if ($rate->label == 'Dostava') {
             $rate->cost = $totalproductprice;
         }
     }
@@ -544,37 +556,36 @@ function test_overwrite_fedex($rates,$package) {
     return $rates;
 }
 
+function hide_shipping_when_free_is_available($rates, $package) {
+    $new_rates = array();
+    foreach ($rates as $rate_id => $rate) {
+        // Only modify rates if free_shipping is present.
+        if ('free_shipping' === $rate->method_id) {
+            $new_rates[$rate_id] = $rate;
+            break;
+        }
+    }
 
-function hide_shipping_when_free_is_available( $rates, $package ) {
-	$new_rates = array();
-	foreach ( $rates as $rate_id => $rate ) {
-		// Only modify rates if free_shipping is present.
-		if ( 'free_shipping' === $rate->method_id ) {
-			$new_rates[ $rate_id ] = $rate;
-			break;
-		}
-	}
-
-	if ( ! empty( $new_rates ) ) {
-		//Save local pickup if it's present.
-		foreach ( $rates as $rate_id => $rate ) {
-			if ('local_pickup' === $rate->method_id ) {
-				$new_rates[ $rate_id ] = $rate;
-				break;
-			}
-		}
-		return $new_rates;
-	}
-        
-        
-        foreach ($rates as $rate) {
-        
-            if ( $rate->label == 'Dostava' ) {
-                $rate->cost = 99;
+    if (!empty($new_rates)) {
+        //Save local pickup if it's present.
+        foreach ($rates as $rate_id => $rate) {
+            if ('local_pickup' === $rate->method_id) {
+                $new_rates[$rate_id] = $rate;
+                break;
             }
         }
+        return $new_rates;
+    }
 
-	return $rates;
+
+    foreach ($rates as $rate) {
+
+        if ($rate->label == 'Dostava') {
+            $rate->cost = 99;
+        }
+    }
+
+    return $rates;
 }
 
 //--------------------add to cart new custom field --------------------------
