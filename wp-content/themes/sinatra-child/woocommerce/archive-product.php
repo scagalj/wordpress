@@ -30,7 +30,7 @@ do_action( 'woocommerce_before_main_content' );
 
 ?>
 <header class="woocommerce-products-header">
-    <div>
+    <div style="display: none;">
          <div class="container">
          <div class="row selectCategoriesGroup">
             <?php foreach ( fetchAllProductCategories() as $cat ) : ?>

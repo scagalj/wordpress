@@ -329,13 +329,15 @@ add_action('wp_enqueue_scripts', 'wpb_load_fa');
 
 //-----------------add to cart new custom field -------------------------
 
+
+// --- Dodana vrijednost u eurima za detalje pojedinog proizvoda
 function custom_single_product_price($product) {
 
     $result = "";
     $regular_price = (float) $product->get_regular_price(); // Regular price
     $sale_price = (float) $product->get_price(); // Active price (the "Sale price" when on-sale)
     $result .= '<span id="single_product_price"> ' . number_format($sale_price, 2, ',', '.') . '</span><span> ' . get_woocommerce_currency_symbol() . '</span>';
-    $result .= '<span id="single_product_price"> ( ' . number_format($sale_price / 7.53450, 2, ',', '.') . '</span><span> ' . "€" . ' ) </span>';
+    $result .= ' ( <span id="single_product_price_eur"> ' . number_format($sale_price / 7.53450, 2, ',', '.') . '</span><span> ' . "€" . ' ) </span>';
     return $result;
 }
 

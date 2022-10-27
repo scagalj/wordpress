@@ -17,7 +17,7 @@ msgstr ""
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-09 18:22+0000\n"
-"PO-Revision-Date: 2022-10-09 18:22+0000\n"
+"PO-Revision-Date: 2022-10-26 16:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: Hrvatski\n"
 "Language: hr\n"
@@ -30,6 +30,7 @@ msgid "%s Comment"
 msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: comments.php:34,
 #: inc/customizer/settings/class-sinatra-customizer-blog-page.php:131,
@@ -201,11 +202,12 @@ msgid "%s result found"
 msgid_plural "%s results found"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: inc/helpers.php:1492, template-parts/hero/hero-hover-slider.php:90,
 #: inc/customizer/settings/class-sinatra-customizer-hero.php:249
 msgid "Continue Reading"
-msgstr ""
+msgstr "Nastavite s čitanjem"
 
 #: inc/template-tags.php:341
 msgid "Menu"
@@ -352,7 +354,7 @@ msgstr ""
 
 #: woocommerce/product-searchform.php:29
 msgid "Search products&hellip;"
-msgstr ""
+msgstr "Pretraži proizvode&hellip;"
 
 #: woocommerce/product-searchform.php:30, woocommerce/product-searchform.php:30
 msgctxt "submit button"
@@ -798,6 +800,7 @@ msgid "Show %s Comment"
 msgid_plural "Show %s Comments"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: inc/core/class-sinatra-enqueue-scripts.php:123,
 #: template-parts/entry/entry-show-comments.php:16
@@ -1127,20 +1130,20 @@ msgstr ""
 
 #: woocommerce/cart/cart.php:30, woocommerce/cart/cart.php:50
 msgid "Product"
-msgstr ""
+msgstr "Proizvod"
 
 #: woocommerce/cart/cart.php:31, woocommerce/cart/cart.php:80,
 #: inc/compatibility/woocommerce/class-sinatra-customizer-woocommerce.php:162
 msgid "Price"
-msgstr ""
+msgstr "Cijena"
 
 #: woocommerce/cart/cart.php:32, woocommerce/cart/cart.php:86
 msgid "Quantity"
-msgstr ""
+msgstr "Količina"
 
 #: woocommerce/cart/cart.php:33
 msgid "Total"
-msgstr ""
+msgstr "Ukupno"
 
 #: woocommerce/cart/cart.php:75
 msgid "Available on backorder"
@@ -1166,19 +1169,19 @@ msgstr ""
 
 #: woocommerce/cart/cart.php:142
 msgid "Coupon code"
-msgstr ""
+msgstr "Promo kod"
 
 #: woocommerce/cart/cart.php:142, woocommerce/cart/cart.php:142
 msgid "Apply Coupon"
-msgstr ""
+msgstr "Dodaj kod"
 
 #: woocommerce/cart/cart.php:147
 msgid "Continue Shopping"
-msgstr ""
+msgstr "Nastavite s kupovinom"
 
 #: woocommerce/cart/cart.php:149, woocommerce/cart/cart.php:149
 msgid "Update Cart"
-msgstr ""
+msgstr "Ažurirajte košaricu"
 
 #: woocommerce/cart/cross-sells.php:28
 msgid "You may be interested in"
@@ -1186,7 +1189,7 @@ msgstr ""
 
 #: woocommerce/cart/proceed-to-checkout-button.php:29
 msgid "Proceed to Checkout"
-msgstr ""
+msgstr "Dovrši kupovinu"
 
 #: woocommerce/checkout/form-checkout.php:28
 msgid "You must be logged in to checkout."
@@ -1194,7 +1197,7 @@ msgstr ""
 
 #: woocommerce/checkout/form-checkout.php:50
 msgid "Your order"
-msgstr ""
+msgstr "Vaša narudžba"
 
 #: woocommerce/single-product/meta.php:33
 msgid "SKU:"
@@ -1209,18 +1212,21 @@ msgid "Category:"
 msgid_plural "Categories:"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: woocommerce/single-product/meta.php:39
 msgid "Tag:"
 msgid_plural "Tags:"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: woocommerce/single-product/rating.php:41
 msgid "%s review"
 msgid_plural "%s reviews"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: inc/admin/metabox/class-sinatra-meta-boxes.php:125,
 #: inc/customizer/settings/class-sinatra-customizer-sidebar.php:47
@@ -1347,6 +1353,7 @@ msgid "Share"
 msgid_plural "Shares"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: inc/compatibility/woocommerce/class-sinatra-customizer-widget-cart.php:34
 msgid "Cart"
@@ -1407,7 +1414,7 @@ msgstr ""
 
 #: inc/compatibility/woocommerce/class-sinatra-customizer-woocommerce.php:157
 msgid "Product details"
-msgstr ""
+msgstr "Detalji proizvoda"
 
 #: inc/compatibility/woocommerce/class-sinatra-customizer-woocommerce.php:158
 msgid "Set order and visibility for product details."
@@ -1567,11 +1574,11 @@ msgstr ""
 
 #: inc/compatibility/woocommerce/class-sinatra-woocommerce.php:821
 msgid "Payment"
-msgstr ""
+msgstr "Plaćanje"
 
 #: inc/compatibility/woocommerce/class-sinatra-woocommerce.php:836
 msgid "Shipping"
-msgstr ""
+msgstr "Dostava"
 
 #: inc/compatibility/woocommerce/woocommerce-functions.php:101
 msgid "Sold Out"
@@ -1585,8 +1592,9 @@ msgstr ""
 #: inc/compatibility/woocommerce/woocommerce-functions.php:267
 msgid "%s product"
 msgid_plural "%s products"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s proizvod"
+msgstr[1] "%s proizvoda"
+msgstr[2] "%s proizvoda"
 
 #: inc/customizer/controls/class-sinatra-customizer-control.php:56,
 #: inc/customizer/controls/typography/class-sinatra-customizer-control-typography.php:229
@@ -3235,7 +3243,7 @@ msgstr ""
 
 #: woocommerce/cart/header-widget/empty.php:14
 msgid "No products in the cart."
-msgstr ""
+msgstr "Nema proizvoda u košarici"
 
 #. translators: %s: the number of cart items;
 #: woocommerce/cart/header-widget/header.php:21
@@ -3243,6 +3251,7 @@ msgid "%s item"
 msgid_plural "%s items"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #. translators: %s is the cart subtotal.
 #: woocommerce/cart/header-widget/header.php:28

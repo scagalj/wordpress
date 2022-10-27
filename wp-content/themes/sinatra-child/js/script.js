@@ -30,6 +30,7 @@ jQuery(document).ready(function ($) {
     function displayPrice(calculatedPrice){
         $('#calculatedPriceInput').val(calculatedPrice);
         $('#single_product_price').html(number_format(parseFloat(calculatedPrice), 2, ',', '.'));
+        $('#single_product_price_eur').html(number_format(parseFloat(calculatedPrice / 7.53450), 2, ',', '.'));
     }
     
     var calculatedPrice2 = function(productId, imageSize, frameSize, setType, originalPrice) {

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-01-18T19:57:15+00:00\n"
-"PO-Revision-Date: 2022-10-09 18:19+0000\n"
+"PO-Revision-Date: 2022-10-27 08:17+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: woocommerce\n"
 "Language: hr\n"
@@ -840,7 +840,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/mini-cart-component-frontend.js:3
 #: packages/woocommerce-blocks/build/single-product-frontend.js:3
 msgid "%s (optional)"
-msgstr ""
+msgstr "%s (neobvezno)"
 
 #. translators: %s: human-readable time difference
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:256
@@ -1115,7 +1115,7 @@ msgstr ""
 #. translators: %s: Email address.
 #: includes/class-wc-checkout.php:807 includes/class-wc-form-handler.php:166
 msgid "%s is not a valid email address."
-msgstr ""
+msgstr "%s nije valjana email adresa."
 
 #. translators: %s: phone number
 #. translators: %s: Phone number.
@@ -1522,7 +1522,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/cart-blocks/order-summary-frontend.js:23
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:27
 msgid "(change address)"
-msgstr ""
+msgstr "(promijenite adresu)"
 
 #. translators: %s is product name
 #: packages/woocommerce-admin/src/API/Reports/Coupons/DataStore.php:168
@@ -2925,7 +2925,7 @@ msgstr ""
 
 #: includes/class-wc-form-handler.php:207
 msgid "Address changed successfully."
-msgstr ""
+msgstr "Adresa uspiješno promijenjena."
 
 #: includes/admin/class-wc-admin-profile.php:58
 #: includes/admin/class-wc-admin-profile.php:118
@@ -5493,7 +5493,7 @@ msgstr "Račun &amp; Dostava"
 
 #: includes/class-wc-privacy-exporters.php:257
 msgid "Billing Address"
-msgstr ""
+msgstr "Adresa za račun"
 
 #: templates/emails/email-addresses.php:29
 #: templates/emails/plain/email-addresses.php:20
@@ -5502,11 +5502,11 @@ msgstr ""
 #: templates/order/order-details-customer.php:31
 #: packages/woocommerce-blocks/build/checkout-blocks/billing-address-frontend.js:1
 msgid "Billing address"
-msgstr ""
+msgstr "Adresa za račun"
 
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:286
 msgid "billing address"
-msgstr ""
+msgstr "Adresa za račun"
 
 #: includes/class-wc-privacy-erasers.php:49
 #: includes/class-wc-privacy-exporters.php:188
@@ -5523,7 +5523,7 @@ msgstr ""
 #: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateCustomer.php:47
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/CheckoutSchema.php:92
 msgid "Billing address."
-msgstr ""
+msgstr "Adresa za račun."
 
 #: includes/class-wc-privacy-erasers.php:51
 #: includes/class-wc-privacy-exporters.php:190
@@ -5533,12 +5533,12 @@ msgstr ""
 #: includes/class-wc-privacy-erasers.php:48
 #: includes/class-wc-privacy-exporters.php:187
 msgid "Billing Company"
-msgstr ""
+msgstr "Poduzeće"
 
 #: includes/class-wc-privacy-erasers.php:54
 #: includes/class-wc-privacy-exporters.php:193
 msgid "Billing Country / Region"
-msgstr ""
+msgstr "Država"
 
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:376
 #: templates/checkout/form-billing.php:28
@@ -5547,7 +5547,7 @@ msgstr "Podaci za račun"
 
 #: templates/order/form-tracking.php:28
 msgid "Billing email"
-msgstr ""
+msgstr "Email za račun"
 
 #: includes/class-wc-privacy-erasers.php:46
 #: includes/class-wc-privacy-exporters.php:185
@@ -6733,7 +6733,7 @@ msgstr ""
 
 #: packages/woocommerce-admin/dist/chunks/activity-panels-help.js:1
 msgid "Cash on Delivery"
-msgstr ""
+msgstr "Plaćanje pouzećem"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:1605
 #: includes/gateways/cod/class-wc-gateway-cod.php:58
@@ -6742,7 +6742,7 @@ msgstr ""
 #: packages/woocommerce-blocks/assets/js/payment-method-extensions/payment-methods/cod/index.js:15
 #: packages/woocommerce-blocks/build/wc-payment-method-cod.js:1
 msgid "Cash on delivery"
-msgstr ""
+msgstr "Plaćanje pouzećem"
 
 #: i18n/states.php:550
 msgid "Castellón"
@@ -7075,7 +7075,7 @@ msgstr ""
 #. Translators: $s shipping destination.
 #: templates/cart/cart-shipping.php:52
 msgid "Change address"
-msgstr ""
+msgstr "Promijenite adresu"
 
 #: packages/woocommerce-blocks/build/wc-blocks-google-analytics.js:1
 msgid "Change Cart Item Quantity"
@@ -7276,7 +7276,7 @@ msgstr ""
 #: includes/class-wc-checkout.php:768
 msgctxt "checkout-validation"
 msgid "Shipping %s"
-msgstr ""
+msgstr "Dostava %s"
 
 #: i18n/states.php:1802
 msgid "Cherkasy Oblast"
@@ -7403,7 +7403,7 @@ msgstr ""
 #: includes/admin/class-wc-admin-settings.php:640
 #: includes/admin/class-wc-admin-setup-wizard.php:505
 msgid "Choose a country / region&hellip;"
-msgstr ""
+msgstr "Izaberite državu"
 
 #: includes/admin/importers/views/html-product-csv-import-form.php:23
 msgid "Choose a CSV file from your computer:"
@@ -7496,7 +7496,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/cart-blocks/order-summary-frontend.js:21
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:25
 msgid "Choose a shipping option"
-msgstr ""
+msgstr "Izaberite vrstu dostave"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:526
 msgid "Choose a state&hellip;"
@@ -7903,11 +7903,11 @@ msgstr ""
 
 #: templates/checkout/form-coupon.php:26
 msgid "Click here to enter your code"
-msgstr ""
+msgstr "Kliknite ovdje da unesete promo kod"
 
 #: templates/checkout/form-login.php:26
 msgid "Click here to login"
-msgstr ""
+msgstr "Kliknite ovdje da se prijavite"
 
 #: templates/emails/customer-reset-password.php:35
 msgid "Click here to reset your password"
@@ -8118,16 +8118,16 @@ msgstr ""
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:332
 #: packages/woocommerce-blocks/build/wc-settings.js:1
 msgid "Company"
-msgstr ""
+msgstr "Poduzeće"
 
 #: packages/woocommerce-blocks/build/wc-settings.js:1
 msgid "Company (optional)"
-msgstr ""
+msgstr "Poduzeće"
 
 #: includes/class-wc-countries.php:699
 #: includes/customizer/class-wc-shop-customizer.php:724
 msgid "Company name"
-msgstr ""
+msgstr "Ime poduzeća"
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-customers-v1-controller.php:738
 #: includes/rest-api/Controllers/Version1/class-wc-rest-customers-v1-controller.php:801
@@ -8140,7 +8140,7 @@ msgstr ""
 #: includes/rest-api/Controllers/Version3/class-wc-rest-customers-controller.php:165
 #: includes/rest-api/Controllers/Version3/class-wc-rest-customers-controller.php:228
 msgid "Company name."
-msgstr ""
+msgstr "Ime poduzeća"
 
 #: packages/woocommerce-admin/dist/chunks/0.js:1
 #: packages/woocommerce-admin/dist/chunks/analytics-report-categories.js:1
@@ -8804,16 +8804,16 @@ msgstr ""
 #: packages/woocommerce-admin/dist/chunks/homescreen.js:1
 #: packages/woocommerce-admin/dist/chunks/profile-wizard.js:1
 msgid "Country / Region"
-msgstr ""
+msgstr "Država"
 
 #: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:248
 #: packages/woocommerce-admin/src/API/Reports/Taxes/Controller.php:175
 msgid "Country / Region."
-msgstr ""
+msgstr "Država"
 
 #: includes/admin/settings/class-wc-settings-general.php:80
 msgid "Country / State"
-msgstr ""
+msgstr "Država"
 
 #: includes/admin/settings/class-wc-settings-tax.php:226
 msgid "Country code"
@@ -8841,11 +8841,11 @@ msgstr ""
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:344
 #: packages/woocommerce-blocks/build/wc-settings.js:1
 msgid "Country/Region"
-msgstr ""
+msgstr "Država"
 
 #: packages/woocommerce-blocks/build/wc-settings.js:1
 msgid "Country/Region (optional)"
-msgstr ""
+msgstr "Država (neobvezno)"
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/AbstractAddressSchema.php:72
 msgid "Country/Region code in ISO 3166-1 alpha-2 format."
@@ -10139,7 +10139,7 @@ msgstr ""
 #: packages/woocommerce-admin/dist/chunks/analytics-report-orders.js:1
 #: packages/woocommerce-admin/dist/chunks/analytics-report-revenue.js:1
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: packages/woocommerce-admin/dist/chunks/analytics-report-customers.js:1
 msgctxt "date"
@@ -10247,7 +10247,7 @@ msgstr ""
 
 #: templates/checkout/order-receipt.php:29 templates/checkout/thankyou.php:52
 msgid "Date:"
-msgstr ""
+msgstr "Datum:"
 
 #: i18n/states.php:1397
 msgid "Davao del Norte"
@@ -10389,23 +10389,23 @@ msgstr ""
 
 #: includes/customizer/class-wc-shop-customizer.php:475
 msgid "Default product sorting"
-msgstr ""
+msgstr "Zadano sortiranje proizvoda"
 
 #: includes/admin/class-wc-admin-attributes.php:268
 #: includes/admin/class-wc-admin-attributes.php:443
 msgid "Default sort order"
-msgstr ""
+msgstr "Zadano sortiranje narudžbi"
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:516
 msgid "Default sort order."
-msgstr ""
+msgstr "Zadano sortiranje narudžbi."
 
 #: includes/wc-template-functions.php:1450
 #: packages/woocommerce-blocks/assets/js/base/components/product-list/product-sort-select/index.js:22
 #: packages/woocommerce-blocks/build/all-products-frontend.js:9
 #: packages/woocommerce-blocks/build/all-products.js:27
 msgid "Default sorting"
-msgstr ""
+msgstr "Zadano sortiranje"
 
 #: includes/customizer/class-wc-shop-customizer.php:313
 #: includes/customizer/class-wc-shop-customizer.php:483
@@ -12150,7 +12150,7 @@ msgstr ""
 #: includes/wc-account-functions.php:67
 msgctxt "edit-address-slug"
 msgid "shipping"
-msgstr ""
+msgstr "dostava"
 
 #: packages/woocommerce-blocks/assets/js/blocks/price-filter/edit.js:52
 #: packages/woocommerce-blocks/build/price-filter.js:5
@@ -12259,13 +12259,13 @@ msgstr ""
 #: templates/single-product-reviews.php:95
 #: packages/woocommerce-admin/dist/chunks/analytics-report-customers.js:1
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: includes/class-wc-privacy-erasers.php:56
 #: includes/class-wc-privacy-exporters.php:195
 #: includes/class-wc-privacy-exporters.php:260
 msgid "Email Address"
-msgstr ""
+msgstr "Email Adresa"
 
 #: includes/admin/class-wc-admin-profile.php:90
 #: includes/admin/class-wc-admin-setup-wizard.php:2238
@@ -12276,15 +12276,15 @@ msgstr ""
 #: packages/woocommerce-admin/dist/chunks/profile-wizard.js:1
 #: packages/woocommerce-blocks/build/checkout-blocks/contact-information-frontend.js:1
 msgid "Email address"
-msgstr ""
+msgstr "Email adresa"
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-customers-v1-controller.php:408
 msgid "Email address is invalid."
-msgstr ""
+msgstr "Email adresa nije valjana"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:1450
 msgid "Email address to receive payments"
-msgstr ""
+msgstr "Email adresa za primit uplatu"
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-customers-v1-controller.php:773
 #: includes/rest-api/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1080
@@ -12292,7 +12292,7 @@ msgstr ""
 #: includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1142
 #: includes/rest-api/Controllers/Version3/class-wc-rest-customers-controller.php:200
 msgid "Email address."
-msgstr ""
+msgstr "Email adresa."
 
 #: includes/emails/class-wc-email-cancelled-order.php:178
 #: includes/emails/class-wc-email-customer-invoice.php:199
@@ -12353,11 +12353,11 @@ msgstr ""
 
 #: templates/checkout/thankyou.php:58
 msgid "Email:"
-msgstr ""
+msgstr "Email:"
 
 #: includes/admin/settings/class-wc-settings-emails.php:25
 msgid "Emails"
-msgstr ""
+msgstr "Emails"
 
 #: i18n/states.php:1333
 msgid "Emberá"
@@ -13823,27 +13823,27 @@ msgstr ""
 #: includes/widgets/class-wc-widget-layered-nav.php:76
 #: packages/woocommerce-admin/dist/chunks/analytics-report-stock.js:1
 msgid "Filter by"
-msgstr ""
+msgstr "Filtiraj po"
 
 #. translators: %s attribute name.
 #: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/edit.js:291
 #: packages/woocommerce-blocks/build/attribute-filter.js:33
 msgid "Filter by %s"
-msgstr ""
+msgstr "Filtriraj po %s"
 
 #: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/index.js:49
 #: packages/woocommerce-blocks/build/attribute-filter.js:35
 msgid "Filter by attribute"
-msgstr ""
+msgstr "Filtriraj po atributima"
 
 #: includes/admin/list-tables/class-wc-admin-list-table-products.php:330
 #: includes/admin/list-tables/class-wc-admin-list-table-products.php:338
 msgid "Filter by category"
-msgstr ""
+msgstr "Filtriraj po kategoriji"
 
 #: includes/admin/reports/class-wc-report-coupon-usage.php:177
 msgid "Filter by coupon"
-msgstr ""
+msgstr "Filtriraj po kuponima"
 
 #: includes/admin/reports/class-wc-report-downloads.php:173
 msgid "Filter by file"
@@ -13859,7 +13859,7 @@ msgstr ""
 
 #: includes/admin/reports/class-wc-report-downloads.php:183
 msgid "Filter by order"
-msgstr ""
+msgstr "Filtriraj po narudžbi"
 
 #: includes/widgets/class-wc-widget-price-filter.php:31
 #: packages/woocommerce-blocks/assets/js/blocks/price-filter/index.js:42
@@ -13869,7 +13869,7 @@ msgstr "Filtiraj po cijeni"
 
 #: includes/admin/reports/class-wc-report-downloads.php:158
 msgid "Filter by product"
-msgstr ""
+msgstr "Filtriraj po proizvodu"
 
 #: packages/woocommerce-blocks/assets/js/blocks/products-by-attribute/block.js:70
 #: packages/woocommerce-blocks/build/products-by-attribute.js:11
@@ -15351,7 +15351,7 @@ msgstr ""
 
 #: templates/checkout/form-coupon.php:26
 msgid "Have a coupon?"
-msgstr ""
+msgstr "Imate promo kod?"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:2271
 msgid "Have an existing store?"
@@ -16357,7 +16357,7 @@ msgstr ""
 
 #: templates/checkout/form-coupon.php:31
 msgid "If you have a coupon code, please apply it below."
-msgstr ""
+msgstr "Ako imate promo kod, unesite ga ispod."
 
 #: packages/woocommerce-admin/dist/app/index.js:2
 msgid ""
@@ -24389,11 +24389,11 @@ msgstr ""
 #: includes/class-wc-checkout.php:240
 #: packages/woocommerce-blocks/build/checkout-blocks/order-note-frontend.js:1
 msgid "Notes about your order, e.g. special notes for delivery."
-msgstr ""
+msgstr "Bilješke o vašoj narudžbi, npr. posebne napomene za dostavu."
 
 #: packages/woocommerce-blocks/build/checkout-blocks/order-note-frontend.js:1
 msgid "Notes about your order."
-msgstr ""
+msgstr "Bilješke o vašoj narudžbi."
 
 #: packages/woocommerce-admin/src/Notes/Notes.php:460
 msgid ""
@@ -25037,12 +25037,12 @@ msgstr ""
 #: includes/gateways/paypal/includes/settings-paypal.php:168
 #: includes/gateways/paypal/includes/settings-paypal.php:176
 msgid "Optional"
-msgstr ""
+msgstr "Neobavezan"
 
 #: includes/class-wc-frontend-scripts.php:536
 #: includes/wc-template-functions.php:2747
 msgid "optional"
-msgstr ""
+msgstr "neobvezno"
 
 #: packages/action-scheduler/classes/ActionScheduler_AdminView.php:146
 msgid "Optional action group."
@@ -25313,7 +25313,7 @@ msgstr ""
 
 #: templates/order/order-details.php:45
 msgid "Order details"
-msgstr ""
+msgstr "Detalji narudžbe"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-actions.php:101
 msgid "Order details manually sent to customer."
@@ -25409,27 +25409,27 @@ msgstr ""
 
 #: includes/class-wc-checkout.php:239
 msgid "Order notes"
-msgstr ""
+msgstr "Bilješka o narudžbi"
 
 #: includes/class-wc-privacy-exporters.php:251
 #: packages/woocommerce-admin/dist/chunks/analytics-report-downloads.js:1
 #: packages/woocommerce-admin/dist/chunks/analytics-report-orders.js:1
 msgid "Order Number"
-msgstr ""
+msgstr "Broj narudžbe"
 
 #: packages/woocommerce-admin/src/API/Reports/Downloads/Controller.php:217
 #: packages/woocommerce-admin/src/API/Reports/Orders/Controller.php:180
 msgid "Order Number."
-msgstr ""
+msgstr "Broj narudžbe."
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-orders-v1-controller.php:945
 #: includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php:959
 msgid "Order number."
-msgstr ""
+msgstr "Broj narudžbe."
 
 #: templates/checkout/order-receipt.php:25 templates/checkout/thankyou.php:47
 msgid "Order number:"
-msgstr ""
+msgstr "Broj narudžbe:"
 
 #: packages/woocommerce-admin/dist/chunks/analytics-report-downloads.js:1
 #: packages/woocommerce-admin/dist/chunks/dashboard-charts.js:1
@@ -26469,7 +26469,7 @@ msgstr ""
 #: includes/gateways/cod/class-wc-gateway-cod.php:86
 #: includes/gateways/cod/class-wc-gateway-cod.php:93
 msgid "Pay with cash upon delivery."
-msgstr ""
+msgstr "Platite gotovinom prilikom preuzimanja"
 
 #: includes/class-wc-privacy-exporters.php:305
 msgid "Payer first name"
@@ -26609,7 +26609,7 @@ msgstr ""
 
 #: packages/woocommerce-blocks/build/wc-blocks-google-analytics.js:1
 msgid "Payment Method"
-msgstr ""
+msgstr "Način plaćanja"
 
 #: includes/class-wc-form-handler.php:561
 msgid "Payment method deleted."
@@ -26648,7 +26648,7 @@ msgstr ""
 #: includes/class-wc-order.php:2058 templates/checkout/order-receipt.php:38
 #: templates/checkout/thankyou.php:70
 msgid "Payment method:"
-msgstr ""
+msgstr "Način plaćanja:"
 
 #: includes/admin/settings/class-wc-settings-advanced.php:283
 #: includes/admin/settings/class-wc-settings-payment-gateways.php:37
@@ -26657,7 +26657,7 @@ msgstr ""
 #: packages/woocommerce-blocks/assets/js/blocks/cart-checkout/payment-methods/no-payment-methods/index.js:36
 #: packages/woocommerce-blocks/build/checkout-blocks/payment-frontend.js:5
 msgid "Payment methods"
-msgstr ""
+msgstr "Način plaćanja"
 
 #. translators: 1: Amount, 2: Authorization ID, 3: Transaction ID
 #: includes/gateways/paypal/class-wc-gateway-paypal.php:428
@@ -27095,7 +27095,7 @@ msgstr ""
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/AbstractAddressSchema.php:78
 #: packages/woocommerce-blocks/build/checkout-blocks/billing-address--checkout-blocks/shipping-address-frontend.js:1
 msgid "Phone"
-msgstr ""
+msgstr "Mobitel"
 
 #: packages/woocommerce-blocks/build/checkout-blocks/billing-address--checkout-blocks/shipping-address-frontend.js:1
 msgid "Phone (optional)"
@@ -27227,11 +27227,11 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-blocks/actions-frontend.js:1
 #: packages/woocommerce-blocks/build/checkout-blocks/terms-frontend.js:1
 msgid "Place Order"
-msgstr ""
+msgstr "Kreirajte narudžbu"
 
 #: includes/wc-template-functions.php:2337
 msgid "Place order"
-msgstr ""
+msgstr "Kreirajte narudžbu"
 
 #: includes/legacy/api/v1/class-wc-api-products.php:459
 #: includes/legacy/api/v1/class-wc-api-products.php:460
@@ -27466,6 +27466,7 @@ msgstr ""
 msgid ""
 "Please read and accept the terms and conditions to proceed with your order."
 msgstr ""
+"Molimo pročitajte i prihvatite uvjete poslovanja da bi predali narudžbu."
 
 #: packages/woocommerce-blocks/build/checkout-blocks/terms-frontend.js:5
 msgid "Please read and accept the terms and conditions."
@@ -27720,7 +27721,7 @@ msgstr ""
 #: includes/class-wc-countries.php:843 includes/class-wc-countries.php:1264
 #: includes/class-wc-countries.php:1274 includes/class-wc-countries.php:1474
 msgid "Postcode"
-msgstr ""
+msgstr "Poštanski broj"
 
 #: includes/admin/class-wc-admin-profile.php:70
 #: includes/admin/class-wc-admin-profile.php:130
@@ -27733,11 +27734,11 @@ msgstr ""
 #: includes/class-wc-countries.php:748
 #: templates/cart/shipping-calculator.php:82
 msgid "Postcode / ZIP"
-msgstr ""
+msgstr "Poštanski broj"
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:650
 msgid "Postcode / ZIP."
-msgstr ""
+msgstr "Poštanski broj"
 
 #: includes/admin/settings/views/html-settings-tax.php:34
 msgid ""
@@ -28813,11 +28814,11 @@ msgstr ""
 #: packages/woocommerce-blocks/assets/js/blocks/product-search/index.js:50
 #: packages/woocommerce-blocks/build/product-search.js:1
 msgid "Product Search"
-msgstr ""
+msgstr "Pretraživanje proizvoda"
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:216
 msgid "Product search"
-msgstr ""
+msgstr "Pretraživanje proizvoda"
 
 #: packages/woocommerce-blocks/assets/js/editor-components/product-control/index.js:33
 #: packages/woocommerce-blocks/assets/js/editor-components/products-control/index.js:56
@@ -28827,7 +28828,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/reviews-by-product.js:1
 #: packages/woocommerce-blocks/build/single-product.js:1
 msgid "Product search results updated."
-msgstr ""
+msgstr "Rezultat pretraživanje proizvoda osvježen.  "
 
 #: includes/legacy/api/v3/class-wc-api-products.php:3214
 msgid "Product shipping class parent is invalid"
@@ -30574,7 +30575,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/all-products-frontend.js:9
 #: packages/woocommerce-blocks/build/all-products.js:27
 msgid "Reset Search"
-msgstr ""
+msgstr "Poništi pretraživanje"
 
 #: includes/rest-api/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php:177
 msgid "Resource cannot be created."
@@ -30710,7 +30711,7 @@ msgstr ""
 
 #: includes/class-wc-ajax.php:277 templates/cart/cart-empty.php:35
 msgid "Return to shop"
-msgstr ""
+msgstr "Povratak u trgovinu"
 
 #: packages/woocommerce-admin/dist/components/index.js:2
 #: packages/woocommerce-blocks/build/wc-blocks-vendors.js:9
@@ -31805,12 +31806,12 @@ msgstr ""
 #: packages/woocommerce-blocks/assets/js/blocks/product-search/index.js:82
 #: packages/woocommerce-blocks/build/product-search.js:1
 msgid "Search"
-msgstr ""
+msgstr "Pretraživanje"
 
 #. translators: %s: attribute name
 #: includes/class-wc-post-types.php:230
 msgid "Search %s"
-msgstr ""
+msgstr "Pretraživanje %s"
 
 #: packages/woocommerce-admin/dist/chunks/analytics-report-orders.js:1
 #: packages/woocommerce-admin/dist/chunks/analytics-report-variations.js:1
@@ -32014,29 +32015,29 @@ msgstr ""
 #: packages/woocommerce-admin/dist/chunks/analytics-report-variations.js:1
 #: packages/woocommerce-admin/dist/chunks/dashboard-charts.js:1
 msgid "Search products"
-msgstr ""
+msgstr "Pretraživanje proizvoda"
 
 #: templates/product-searchform.php:25
 msgid "Search products&hellip;"
-msgstr ""
+msgstr "Pretraživanje proizvoda&hellip;"
 
 #: packages/woocommerce-blocks/src/BlockTypes/ProductSearch.php:43
 #: packages/woocommerce-blocks/assets/js/blocks/product-search/index.js:37
 #: packages/woocommerce-blocks/build/product-search.js:1
 msgid "Search products…"
-msgstr ""
+msgstr "Pretraživanje proizvoda..."
 
 #. translators: search keyword.
 #. translators: %s: search query
 #: includes/admin/views/html-admin-page-addons.php:81
 #: packages/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:650
 msgid "Search results for \"%s\""
-msgstr ""
+msgstr "Pretraživanje proizvoda za \"%s\""
 
 #. translators: %s: search term
 #: includes/class-wc-breadcrumb.php:367
 msgid "Search results for &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "Pretraživanje proizvoda za &ldquo;%s&rdquo;"
 
 #: includes/wc-product-functions.php:839
 msgid "Search results only"
@@ -32080,7 +32081,7 @@ msgstr ""
 
 #: includes/admin/settings/views/html-settings-tax.php:14
 msgid "Search&hellip;"
-msgstr ""
+msgstr "Traži&hellip;"
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:58
 msgid "Second line of the address being shipped to."
@@ -32983,7 +32984,7 @@ msgstr ""
 
 #: templates/checkout/form-shipping.php:26
 msgid "Ship to a different address?"
-msgstr ""
+msgstr "Dostava na drugu adresu?"
 
 #: includes/admin/settings/class-wc-settings-general.php:154
 msgid "Ship to all countries"
@@ -33338,13 +33339,13 @@ msgstr ""
 #: includes/wc-cart-functions.php:231
 msgctxt "shipping packages"
 msgid "Shipping"
-msgstr ""
+msgstr "Dostava"
 
 #. translators: %d: shipping package number
 #: includes/wc-cart-functions.php:231
 msgctxt "shipping packages"
 msgid "Shipping %d"
-msgstr ""
+msgstr "Dostava %d"
 
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:789
 msgctxt "shipping packages"
@@ -33413,12 +33414,12 @@ msgstr ""
 #: packages/woocommerce-blocks/build/cart-blocks/order-summary-frontend.js:23
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:27
 msgid "Shipping to %s"
-msgstr ""
+msgstr "Dostava za %s"
 
 #. Translators: $s shipping destination.
 #: templates/cart/cart-shipping.php:51
 msgid "Shipping to %s."
-msgstr ""
+msgstr "Dostava za %s."
 
 #: includes/legacy/api/v2/class-wc-api-orders.php:1029
 #: includes/legacy/api/v3/class-wc-api-orders.php:1074
@@ -33785,9 +33786,9 @@ msgstr ""
 #: templates/loop/result-count.php:31
 msgid "Showing all %d result"
 msgid_plural "Showing all %d results"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pronađeno je %d rezultata"
+msgstr[1] "Pronađeno je %d rezultata"
+msgstr[2] "Pronađeno je %d rezultata"
 
 #: packages/woocommerce-blocks/assets/js/blocks/products/all-products/edit.js:97
 #: packages/woocommerce-blocks/build/all-products.js:29
@@ -33844,7 +33845,7 @@ msgstr ""
 
 #: templates/loop/result-count.php:28
 msgid "Showing the single result"
-msgstr ""
+msgstr "Pronađen je samo jedan rezultat"
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php:1969
 #: includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php:2428
@@ -34905,6 +34906,8 @@ msgid ""
 "Sorry, your session has expired. <a href=\"%s\" class=\"wc-backward\">Return "
 "to shop</a>"
 msgstr ""
+"Vaša sesija je istekla. <a href=\"%s\" class=\"wc-backward\">Povratak u "
+"trgovinu</a>"
 
 #: i18n/states.php:1438
 msgid "Sorsogon"
@@ -34912,25 +34915,25 @@ msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/AbstractTermsRoute.php:69
 msgid "Sort ascending or descending."
-msgstr ""
+msgstr "Sortiraj uzlazno ili silazno"
 
 #: packages/woocommerce-admin/dist/components/index.js:2
 #: packages/woocommerce-blocks/build/wc-blocks-vendors.js:11
 msgid "Sort by %s in ascending order"
-msgstr ""
+msgstr "Sortiraj po %s uzlazno"
 
 #: packages/woocommerce-admin/dist/components/index.js:2
 #: packages/woocommerce-blocks/build/wc-blocks-vendors.js:11
 msgid "Sort by %s in descending order"
-msgstr ""
+msgstr "Sortiraj po %s silazno"
 
 #: includes/wc-template-functions.php:1452
 msgid "Sort by average rating"
-msgstr ""
+msgstr "Sortiraj po prosjecnoj ocjeni"
 
 #: includes/wc-template-functions.php:1453
 msgid "Sort by latest"
-msgstr ""
+msgstr "Najnovije"
 
 #: includes/customizer/class-wc-shop-customizer.php:316
 #: includes/customizer/class-wc-shop-customizer.php:486
@@ -34939,7 +34942,7 @@ msgstr ""
 
 #: includes/wc-template-functions.php:1451
 msgid "Sort by popularity"
-msgstr ""
+msgstr "Najpopularnije"
 
 #: includes/customizer/class-wc-shop-customizer.php:317
 #: includes/customizer/class-wc-shop-customizer.php:487
@@ -34953,11 +34956,11 @@ msgstr "Soritaj prema cijeni (silazno)"
 
 #: includes/wc-template-functions.php:1455
 msgid "Sort by price: high to low"
-msgstr "Sortiraj prema cijeni: viša prema nižoj"
+msgstr "Najskuplje"
 
 #: includes/wc-template-functions.php:1454
 msgid "Sort by price: low to high"
-msgstr "Sortiraj prema cijeni: niža prema višoj"
+msgstr "Najjeftinije"
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:759
 msgid "Sort by tax class."
@@ -34969,7 +34972,7 @@ msgstr ""
 
 #: includes/admin/helper/views/html-main.php:44
 msgid "Sort by:"
-msgstr ""
+msgstr "Sortiraj po:"
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:128
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:290
@@ -35016,7 +35019,7 @@ msgstr ""
 #: includes/widgets/class-wc-widget-products.php:62
 msgctxt "Sorting order"
 msgid "Order"
-msgstr ""
+msgstr "Narudžba"
 
 #: i18n/states.php:470
 msgid "Souk Ahras"
@@ -35301,16 +35304,16 @@ msgstr ""
 #: templates/cart/shipping-calculator.php:55
 #: templates/cart/shipping-calculator.php:67
 msgid "State / County"
-msgstr ""
+msgstr "Županija"
 
 #: includes/admin/class-wc-admin-profile.php:82
 #: includes/admin/class-wc-admin-profile.php:142
 msgid "State / County or state code"
-msgstr ""
+msgstr "Županija"
 
 #: includes/class-wc-countries.php:1292
 msgid "State / Zone"
-msgstr ""
+msgstr "Županija"
 
 #: includes/admin/settings/class-wc-settings-tax.php:227
 #: includes/admin/settings/views/html-settings-tax.php:33
@@ -35330,11 +35333,11 @@ msgstr ""
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:352
 #: packages/woocommerce-blocks/build/wc-settings.js:1
 msgid "State/County"
-msgstr ""
+msgstr "Država"
 
 #: packages/woocommerce-blocks/build/wc-settings.js:1
 msgid "State/County (optional)"
-msgstr ""
+msgstr "Država (neobvezno)"
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/AbstractAddressSchema.php:60
 msgid "State/County code, or name of the state, county, province, or district."
@@ -35680,7 +35683,7 @@ msgstr ""
 
 #: includes/class-wc-countries.php:714
 msgid "Street address"
-msgstr ""
+msgstr "Adresa"
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/TermSchema.php:45
 msgid "String based identifier for the term."
@@ -35735,7 +35738,7 @@ msgstr ""
 #: templates/product-searchform.php:26
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "Traži"
 
 #. translators: %1$s: product name, %2$s: deactivate url
 #: includes/admin/helper/class-wc-helper.php:541
@@ -36904,7 +36907,7 @@ msgstr ""
 
 #: templates/checkout/thankyou.php:42 templates/checkout/thankyou.php:84
 msgid "Thank you. Your order has been received."
-msgstr ""
+msgstr "Hvala vam. Vaša narudžba je zaprimljena."
 
 #: includes/admin/class-wc-admin.php:242
 msgid "Thanks :)"
@@ -40347,19 +40350,19 @@ msgstr ""
 
 #: includes/class-wc-countries.php:732
 msgid "Town / City"
-msgstr ""
+msgstr "Grad"
 
 #: includes/class-wc-countries.php:1164
 msgid "Town / City / Post Office"
-msgstr ""
+msgstr "Grad"
 
 #: includes/class-wc-countries.php:1070
 msgid "Town / District"
-msgstr ""
+msgstr "Grad"
 
 #: includes/class-wc-countries.php:1451
 msgid "Town / Village"
-msgstr ""
+msgstr "Grad"
 
 #: i18n/states.php:985
 msgid "Toyama"
@@ -41148,12 +41151,12 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:25
 #: packages/woocommerce-blocks/build/wc-blocks-vendors.js:9
 msgid "Update"
-msgstr ""
+msgstr "Ažurirajte"
 
 #. translators: %s: attribute name
 #: includes/class-wc-post-types.php:240
 msgid "Update %s"
-msgstr ""
+msgstr "Ažurirajte %s"
 
 #: includes/admin/helper/class-wc-helper.php:364
 msgid "Update Available"
@@ -41182,7 +41185,7 @@ msgstr ""
 
 #: includes/admin/plugin-updates/views/html-notice-untested-extensions-modal.php:49
 msgid "Update now"
-msgstr ""
+msgstr "Ažurirajte"
 
 #. translators: 1: Minimum PHP version 2: Minimum WordPress version
 #: includes/admin/class-wc-admin-notices.php:427
@@ -41246,7 +41249,7 @@ msgstr ""
 
 #: includes/cli/class-wc-cli-rest-command.php:273
 msgid "Updated"
-msgstr ""
+msgstr "Ažurirano"
 
 #: includes/admin/settings/views/html-webhooks-edit.php:183
 msgid "Updated at"
@@ -44763,7 +44766,7 @@ msgstr[2] ""
 
 #: includes/wc-template-functions.php:3619
 msgid "Your cart is currently empty."
-msgstr ""
+msgstr "Vaša košarica je prazna."
 
 #: packages/woocommerce-blocks/assets/js/blocks/cart-checkout/checkout/empty-cart/index.js:23
 msgid "Your cart is empty!"
