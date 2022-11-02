@@ -17,7 +17,7 @@ msgstr ""
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-09 18:22+0000\n"
-"PO-Revision-Date: 2022-10-26 16:35+0000\n"
+"PO-Revision-Date: 2022-10-29 18:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: Hrvatski\n"
 "Language: hr\n"
@@ -359,7 +359,7 @@ msgstr "Pretraži proizvode&hellip;"
 #: woocommerce/product-searchform.php:30, woocommerce/product-searchform.php:30
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "Traži"
 
 #: inc/admin/class-sinatra-admin.php:137
 msgid "Install"
@@ -601,7 +601,7 @@ msgstr ""
 #: inc/admin/class-sinatra-dashboard.php:444,
 #: template-parts/entry/entry-about-author.php:33
 msgid "About"
-msgstr ""
+msgstr "O nama"
 
 #: inc/admin/class-sinatra-dashboard.php:479,
 #: inc/admin/class-sinatra-dashboard.php:510
@@ -1051,7 +1051,7 @@ msgstr ""
 
 #: template-parts/content/content-404.php:29
 msgid "Return to Home"
-msgstr ""
+msgstr "Vratite se na naslovnu"
 
 #: template-parts/content/content-none.php:62
 msgid ""
@@ -1151,17 +1151,17 @@ msgstr ""
 
 #: woocommerce/cart/cart.php:108
 msgid "Subtotal"
-msgstr ""
+msgstr "Ukupno"
 
 #: woocommerce/cart/cart.php:114,
 #: inc/customizer/controls/background/class-sinatra-customizer-control-background.php:125,
 #: inc/customizer/controls/design-options/class-sinatra-customizer-control-design-options.php:321
 msgid "Remove"
-msgstr ""
+msgstr "Uklonite"
 
 #: woocommerce/cart/cart.php:121
 msgid "Remove this item"
-msgstr ""
+msgstr "Uklonite ovaj proizvod"
 
 #: woocommerce/cart/cart.php:142
 msgid "Coupon:"
@@ -1193,7 +1193,7 @@ msgstr "Dovrši kupovinu"
 
 #: woocommerce/checkout/form-checkout.php:28
 msgid "You must be logged in to checkout."
-msgstr ""
+msgstr "Morate bit logirani da bi završili kupnju."
 
 #: woocommerce/checkout/form-checkout.php:50
 msgid "Your order"
@@ -1586,7 +1586,7 @@ msgstr ""
 
 #: inc/compatibility/woocommerce/woocommerce-functions.php:193
 msgid "Return to Shop"
-msgstr ""
+msgstr "Vratite se u trgovinu"
 
 #. translators: %s is category count
 #: inc/compatibility/woocommerce/woocommerce-functions.php:267
@@ -3228,18 +3228,18 @@ msgstr ""
 
 #: woocommerce/cart/header-widget/buttons.php:16
 msgid "View Cart"
-msgstr ""
+msgstr "Košarica"
 
 #: woocommerce/cart/header-widget/buttons.php:20
 msgid "Checkout"
-msgstr ""
+msgstr "Naplata"
 
 #. translators: %s is cart item title.
 #. translators: %s is cart item title.
 #: woocommerce/cart/header-widget/content.php:59,
 #: woocommerce/cart/header-widget/content.php:62
 msgid "Remove %s from cart"
-msgstr ""
+msgstr "Uklonite %s iz košarice"
 
 #: woocommerce/cart/header-widget/empty.php:14
 msgid "No products in the cart."
@@ -3249,14 +3249,14 @@ msgstr "Nema proizvoda u košarici"
 #: woocommerce/cart/header-widget/header.php:21
 msgid "%s item"
 msgid_plural "%s items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%s proizvod"
+msgstr[1] "%s proizvoda"
+msgstr[2] "%s proizvoda"
 
 #. translators: %s is the cart subtotal.
 #: woocommerce/cart/header-widget/header.php:28
 msgid "Subtotal: %s"
-msgstr ""
+msgstr "Ukupno: %s"
 
 #: inc/customizer/controls/alignment/class-sinatra-customizer-control-alignment.php:44,
 #: inc/customizer/controls/design-options/class-sinatra-customizer-control-design-options.php:117

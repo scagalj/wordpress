@@ -276,14 +276,14 @@
                 </a>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb-4">
-                <a href="<?php echo site_url() . '/kontakt' ?>">
+                <a href="<?php echo site_url() . '/galerija' ?>">
                     <div class="image-container">
                         <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba7.jpg" alt="Avatar" class="image" style="width:100%">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/vaseslikenaslovna1.jpg" alt="Avatar" class="image" style="width:100%">
                             <div class="verticalmiddle">
                                 <div class="headerButton">
                                     <button type="button" class="btn btn-lg btn-header">
-                                        Line art posteri
+                                        Vaši posteri
                                     </button>
                                 </div>
                             </div>

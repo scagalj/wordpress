@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-01-18T19:57:15+00:00\n"
-"PO-Revision-Date: 2022-10-27 08:17+0000\n"
+"PO-Revision-Date: 2022-10-29 18:51+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: woocommerce\n"
 "Language: hr\n"
@@ -6345,7 +6345,7 @@ msgstr ""
 
 #: templates/cart/shipping-calculator.php:24
 msgid "Calculate shipping"
-msgstr ""
+msgstr "Izračunajte poštarinu"
 
 #: includes/admin/settings/views/settings-tax.php:32
 msgid "Calculate tax based on"
@@ -7234,7 +7234,7 @@ msgstr ""
 #: includes/customizer/class-wc-shop-customizer.php:715
 #: includes/wc-template-functions.php:2186
 msgid "Checkout"
-msgstr ""
+msgstr "Naplata"
 
 #: includes/admin/settings/class-wc-settings-advanced.php:174
 msgid "Checkout endpoints"
@@ -12972,7 +12972,7 @@ msgstr ""
 
 #: templates/cart/cart-shipping.php:64
 msgid "Enter your address to view shipping options."
-msgstr ""
+msgstr "Unesite adresu da vidite opcije dostave."
 
 #. translators: %s: URL
 #: includes/gateways/paypal/includes/settings-paypal.php:128
@@ -14858,7 +14858,7 @@ msgstr ""
 
 #: packages/woocommerce-blocks/build/mini-cart-component-frontend.js:17
 msgid "Go to checkout"
-msgstr ""
+msgstr "Odite na završetak kupnje"
 
 #: packages/woocommerce-admin/dist/components/index.js:2
 #: packages/woocommerce-blocks/build/wc-blocks-vendors.js:9
@@ -15763,7 +15763,7 @@ msgstr ""
 #. translators: use local order of street name and house number.
 #: includes/class-wc-countries.php:716
 msgid "House number and street name"
-msgstr ""
+msgstr "Adresa i kućni broj"
 
 #: packages/woocommerce-admin/src/Features/CustomerEffortScoreTracks.php:401
 msgid "How easy was it to add a product attribute?"
@@ -24099,13 +24099,13 @@ msgstr ""
 #. Translators: $s shipping destination.
 #: templates/cart/cart-shipping.php:70
 msgid "No shipping options were found for %s."
-msgstr ""
+msgstr "Nema mogućnosti dostave %s."
 
 #: packages/woocommerce-blocks/assets/js/base/components/cart-checkout/totals/shipping/shipping-rate-selector.js:35
 #: packages/woocommerce-blocks/build/cart-blocks/order-summary-frontend.js:21
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:25
 msgid "No shipping options were found."
-msgstr ""
+msgstr "Dostava nije moguća."
 
 #: includes/class-wc-post-types.php:151
 msgid "No tags found"
@@ -26057,7 +26057,7 @@ msgstr ""
 #: includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:1182
 msgctxt "Page setting"
 msgid "Checkout"
-msgstr ""
+msgstr "Naplata"
 
 #: includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:1187
 msgctxt "Page setting"
@@ -26072,7 +26072,7 @@ msgstr ""
 #: includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:1192
 msgctxt "Page setting"
 msgid "Terms and conditions"
-msgstr ""
+msgstr "Uvjeti poslovanja"
 
 #: includes/admin/settings/class-wc-settings-advanced.php:40
 #: includes/admin/settings/class-wc-settings-advanced.php:57
@@ -26087,7 +26087,7 @@ msgstr ""
 #: includes/class-wc-install.php:600
 msgctxt "Page slug"
 msgid "checkout"
-msgstr ""
+msgstr "Naplata"
 
 #: includes/class-wc-install.php:605
 msgctxt "Page slug"
@@ -26112,7 +26112,7 @@ msgstr ""
 #: includes/class-wc-install.php:601
 msgctxt "Page title"
 msgid "Checkout"
-msgstr ""
+msgstr "Naplata"
 
 #: includes/class-wc-install.php:606
 msgctxt "Page title"
@@ -27470,7 +27470,7 @@ msgstr ""
 
 #: packages/woocommerce-blocks/build/checkout-blocks/terms-frontend.js:5
 msgid "Please read and accept the terms and conditions."
-msgstr ""
+msgstr "Molimo pročitajte i prihvatite uvjete poslovanja."
 
 #: includes/class-wc-privacy.php:127
 msgid ""
@@ -28122,7 +28122,7 @@ msgstr "Nastavite"
 
 #: packages/woocommerce-blocks/build/cart-blocks/checkout-button-frontend.js:1
 msgid "Proceed to Checkout"
-msgstr "Nastavite na Clagajnu"
+msgstr "Nastavite na Blagajnu"
 
 #: templates/cart/proceed-to-checkout-button.php:26
 msgid "Proceed to checkout"
@@ -33153,7 +33153,7 @@ msgstr "Cijena dostave"
 
 #: templates/cart/cart-shipping.php:62
 msgid "Shipping costs are calculated during checkout."
-msgstr ""
+msgstr "Iznos poštarine bit ce izračunat prilikom naplate."
 
 #: includes/shortcodes/class-wc-shortcode-cart.php:55
 msgid "Shipping costs updated."
@@ -33323,17 +33323,17 @@ msgstr[2] ""
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:25
 #: packages/woocommerce-blocks/build/checkout-blocks/shipping-methods-frontend.js:9
 msgid "Shipping options"
-msgstr ""
+msgstr "Opcije dostave"
 
 #: packages/woocommerce-blocks/build/checkout-blocks/shipping-methods-frontend.js:9
 msgid ""
 "Shipping options will be displayed here after entering your full shipping "
 "address."
-msgstr ""
+msgstr "Opcije dostave bit ce prikazane nakon što unesete adresu."
 
 #: templates/cart/cart-shipping.php:54
 msgid "Shipping options will be updated during checkout."
-msgstr ""
+msgstr "Iznos dostave će se ažurirati prilikom naplate."
 
 #. translators: %d: shipping package number
 #: includes/wc-cart-functions.php:231
@@ -36800,22 +36800,22 @@ msgstr ""
 #: packages/woocommerce-blocks/assets/js/blocks/cart-checkout/checkout/inner-blocks/checkout-terms-block/constants.js:12
 #: packages/woocommerce-blocks/build/checkout-blocks/terms-frontend.js:1
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Uvjeti poslovanja"
 
 #: includes/admin/settings/class-wc-settings-advanced.php:124
 #: includes/customizer/class-wc-shop-customizer.php:805
 #: includes/customizer/class-wc-shop-customizer.php:809
 #: includes/customizer/class-wc-shop-customizer.php:866
 msgid "Terms and conditions"
-msgstr ""
+msgstr "Uvjeti poslovanja"
 
 #: includes/wc-template-functions.php:942
 msgid "terms and conditions"
-msgstr ""
+msgstr "uvjeti poslovanja"
 
 #: includes/admin/class-wc-admin-post-types.php:879
 msgid "Terms and Conditions Page"
-msgstr ""
+msgstr "Stranica s uvjetima poslovanja"
 
 #: includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php:505
 msgid "Terms in the product visibility taxonomy."
@@ -38501,13 +38501,13 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-blocks/shipping-methods-frontend.js:9
 msgid ""
 "There are no shipping options available. Please check your shipping address."
-msgstr ""
+msgstr "Dostava nije moguća za unesenu adresu."
 
 #: templates/cart/cart-shipping.php:67
 msgid ""
 "There are no shipping options available. Please ensure that your address has "
 "been entered correctly, or contact us if you need any help."
-msgstr ""
+msgstr "Dostava nije moguća za unesenu adresu."
 
 #. translators: %s: product names.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:335
@@ -44621,7 +44621,7 @@ msgstr ""
 
 #: templates/checkout/form-checkout.php:26
 msgid "You must be logged in to checkout."
-msgstr ""
+msgstr "Morate bit logirani da bi završili s kupovinom."
 
 #: includes/class-wc-download-handler.php:180
 #: includes/class-wc-download-handler.php:183
