@@ -1,6 +1,0 @@
-2022-10-09T19:14:23+00:00 CRITICAL Label 'wp' already defined in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\index.php on line 309
-
-2022-10-09T19:16:05+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\index.php on line 308
-
-2022-10-09T19:16:52+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\index.php on line 309
-
