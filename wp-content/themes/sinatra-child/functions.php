@@ -1,17 +1,114 @@
 <?php
 require 'calculatePrice.php';
 
-//Child Theme Functions File
-add_action("wp_enqueue_scripts", "enqueue_wp_child_theme");
+//Obvezna polja za dodat
+//----TAGOVI:
+// SetOfOne - setofone
+// SetOfTwo - setoftwo
+// SetOfThree - setofthree
+// Custom - custom
 
 
 $TEST_CATEGORY_ID = 23;
 
 //$BESTSELLING_CATEGORY_ID = 1;
+//
+//<editor-fold defaultstate="collapsed" desc="Metode za funkcioniranje child teme kao i css/js/icons">
+//Child Theme Functions File
+add_action("wp_enqueue_scripts", "enqueue_wp_child_theme");
 
-function testMethod() {
-    return "<h2>TEST METHOD</h2>";
+function enqueue_wp_child_theme() {
+    if ((esc_attr(get_option("childthemewpdotcom_setting_x")) != "Yes")) {
+//This is your parent stylesheet you can choose to include or exclude this by going to your Child Theme Settings under the "Settings" in your WP Dashboard
+        wp_enqueue_style("parent-css", get_template_directory_uri() . "/style.css");
+    }
+
+//This is your child theme stylesheet = style.css
+    wp_enqueue_style("child-css", get_stylesheet_uri());
+
+//This is your child theme js file = js/script.js
+    wp_enqueue_script("child-js", get_stylesheet_directory_uri() . "/js/script.js", array("jquery"), "1.0", true);
 }
+
+// ChildThemWP.com Settings 
+function childthemewpdotcom_register_settings() {
+    register_setting("childthemewpdotcom_theme_options_group", "childthemewpdotcom_setting_x", "ctwp_callback");
+}
+
+add_action("admin_init", "childthemewpdotcom_register_settings");
+
+//ChildThemeWP.com Options Page
+function childthemewpdotcom_register_options_page() {
+    add_options_page("Child Theme Settings", "FramesForYou Theme", "manage_options", "childthemewpdotcom", "childthemewpdotcom_theme_options_page");
+}
+
+add_action("admin_menu", "childthemewpdotcom_register_options_page");
+
+function wpb_load_fa() {
+
+    wp_enqueue_style('wpb-fa', get_stylesheet_directory_uri() . '/fonts/css/fontello.css');
+    wp_enqueue_style('iconsPack', get_stylesheet_directory_uri() . '/fonts/css/iconspack.css');
+}
+
+add_action('wp_enqueue_scripts', 'wpb_load_fa');
+
+//</editor-fold>
+
+//<editor-fold defaultstate="collapsed" desc="Metode koje se trenutno nigdje ne koriste">
+//Trenutno se nigdje ne koristi
+function showBestSellingFrames() {
+    $result = "";
+    $query = new WP_Query(array('category_name' => 'Best selling'));
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $splitedTextArray = explode("[FEATUREDIMAGES]", get_the_content());
+            $postImages = $splitedTextArray[0];
+            $postContent = $splitedTextArray[1];
+            $result = $result . $postContent . ", ";
+        }
+    } else {
+        $result = "No posts";
+    }
+    /* Restore original Post Data */
+    wp_reset_postdata();
+    return $result;
+}
+
+function test_overwrite_fedex($rates, $package) {
+
+    $cart = WC()->cart;
+//    $cart_item_count = WC()->cart->get_cart_contents_count();
+    $totalproductprice = 0;
+
+    foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
+        $product = $cart_item['data'];
+        $productPrice2 = $cart_item['data']->get_price();
+        $imageSize = $cart_item['imageSize'];
+        $frameType = $cart_item['frameType'];
+        $setType = $cart_item['setType'];
+
+        $product_id = $cart_item['product_id'];
+        $quantity = $cart_item['quantity'];
+
+        $totalproductprice = $totalproductprice + $productPrice2;
+    }
+    foreach ($rates as $rate) {
+
+        if ($totalproductprice > 100 && $rate->label == 'Dostava') {
+            continue;
+        }
+
+        //Set the price
+        if ($rate->label == 'Dostava') {
+            $rate->cost = $totalproductprice;
+        }
+    }
+
+    return $rates;
+}
+
+// </editor-fold>
 
 function fetchAllProductCategories() {
 
@@ -37,17 +134,7 @@ function fetchAllProductCategories() {
     return $all_categories;
 }
 
-function logToConsole() {
-    $to = 'stjepan_12@hotmail.com';
-    $subject = 'The subject';
-    $body = 'The email body content';
-    $headers = array('Content-Type: text/html; charset=UTF-8');
-
-    wp_mail($to, $subject, $body, $headers);
-
-//return "<h1>Test</h1>";
-}
-
+//Na naslovnoj za prikaz liste proizvoda iz pojedine kategorije
 function fetchCategoriesForName() {
 
 //    'type' => 'external',
@@ -65,6 +152,7 @@ function fetchCategoriesForName() {
     return $result;
 }
 
+//Na stranici webshop (Svi proizvodi) prikazuje se ispod slike
 function woocommerce_template_loop_product_title() {
     echo '<div class="mt-2" style="text-align:center;">'
     . '<span style="color:black;" class="imageTitle">'
@@ -73,6 +161,7 @@ function woocommerce_template_loop_product_title() {
     . '</div>';
 }
 
+//Na stranici webshop (Svi proizvodi) glavni dio sa slikom
 function woocommerce_template_loop_product_link_open() {
     global $product;
 
@@ -81,6 +170,7 @@ function woocommerce_template_loop_product_link_open() {
     echo '<a href="' . esc_url($link) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">';
 }
 
+//Na stranici webshop (Svi proizvodi) dio povise title ispod slike
 function woocommerce_template_loop_add_to_cart($args = array()) {
     echo '';
 }
@@ -106,6 +196,7 @@ if (!function_exists('woocommerce_template_single_rating')) {
 
 }
 
+//Na stranici o pojedinog proizvoda, tabovi za Opis, Additional Info ...
 if (!function_exists('woocommerce_default_product_tabs')) {
 
     /**
@@ -149,8 +240,11 @@ if (!function_exists('woocommerce_default_product_tabs')) {
     }
 
 }
+//Metoda koja se poziva nalazi se u calculatePrice.php
+add_filter('wc_price', 'span_custom_prc', 10, 5);
 
-
+//Na stranici pojedinog proizoda, ispod cijene i opcija i dodavanja u kosaricu
+//pojedini podaci o meta data tipa Quantity, Categories ...
 if (!function_exists('woocommerce_template_single_meta')) {
 
     /**
@@ -162,6 +256,7 @@ if (!function_exists('woocommerce_template_single_meta')) {
 
 }
 
+//Na naslovoj za kreiranje pojedinog posta o proizvodu.
 function createPostContentFomPost($product) {
     $productPost = '<div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pr-2 imageContainerBestSellers">'
             . '<div class="imageContainerBestSellerImage shadowBox">';
@@ -203,6 +298,7 @@ function createPostContentFomPost($product) {
     return $productPost;
 }
 
+//Na naslovnoj za keneriranje kvadratica s popustom na proizvodu
 function generateProductDiscountHtml($product) {
     if ($product->is_on_sale()) {
         $regular_price = (float) $product->get_regular_price(); // Regular price
@@ -217,36 +313,7 @@ function generateProductDiscountHtml($product) {
     }
 }
 
-function generateProductPriceHtml($product) {
-    $result = '';
-
-    $regular_price = (float) $product->get_regular_price(); // Regular price
-    $sale_price = (float) $product->get_price(); // Active price (the "Sale price" when on-sale)
-    // "Saving Percentage" calculation and formatting
-    $precision = 0; // Max number of decimals
-    $saving_percentage = '-' . round(100 - ( $sale_price / $regular_price * 100 ), $precision) . ' %';
-
-    $result .= '<div class="imagePrice priceWrapper">';
-    if ($product->is_on_sale()) {
-        $result .= '<span class="regularPrice">' . number_format($sale_price, 2, ',', '.') . ' HRK' . '</span><span class="salePrice">' . number_format($regular_price, 2, ',', '.') . ' HRK' . '</span>';
-        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2, ',', '.') . ' €' . '</span><span class="salePrice priceInEur">' . number_format($regular_price / 7.53450, 2, ',', '.') . ' €' . '</span></span>';
-    } else {
-        $result .= '<span class="regularPrice">' . number_format($sale_price, 2, ',', '.') . ' HRK' . '</span>';
-        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format($sale_price / 7.53450, 2, ',', '.') . ' €' . '</span></span>';
-    }
-    $result .= '</div>';
-    return $result;
-}
-
-add_filter('wc_price', 'span_custom_prc', 10, 5);
-
-function span_custom_prc($return, $price, $args, $unformatted_price, $original_price) {
-
-    $formatedPriceInEUR = '<span class="woocommerce-Price-amount amount"><bdi> ( ' . number_format($original_price / 7.53450, 2, ',', '.') . ' €' . ' ) </bdi></span>';
-
-    return $return . $formatedPriceInEUR;
-}
-
+//Na naslovnoj za generiranje IMAGE taga za pojedini proizvod
 function createImageTagFromImageId($imageId, $widht = null, $height = null, $id = null, $class = null, $style = null) {
     $imageTag = '<img ';
 
@@ -270,84 +337,32 @@ function createImageTagFromImageId($imageId, $widht = null, $height = null, $id 
     return $imageTag;
 }
 
-function showBestSellingFrames() {
-    $result = "";
-    $query = new WP_Query(array('category_name' => 'Best selling'));
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-            $splitedTextArray = explode("[FEATUREDIMAGES]", get_the_content());
-            $postImages = $splitedTextArray[0];
-            $postContent = $splitedTextArray[1];
-            $result = $result . $postContent . ", ";
-        }
-    } else {
-        $result = "No posts";
-    }
-    /* Restore original Post Data */
-    wp_reset_postdata();
-    return $result;
-}
-
-function enqueue_wp_child_theme() {
-    if ((esc_attr(get_option("childthemewpdotcom_setting_x")) != "Yes")) {
-//This is your parent stylesheet you can choose to include or exclude this by going to your Child Theme Settings under the "Settings" in your WP Dashboard
-        wp_enqueue_style("parent-css", get_template_directory_uri() . "/style.css");
-    }
-
-//This is your child theme stylesheet = style.css
-    wp_enqueue_style("child-css", get_stylesheet_uri());
-
-//This is your child theme js file = js/script.js
-    wp_enqueue_script("child-js", get_stylesheet_directory_uri() . "/js/script.js", array("jquery"), "1.0", true);
-}
-
-// ChildThemWP.com Settings 
-function childthemewpdotcom_register_settings() {
-    register_setting("childthemewpdotcom_theme_options_group", "childthemewpdotcom_setting_x", "ctwp_callback");
-}
-
-add_action("admin_init", "childthemewpdotcom_register_settings");
-
-//ChildThemeWP.com Options Page
-function childthemewpdotcom_register_options_page() {
-    add_options_page("Child Theme Settings", "My Child Theme", "manage_options", "childthemewpdotcom", "childthemewpdotcom_theme_options_page");
-}
-
-add_action("admin_menu", "childthemewpdotcom_register_options_page");
-
-function wpb_load_fa() {
-
-    wp_enqueue_style('wpb-fa', get_stylesheet_directory_uri() . '/fonts/css/fontello.css');
-    wp_enqueue_style('iconsPack', get_stylesheet_directory_uri() . '/fonts/css/iconspack.css');
-}
-
-add_action('wp_enqueue_scripts', 'wpb_load_fa');
-
 //-----------------add to cart new custom field -------------------------
-// --- Dodana vrijednost u eurima za detalje pojedinog proizvoda
-function custom_single_product_price($product) {
-
-    $result = "";
-    $regular_price = (float) $product->get_regular_price(); // Regular price
-    $sale_price = (float) $product->get_price(); // Active price (the "Sale price" when on-sale)
-    $result .= '<span id="single_product_price"> ' . number_format($sale_price, 2, ',', '.') . '</span><span> ' . get_woocommerce_currency_symbol() . '</span>';
-    $result .= ' ( <span id="single_product_price_eur"> ' . number_format($sale_price / 7.53450, 2, ',', '.') . '</span><span> ' . "€" . ' ) </span>';
-    return $result;
-}
 
 /**
- * Output engraving field.
+ * Na stranici pojedinih proizvoda da se prikazu dodatne opcije za proizvod
+ * Kao sto su: željeni tekst za custom proizvod
+ * Velicina slike i vrsta okvira.
  */
-function iconic_output_engraving_field() {
+function generateSingleProductAdditionalOptions() {
     global $product;
 
-//    spremiti tagove proizvoda u input i izracun cijene za setove i ne 
+    /***
+     * Samo za odredene kategorije ovo treba prikazati
+     * tipa samo za Custom kategoriju treba prikazati "Željeni tekst"!
+     * Ostali nisu custombilni.
+     */
+
+    $isCustomProduct = isCustomProduct($product);
+    
+    if($isCustomProduct){
+
+        printf('<div class="productAdditionalFields">
+        <label for="customText">Željeni tekst</label>  
+        <input type="text" id="iconic-engraving" name="customText" placeholder="Unesite željeni tekst">
+        </div>');
+    }
     ?>
-    <div class="productAdditionalFields">
-        <label for="customText"><?php _e('Željeni tekst'); ?></label>
-        <input type="text" id="iconic-engraving" name="customText" placeholder="<?php _e('Unesite željeni tekst'); ?>">
-    </div>
 
     <div class="productAdditionalFields">
         <label for="imageSizeId"><?php _e('Veličina slike'); ?></label>
@@ -375,7 +390,14 @@ function iconic_output_engraving_field() {
     <input type="hidden" id="setTypeInput" value="<?php echo resolveProductSetType($product) ?>" name="setType">
     <?php
 }
+add_action('woocommerce_before_add_to_cart_button', 'generateSingleProductAdditionalOptions', 10);
 
+/***
+ * Izracunava broj postera za setove, 
+ * ako je setoftwo, 2 su postera
+ * ako je setofthree, 3 su postera
+ * inace je 1 poster odnosno nije set.
+ */
 function resolveProductSetType($product) {
     if (is_object_in_term($product->get_id(), 'product_tag', 'setoftwo')) {
         return 2;
@@ -385,10 +407,18 @@ function resolveProductSetType($product) {
     return 1;
 }
 
-add_action('woocommerce_before_add_to_cart_button', 'iconic_output_engraving_field', 10);
+/***
+ * Provjera je li proizvod custombilan,
+ * Moze li klijent unijeti svoj tekst.
+ */
+function isCustomProduct($product){
+    return is_object_in_term($product->get_id(), 'product_tag', 'custom');
+}
+
 
 /**
- * Add engraving text to cart item.
+ * Prilikom odabira proizoda spremi popratne odabrane opcije 
+ * u metadata od proizvoda u košarici
  *
  * @param array $cart_item_data
  * @param int   $product_id
@@ -396,7 +426,7 @@ add_action('woocommerce_before_add_to_cart_button', 'iconic_output_engraving_fie
  *
  * @return array
  */
-function iconic_add_engraving_text_to_cart_item($cart_item_data, $product_id, $variation_id) {
+function save_additional_options_to_cart_item($cart_item_data, $product_id, $variation_id) {
     $customText = filter_input(INPUT_POST, 'customText');
     $imageSize = filter_input(INPUT_POST, 'imageSize');
     $frameType = filter_input(INPUT_POST, 'frameType');
@@ -420,17 +450,18 @@ function iconic_add_engraving_text_to_cart_item($cart_item_data, $product_id, $v
     return $cart_item_data;
 }
 
-add_filter('woocommerce_add_cart_item_data', 'iconic_add_engraving_text_to_cart_item', 10, 3);
+add_filter('woocommerce_add_cart_item_data', 'save_additional_options_to_cart_item', 10, 3);
 
 /**
- * Display engraving text in the cart.
+ * Prikazivanje odabranih dodatnih opcija iz proizvoda
+ * Kao što su tekst, okvir, velicina okvira...
  *
  * @param array $item_data
  * @param array $cart_item
  *
  * @return array
  */
-function iconic_display_engraving_text_cart($item_data, $cart_item) {
+function display_additional_options_on_cart($item_data, $cart_item) {
     if (!empty($cart_item['customText'])) {
 
         $item_data[] = array(
@@ -458,7 +489,11 @@ function iconic_display_engraving_text_cart($item_data, $cart_item) {
 
     return $item_data;
 }
+add_filter('woocommerce_get_item_data', 'display_additional_options_on_cart', 10, 2);
 
+/***
+ * Resolvanje teksta za pojedini naziv okvira
+ */
 function resolveFrameTypeValue($frameType) {
 
     if ($frameType == 'BijeliOkvir') {
@@ -471,17 +506,16 @@ function resolveFrameTypeValue($frameType) {
     return _("Bez okvira");
 }
 
-add_filter('woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 10, 2);
-
 /**
- * Add engraving text to order.
+ * * Prilikom odabira proizoda spremi popratne odabrane opcije 
+ * u metadata od proizvoda u narudžbi.
  *
  * @param WC_Order_Item_Product $item
  * @param string                $cart_item_key
  * @param array                 $values
  * @param WC_Order              $order
  */
-function iconic_add_engraving_text_to_order_items($item, $cart_item_key, $values, $order) {
+function save_additional_options_to_order_items($item, $cart_item_key, $values, $order) {
     if (!empty($values['customText'])) {
         $item->add_meta_data(__('Tekst', 'iconic'), $values['customText']);
     }
@@ -499,10 +533,12 @@ function iconic_add_engraving_text_to_order_items($item, $cart_item_key, $values
     }
 }
 
-add_action('woocommerce_checkout_create_order_line_item', 'iconic_add_engraving_text_to_order_items', 10, 4);
+add_action('woocommerce_checkout_create_order_line_item', 'save_additional_options_to_order_items', 10, 4);
 
 add_action('woocommerce_before_calculate_totals', 'add_custom_price');
-
+/***
+ * Izracun cijene na stranici cart (Košarica), na listi svih dodanih proizvoda u košarici.
+ */
 function add_custom_price($cart_object) {
     foreach ($cart_object->cart_contents as $key => $value) {
 //        $value['data']->price = $custom_price;
@@ -520,38 +556,9 @@ function add_custom_price($cart_object) {
 
 add_filter('woocommerce_package_rates', 'hide_shipping_when_free_is_available', 100, 2);
 
-function test_overwrite_fedex($rates, $package) {
-
-    $cart = WC()->cart;
-//    $cart_item_count = WC()->cart->get_cart_contents_count();
-    $totalproductprice = 0;
-
-    foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
-        $product = $cart_item['data'];
-        $productPrice2 = $cart_item['data']->get_price();
-        $imageSize = $cart_item['imageSize'];
-        $frameType = $cart_item['frameType'];
-        $setType = $cart_item['setType'];
-
-        $product_id = $cart_item['product_id'];
-        $quantity = $cart_item['quantity'];
-
-        $totalproductprice = $totalproductprice + $productPrice2;
-    }
-    foreach ($rates as $rate) {
-
-        if ($totalproductprice > 100 && $rate->label == 'Dostava') {
-            continue;
-        }
-
-        //Set the price
-        if ($rate->label == 'Dostava') {
-            $rate->cost = $totalproductprice;
-        }
-    }
-
-    return $rates;
-}
+/***
+ * Izracunavanje cijene za dostavu!
+ */
 
 function hide_shipping_when_free_is_available($rates, $package) {
     $new_rates = array();
@@ -587,6 +594,8 @@ function hide_shipping_when_free_is_available($rates, $package) {
 
 //--------------------add to cart new custom field --------------------------
 
+
+// <editor-fold defaultstate="collapsed" desc="END POINTS">
 
 add_action('rest_api_init', function () {
     register_rest_route('myplugin/v1', '/author/(?P<id>\d+)', array(
@@ -662,16 +671,14 @@ function my_awesome_func(WP_REST_Request $request) {
     $attach_data = wp_generate_attachment_metadata($attach_id, $filename);
     wp_update_attachment_metadata($attach_id, $attach_data);
     $jsonReturn = array(
-        
     );
-    
-    header( 'Content-Type: text/html; charset=UTF-8' );
-    echo '<img src="'.wp_get_attachment_image_url($attach_id, 'full').'" >';
+
+    header('Content-Type: text/html; charset=UTF-8');
+    echo '<img src="' . wp_get_attachment_image_url($attach_id, 'full') . '" >';
     exit();
 
     // Insert the post into the database
 //    $tattoo_ID = wp_insert_post($my_post);
-
 //    if ($tattoo_ID) {
 //        add_post_meta($tattoo_ID, 'text', $_POST["tatooInput"]);
 //        add_post_meta($tattoo_ID, 'image', $_POST["imageData"]);
@@ -679,4 +686,7 @@ function my_awesome_func(WP_REST_Request $request) {
 //        exit(wp_redirect(get_permalink($tattoo_ID)));
 //    }
 }
+// </editor-fold>
+
+
 ?>

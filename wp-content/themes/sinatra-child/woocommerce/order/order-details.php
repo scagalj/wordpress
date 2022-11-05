@@ -58,8 +58,8 @@ if ($show_downloads) {
 
     function GetPaymentParams() {
         var paymentParams = new BarcodePayment.PaymentParams();
-
-        paymentParams.Iznos = '<?php echo number_format($order->get_total(), 2, ',', ''); ?>';
+//TODO: CIJENA U EUR I HRK Izbristi konverziju i promijeniti valutu u EUR!
+        paymentParams.Iznos = '<?php echo number_format($order->get_total() * 7.53450 , 2, ',', ''); ?>';
         paymentParams.ImePlatitelja = '';
         paymentParams.AdresaPlatitelja = ''
         paymentParams.SjedistePlatitelja = '';

@@ -15,6 +15,7 @@ BarcodePayment = new function() {
 	
 	var _delimiter = String.fromCharCode(0x0A);
 	var _header = "HRVHUB30";
+//	var _currency = "EUR" Prebaciti u eure  izbrisati konverziju u iznosu!
 	var _currency = "HRK"
 	var _paymentModelPrefix = "HR";
 	
