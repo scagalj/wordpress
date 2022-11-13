@@ -27,21 +27,9 @@ do_action('woocommerce_email_header', $email_heading, $email);
 
 <?php /* translators: %s: Customer first name */ ?>
 
-<p><?php printf(esc_html__('Hi %s,', 'woocommerce'), esc_html($order->get_billing_first_name())); ?></p>
+<p><?php printf(esc_html__('Pozdrav %s,', 'woocommerce'), esc_html($order->get_billing_first_name())); ?></p>
 <?php /* translators: %s: Order number */ ?>
-<p><?php printf(esc_html__('Narudžba #%s, je uspiješno zaprimljena!', 'woocommerce'), esc_html($order->get_order_number())); ?></p>
-<p>
-    Detalji o narudžbi i plaćanju nalaze se na sljedećem linku. 
-    Nakon zaprimljene uplate započet ćemo s izradom Vaše narudžbe. 
-</p>
-<p>
-    Uplatu možete izvržiti uplatom na IBAN ili skeniranjem bar koda. 
-</p>
-
-<a href="<?php echo $order->get_checkout_order_received_url() ?>" target="_blank">
-    <button class="order_payment_details" style="border-radius: 5px; border-color: #96588a; color: #96588a; font-size: 12pt; padding: 10px;font-weight: 700;width: 100%;
-    margin: 15px 0px 20px 0px;cursor: pointer; ">DETALJI O NARUDŽBI I PLAĆANJU</button>
-</a>
+<p><?php printf(esc_html__('Vaša uplata je uspiješno zaprimljena. Započeli smo s izradom Vaše narudžbe te ćete bit obaviješteni o isporuci Vaše narudžbe u najkraćem mogućem roku.', 'woocommerce')); ?></p>
 
 <?php
 /*

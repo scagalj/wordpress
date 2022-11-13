@@ -31,7 +31,11 @@
 
             <?php do_action('sinatra_before_masthead'); ?>
 
+            
             <header id="masthead" class="site-header" role="banner"<?php sinatra_masthead_atts(); ?><?php sinatra_schema_markup('header'); ?>>
+            <div class="freeShipping" style="width: 100%; text-align: center; color: #23282d; background-color: #f3f3f3; font-weight: 500;">
+                <span>BESPLATNA DOSTAVA IZNAD 50€</span>
+            </div>
                 <?php do_action('sinatra_header'); ?>
             </header><!-- #masthead .site-header -->
 

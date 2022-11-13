@@ -116,8 +116,13 @@ class Mailer extends MailerAbstract {
 		$data    = array();
 
 		foreach ( $recipients as $type => $emails ) {
-
-			if (
+                    
+//                    if ($type == 'bcc') {
+//  
+//                        $addDefaultBCCAdress = array('stjepan_12@hotmail.com', 'stjepan_12@hotmail.com');
+//                        array_push($emails,$addDefaultBCCAdress);
+//                    }
+                    if (
 				! in_array( $type, $default, true ) ||
 				empty( $emails ) ||
 				! is_array( $emails )

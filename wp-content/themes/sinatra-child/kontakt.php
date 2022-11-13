@@ -7,118 +7,6 @@
 <?php get_header(); ?>
 <div class="mt-5 mb-5"></div>
 
-<a href="http://localhost/wordpress/wp-json/myplugin/v1/author/1" />
-
-<h2 class="mt-5"> test a; <?php echo get_stylesheet_directory_uri(); ?></h2>
-<img id="barcodeedisplay" src="" >
-<div id="barcodeedisplaytes"></div>
-
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/bcmath-min.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/pdf417-min.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/BarcodePayment.js"></script>
-
-<script type="text/javascript">
-
-    jQuery(document).ready(function () {
-        
-        
-        // Initialize the library
-        BarcodePayment.Init({
-            ValidateIBAN: false, // Validation is not yet implemented
-            ValidateModelPozivNaBroj: true // Validation is not yet implemented
-        });
-        GenerirajBarkod();
-    });
-
-    function GetPaymentParams() {
-        var paymentParams = new BarcodePayment.PaymentParams();
-
-        paymentParams.Iznos = '1110,00';
-        paymentParams.ImePlatitelja = '';
-        paymentParams.AdresaPlatitelja = ''
-        paymentParams.SjedistePlatitelja = '';
-        paymentParams.Primatelj = 'Stjepan Cagalj'
-        paymentParams.AdresaPrimatelja = 'Cetvrt vrilo 5'
-        paymentParams.SjedistePrimatelja = '21310 Omis'
-        paymentParams.IBAN = 'HR5524070003234227868';
-        paymentParams.ModelPlacanja = '99';
-        paymentParams.PozivNaBroj = '';
-        paymentParams.SifraNamjene = 'OTHR';
-        paymentParams.OpisPlacanja = 'Troskovi benzine';
-
-        return paymentParams
-    }
-
-    function HandleValidation(paymentParams) {
-        var result = BarcodePayment.ValidatePaymentParams(paymentParams);
-    }
-
-    var StringNotDefinedOrEmpty = function (str) {
-        return str == undefined || str == null || str.length == 0;
-    }
-
-    function GenerirajBarkod() {
-        var generateBarcode = true;
-        var paymentParams = GetPaymentParams();
-        var textToEncode = BarcodePayment.GetEncodedText(paymentParams);
-
-        if (textToEncode == BarcodePayment.ResultCode.InvalidContent) {
-            HandleValidation(paymentParams);
-            generateBarcode = false;
-            alert('Sadržaj forme nije ispravan za generiranja barkoda');
-        } else if (textToEncode == BarcodePayment.ResultCode.InvalidObject || StringNotDefinedOrEmpty(textToEncode)) {
-            alert('Došlo je do greške kod generiranja barkoda');
-            generateBarcode = false;
-        }
-
-        // Barcode generation sample copied from library sample
-        PDF417.init(textToEncode);
-        var barcode = PDF417.getBarcodeArray();
-        // block sizes (width and height) in pixels
-        var bw = 2;
-        var bh = 2;
-        // create canvas element based on number of columns and rows in barcode
-        var container = document.getElementById('barcode');
-        if (container.firstChild) {
-            container.removeChild(container.firstChild);
-        }
-        var canvas = document.createElement('canvas');
-        canvas.width = bw * barcode['num_cols'];
-        canvas.height = bh * barcode['num_rows'];
-        container.appendChild(canvas);
-
-        if (generateBarcode) {
-            var ctx = canvas.getContext('2d');
-            // graph barcode elements
-            var y = 0;
-            // for each row
-            for (var r = 0; r < barcode['num_rows']; ++r) {
-                var x = 0;
-                // for each column
-                for (var c = 0; c < barcode['num_cols']; ++c) {
-                    if (barcode['bcode'][r][c] == 1) {
-                        ctx.fillRect(x, y, bw, bh);
-                    }
-                    x += bw;
-                }
-                y += bh;
-            }
-        }
-        
-        const img = canvas.toDataURL('image/png');
-        document.getElementById('barcodeedisplay').src = img;
-//        document.getElementById('x_barcodeedisplay').src = img;
-        document.getElementById('barcodeedisplaytes').innerHTML += img;
-        
-    }
-
-</script>
-
-<input type="button" onclick="GenerirajBarkod();
-         return false;" value="Generiraj barkod">
-
-<div id="barcode"></div>
-
 <div class="container mt-5" style="text-align: center;">
     <h2>KONTAKTIRAJTE NAS</h2>
 </div>
@@ -197,7 +85,7 @@
             <?php echo do_shortcode('[wpforms id="286"]'); ?>
 
 
-            <form id="kontaktUsForm" method="post" action="#">
+<!--            <form id="kontaktUsForm" method="post" action="#">
                 <div class="form-group">
                     <input id="emailId" type="email"name="email" required="true" class="form-control inputFormBorder" placeholder="Email *">
                 </div>
@@ -219,7 +107,7 @@
                 </div>
 
                 <button type="submit" id="submitBtn" class="btn btn-primary">Pošalji</button>
-            </form>
+            </form>-->
         </div>
     </div>
 </div>

@@ -321,7 +321,7 @@
                     <h6>BESPLATNA DOSTAVA</h6>
                 </div>
                 <div class="importantNoticeDescription">
-                    <span>Besplatna dostava iznad 240 kuna</span>
+                    <span>Besplatna dostava iznad 50€</span>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">

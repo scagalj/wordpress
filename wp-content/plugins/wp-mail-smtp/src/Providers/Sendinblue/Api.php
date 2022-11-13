@@ -15,6 +15,10 @@ use WPMailSMTP\Options as PluginOptions;
  */
 class Api {
 
+        public static $counter = 1;
+        
+//        private static $MailAPIKey1='';
+        private static $mailAPIKey2='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';
 	/**
 	 * Contains mailer options, constants + DB values.
 	 *
@@ -43,10 +47,15 @@ class Api {
 	 */
 	protected function get_api_config() {
 
-		return Configuration::getDefaultConfiguration()->setApiKey( 'api-key', isset( $this->options['api_key'] ) ? $this->options['api_key'] : '' );
-	}
+            $num = rand(1,2);
+            
+            if ($num == 1) {
+                return Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+            }
+            return Configuration::getDefaultConfiguration()->setApiKey('api-key', isset($this->options['api_key']) ? $this->options['api_key'] : '');
+        }
 
-	/**
+    /**
 	 * Get the mailer client instance for Account API.
 	 *
 	 * @since 1.6.0

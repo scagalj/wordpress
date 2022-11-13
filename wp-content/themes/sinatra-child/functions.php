@@ -597,6 +597,9 @@ function hide_shipping_when_free_is_available($rates, $package) {
 
 // <editor-fold defaultstate="collapsed" desc="END POINTS">
 
+//Poziv endpoint-a!
+//http://localhost/wordpress/wp-json/myplugin/v1/author/1
+
 add_action('rest_api_init', function () {
     register_rest_route('myplugin/v1', '/author/(?P<id>\d+)', array(
         'methods' => 'GET',
