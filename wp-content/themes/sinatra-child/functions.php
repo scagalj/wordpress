@@ -7,6 +7,17 @@ require 'calculatePrice.php';
 // SetOfTwo - setoftwo
 // SetOfThree - setofthree
 // Custom - custom
+//Izmejna u SMTP - MAIL SENDER za multiple sendiblue accounts: wp-content/plugins/wp-mail-smtp/src/Providers/Sendinblue/Api.php
+//private static $mailAPIKey2='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';
+//protected function get_api_config() {
+//
+//            $num = rand(1,2);
+//            
+//            if ($num == 1) {
+//                return Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+//            }
+//            return Configuration::getDefaultConfiguration()->setApiKey('api-key', isset($this->options['api_key']) ? $this->options['api_key'] : '');
+//        }
 
 
 $TEST_CATEGORY_ID = 23;
