@@ -47,11 +47,11 @@ class Api {
 	 */
 	protected function get_api_config() {
 
-            $num = rand(1,2);
+//            $num = rand(1,2);
             
-            if ($num == 1) {
-                return Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
-            }
+//            if ($num == 1) {
+//                return Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
+//            }
             return Configuration::getDefaultConfiguration()->setApiKey('api-key', isset($this->options['api_key']) ? $this->options['api_key'] : '');
         }
 

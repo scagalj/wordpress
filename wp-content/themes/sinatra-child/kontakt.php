@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<div class="mt-5 mb-5"></div>
 
 <div class="container mt-5" style="text-align: center;">
     <h2>KONTAKTIRAJTE NAS</h2>
