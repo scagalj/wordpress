@@ -174,9 +174,12 @@
             <div class="col-sm-12">
 
                 <p class="text-center">
-                    Mi znamo koliki luksuz i osvježenje svakom domu daju slike na zidovima, stoga smo za Vas pripremili širok i raznolik asortiman postera za Vaš dom. </p>
+                    Mi znamo koliki luksuz i osvježenje svakom domu daju slike na zidovima, stoga smo za Vas pripremili širok i raznolik asortiman postera za Vaš dom. 
+                </p>
                 <p class="text-center">
-                    Da bi se posteri uklopili u svaki prostor bio on veći ili manji pobrinuli smo se da u ponudi imamo čak 4 standardne dimenzije: 21x30cm, 30x40cm, 40x50cm, 50x70cm.</p>
+                    Da bi se posteri uklopili u svaki prostor bio on veći ili manji pobrinuli smo se da u ponudi imamo čak 4 standardne dimenzije: 21x30cm, 30x40cm, 40x50cm, 50x70cm.<br/>
+                    * Moguće slanjem poštom postere svih veličina bez okvira, postere dimenzija 21x30cm, 30x40cm šaljemo s okvirom. 
+                </p>
                 <p class="text-center">
                     Ono po čemu smo drugačiji su naši personalizirani posteri koje je moguće upotpuniti Vašim imenima, inicijalima, Vama bitnim datumima ili nekim citatom. Svi personalizirani posteri dizajniraju se individualno za Vas te ih prije tiska šaljemo Vama na uvid putem e-mail adrese.
                 </p>
@@ -338,7 +341,7 @@
                 </div>
             </div><div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-3 justify-content-center text-center">
                 <div class="importantNoticeIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16" style="margin-left: -30px;">
                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
                         <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                     </svg>

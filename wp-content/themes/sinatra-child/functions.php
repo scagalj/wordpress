@@ -9,6 +9,7 @@ require 'calculatePrice.php';
 // Custom - custom
 //Izmejna u SMTP - MAIL SENDER za multiple sendiblue accounts: wp-content/plugins/wp-mail-smtp/src/Providers/Sendinblue/Api.php
 //private static $mailAPIKey2='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';
+//C:\xampp\htdocs\wordpress\wp-content\plugins\wp-mail-smtp\src\Providers\Sendinblue\Api.php
 //protected function get_api_config() {
 //
 //            $num = rand(1,2);
@@ -375,6 +376,10 @@ function generateSingleProductAdditionalOptions() {
     }
     ?>
 
+<div id="outputTextId" class="outputText" style="font-style: italic; font-size: 10pt; font-weight: 500; padding-bottom: 10px;">
+        <span id="outputTextHolder"></span>
+    </div>
+
     <div class="productAdditionalFields">
         <label for="imageSizeId"><?php _e('Veličina slike'); ?></label>
         <select id="imageSizeId" name="imageSize" class="form-select" required="true" style="width: 100%">
@@ -385,7 +390,7 @@ function generateSingleProductAdditionalOptions() {
             <option value="50x70">50 x 70 cm</option>
         </select>
     </div>
-    <div class="productAdditionalFields">
+    <div id="imageFrameFieldsId" class="productAdditionalFields">
         <label for="imageFrameId"><?php _e('Vrsta okvira'); ?></label>
         <select id="imageFrameId" name="frameType" class="form-select" required="true" style="width: 100%">
             <option value=""><?php _e('Odaberite vrstu okvira'); ?></option>

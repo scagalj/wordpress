@@ -1,4 +1,0 @@
-2022-11-05T16:45:41+00:00 CRITICAL Cannot redeclare displayPrice() (previously declared in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\calculatePrice.php:4) in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\displayPrice.php on line 3
-
-2022-11-05T17:11:50+00:00 CRITICAL require(): Failed opening required 'displayPrice.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 3
-

@@ -320,10 +320,49 @@ h3.name{
 }
 
 
+@media screen and (max-width: 360px) {
+    .iconsPackHeader{
+        display: none !important;
+    }
+
+}
 @media screen and (max-width: 768px) {
+
+    .headerName{
+        padding-top: 100px !important;
+    }
+    .headerName h1{
+        font-size: 1.7rem !important;
+    }
+
     body .sinatra-hide-mobile-tablet {
         display: block !important;
     }
+}
+
+@media screen and (max-width: 960px) {
+    .site-main #secondary{
+        padding: 10px;
+    }
+    
+    #secondary{
+        padding-bottom: 0px !important;
+        margin-bottom:  0px !important;
+        
+    }
+
+}
+@media screen and (min-width: 960px) {
+    #sideBarHeader{
+        display: none;
+    }
+}
+
+#sideBarHeader{
+    padding: 5px 5px 5px 10px;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 /*#companyLogo{
@@ -970,6 +1009,10 @@ em{
     height: 420px;
     transition: .5s ease;
     backface-visibility: hidden;
+}
+
+.imageContainerBestSellers{
+    margin-bottom: 30px;
 }
 
 .imageContainerBestSellers, .imageContainerBestSellerImage{

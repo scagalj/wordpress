@@ -3,6 +3,41 @@ jQuery(document).ready(function ($) {
     console.log('ready');
 
 
+    function myFunction(x) {
+        $header = $('#sideBarHeader');
+        $content = $header.next();
+        if (x.matches) { // If media query matches
+            $content.hide();
+        } else {
+            $content.show();
+        }
+        $header.text(function () {
+            //change text based on condition
+            return $content.is(":visible") ? " ˇ Sakrij filtere" : " > Prikaži filtere";
+        });
+    }
+
+    var x = window.matchMedia("(max-width: 960px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+
+    $("#sideBarHeader").click(function () {
+
+        $header = $(this);
+        //getting the next element
+        $content = $header.next();
+        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+        $content.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of header based on visibility of content div
+            $header.text(function () {
+                //change text based on condition
+                return $content.is(":visible") ? " ˇ Sakrij filtere" : " > Prikaži filtere";
+            });
+        });
+
+    });
+
     var contactUs = function (email, ime, mobitel, naslov, poruka) {
         console.log('Uslo u contact us form;');
         $.ajax({
@@ -41,12 +76,31 @@ jQuery(document).ready(function ($) {
     });
 
     $('#imageSizeId').change(function () {
+
+        var imageSize = $('#imageSizeId').val();
+        updateFrameOnImageChange(imageSize);
+
         updatePriceOnSelectedValues();
     });
 
     $('#imageFrameId').change(function () {
         updatePriceOnSelectedValues();
     });
+
+    function updateFrameOnImageChange(imageSize) {
+        console.log('size: ' + imageSize);
+        if (imageSize === '40x50' || imageSize === '50x70') {
+            if ($("#imageFrameId").val() !== 'none') {
+                $('#outputTextHolder').html('* Odabrana veličina s okvirom nije moguća za slanje poštom.');
+                $('#outputTextId').show();
+            }
+            $("#imageFrameId").val("none").change();
+            $('#imageFrameFieldsId').hide();
+        } else {
+            $('#imageFrameFieldsId').show();
+            $('#outputTextId').hide();
+        }
+    }
 
     function updatePriceOnSelectedValues() {
 
@@ -69,7 +123,6 @@ jQuery(document).ready(function ($) {
     function displayPrice(calculatedPrice) {
         $('#calculatedPriceInput').val(calculatedPrice);
         $('#single_product_price').html(number_format(parseFloat(calculatedPrice), 2, ',', '.'));
-        alert('CAL PRICE: ' + calculatedPrice);
         $('#single_product_price_eur').html(number_format(parseFloat(calculatedPrice * 7.53450), 2, ',', '.'));
     }
 
