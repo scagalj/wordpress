@@ -8,13 +8,17 @@ jQuery(document).ready(function ($) {
         $content = $header.next();
         if (x.matches) { // If media query matches
             $content.hide();
+            $('#showFilters').show();
+            $('#hideFilters').hide();
         } else {
             $content.show();
+            $('#showFilters').hide();
+            $('#hideFilters').show();
         }
-        $header.text(function () {
+//        $header.text(function () {
             //change text based on condition
-            return $content.is(":visible") ? " ˇ Sakrij filtere" : " > Prikaži filtere";
-        });
+//            return $content.is(":visible") ? "Sakrij filtere" : "Prikaži filtere";
+//        });
     }
 
     var x = window.matchMedia("(max-width: 960px)")
@@ -30,11 +34,21 @@ jQuery(document).ready(function ($) {
         $content.slideToggle(500, function () {
             //execute this after slideToggle is done
             //change text of header based on visibility of content div
-            $header.text(function () {
+//            $header.text(function () {
                 //change text based on condition
-                return $content.is(":visible") ? " ˇ Sakrij filtere" : " > Prikaži filtere";
-            });
+//                return $content.is(":visible") ? "Sakrij filtere" : "Prikaži filtere";
+//            });
         });
+        if($("#showFilters").is(":visible")){
+           $("#showFilters").hide(); 
+           $("#hideFilters").show(); 
+        }else{
+           $("#showFilters").show(); 
+           $("#hideFilters").hide(); 
+        }
+        
+        
+        
 
     });
 

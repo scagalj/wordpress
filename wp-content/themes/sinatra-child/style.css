@@ -101,7 +101,7 @@ a:hover{
     margin-top: 10px;
 }
 .site-main{
-    margin-top: 45px;
+    margin-top: 65px;
 }
 
 #fullPageHeader{
@@ -345,10 +345,14 @@ h3.name{
         padding: 10px;
     }
     
+    #primary{
+        margin-top: 30px !important;
+    }
+    
     #secondary{
         padding-bottom: 0px !important;
         margin-bottom:  0px !important;
-        
+        margin-top: 60px !important;
     }
 
 }
@@ -1564,17 +1568,6 @@ body .doctorDescription{
     padding: 0px;
 }
 
-#primary{
-    margin-top: 90px !important;
-}
-
-@media screen and (max-width: 960px){
-
-    #primary {
-        margin-top: 80px !important;
-    }
-
-}
 /*------------------------*/
 
 /*------------IMPORTANT-NOTICE------------*/
