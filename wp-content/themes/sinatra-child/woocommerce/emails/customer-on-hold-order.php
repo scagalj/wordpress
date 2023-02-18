@@ -35,7 +35,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <a href="<?php echo $order->get_checkout_order_received_url() ?>" target="_blank">
     <button class="order_payment_details" style="border-radius: 5px; border-color: #96588a; color: #96588a; font-size: 12pt; padding: 10px;font-weight: 700;width: 100%;
-    margin: 15px 0px 50px 0px;cursor: pointer; ">DETALJI O NARUDŽBI I PLAĆANJU</button>
+    margin: 15px 0px 50px 0px;cursor: pointer; ">PREUZMITE OVDJE DETALJE O PLAĆANJU</button>
 </a>
 <span style="font-size: 10pt; margin-bottom: 15px;">*Da bi ubrzali proces izrade Vaše narudžbe možete nam poslat potvrdu o uplati na e-mail.</span>
 
@@ -67,7 +67,19 @@ if ( $additional_content ) {
 	echo wp_kses_post( wpautop( wptexturize( $additional_content ) ) );
 }
 
+?>
+
+
+<a href="<?php echo $order->get_checkout_order_received_url() ?>" target="_blank">
+    <button class="order_payment_details" style="border-radius: 5px; border-color: #96588a; color: #96588a; font-size: 12pt; padding: 10px;font-weight: 700;width: 100%;
+    margin: 15px 0px 50px 0px;cursor: pointer; ">PREUZMITE PODATKE ZA PLACANJE</button>
+</a>
+<span style="font-size: 10pt; margin-bottom: 15px;">*Da bi ubrzali proces izrade Vaše narudžbe možete nam poslat potvrdu o uplati na e-mail.</span>
+
+<?php
+
 /*
  * @hooked WC_Emails::email_footer() Output the email footer
  */
 do_action( 'woocommerce_email_footer', $email );
+?>
