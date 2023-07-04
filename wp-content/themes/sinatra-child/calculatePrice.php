@@ -112,10 +112,10 @@ function generateProductPriceHtml($product) {
     $result .= '<div class="imagePrice priceWrapper">';
     if ($product->is_on_sale()) {
         $result .= '<span class="regularPrice">' . number_format($sale_price, 2, ',', '.') . ' €' . '</span><span class="salePrice">' . number_format($regular_price, 2, ',', '.') . ' €' . '</span>';
-        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format(calculatePriceByCurrentyRate($sale_price), 2, ',', '.') . ' kn' . '</span><span class="salePrice priceInEur">' . number_format(calculatePriceByCurrentyRate($regular_price), 2, ',', '.') . ' kn' . '</span></span>';
+        $result .= '<span style="display:block; margin-top -5px;"><span class="regularPrice priceInEur">' . number_format(calculatePriceByCurrentyRate($sale_price), 2, ',', '.') . ' kn' . '</span><span class="salePrice priceInEur">' . number_format(calculatePriceByCurrentyRate($regular_price), 2, ',', '.') . ' kn' . '</span></span>';
     } else {
         $result .= '<span class="regularPrice">' . number_format($sale_price, 2, ',', '.') . ' €' . '</span>';
-        $result .= '<span style="display:block;"><span class="regularPrice priceInEur">' . number_format(calculatePriceByCurrentyRate($sale_price), 2, ',', '.') . ' kn' . '</span></span>';
+        $result .= '<span style="display:block; margin-top -5px;"><span class="regularPrice priceInEur">' . number_format(calculatePriceByCurrentyRate($sale_price), 2, ',', '.') . ' kn' . '</span></span>';
     }
     $result .= '</div>';
     return $result;

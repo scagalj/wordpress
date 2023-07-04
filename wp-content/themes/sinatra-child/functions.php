@@ -147,12 +147,12 @@ function fetchAllProductCategories() {
 }
 
 //Na naslovnoj za prikaz liste proizvoda iz pojedine kategorije
-function fetchCategoriesForName() {
+function fetchCategoriesForName($categoryName) {
 
 //    'type' => 'external',
     $args = array(
-        'limit' => 4,
-        'category' => array('Hoodies')
+        'limit' => 6,
+        'category' => array($categoryName)
     );
     $result = '';
     $products = wc_get_products($args);
@@ -270,7 +270,7 @@ if (!function_exists('woocommerce_template_single_meta')) {
 
 //Na naslovoj za kreiranje pojedinog posta o proizvodu.
 function createPostContentFomPost($product) {
-    $productPost = '<div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pr-2 imageContainerBestSellers">'
+    $productPost = '<div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 pr-2 imageContainerBestSellers">'
             . '<div class="imageContainerBestSellerImage shadowBox">';
 
     $images = $product->get_gallery_image_ids('view');
@@ -293,7 +293,7 @@ function createPostContentFomPost($product) {
 
     $productPost .= '<div class="imageDescription">'
             . generateProductDiscountHtml($product)
-            . '<div class="mt-2" style="text-align:center;">'
+            . '<div class="mt-2 mb-2" style="text-align:center; line-height:1.2;">'
             . '<a href="'
             . $productUrl . '">'
             . '<span style="color:black;" class="imageTitle">'

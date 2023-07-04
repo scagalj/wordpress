@@ -36,7 +36,7 @@
                         <div class="wp-block-column" style="flex-basis:100%">
                             <ul class="wp-block-page-list" style="list-style-type: none;">
                                 <li class="wp-block-pages-list__item">
-                                    <a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/uvjeti-poslovanja' ?>" >Svi proizvodi</a>
+                                    <a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/terms-and-conditions' ?>" >Svi proizvodi</a>
                                 </li>
                                 <li class="wp-block-pages-list__item">
                                     <a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/cesto-postavljena-pitanja' ?>" >Personalizirani posteri</a>
@@ -120,12 +120,12 @@
             </div>
 
             <div class="uvjetiPoslovanja mt-4" style="text-align: center; font-size: 10pt;">
-                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/uvjeti-poslovanja' ?>" >Opći uvjeti poslovanja</a></span>
-                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/uvjeti-poslovanja/#placanje' ?>" >Način plaćanja</a></span>
-                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/uvjeti-poslovanja/#dostava' ?>" >Dostava</a></span>
-                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/uvjeti-poslovanja/#reklamacije' ?>" >Reklamacija</a></span>
-                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/uvjeti-poslovanja/#pravilaprivatnosti' ?>" >Zaštita osobnih podataka</a></span>
-                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/uvjeti-poslovanja/#faq' ?>" >Često postavljanja pitanja</a></span>
+                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/terms-and-conditions' ?>" >Opći uvjeti poslovanja</a></span>
+                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/terms-and-conditions/#placanje' ?>" >Način plaćanja</a></span>
+                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/terms-and-conditions/#dostava' ?>" >Dostava</a></span>
+                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/terms-and-conditions/#reklamacije' ?>" >Reklamacija</a></span>
+                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/terms-and-conditions/#pravilaprivatnosti' ?>" >Zaštita osobnih podataka</a></span>
+                <span class="pr-4" ><a class="wp-block-pages-list__item__link" href="<?php echo site_url() . '/terms-and-conditions/#faq' ?>" >Često postavljanja pitanja</a></span>
             </div>
         </div>
 

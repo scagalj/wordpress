@@ -84,6 +84,10 @@ body h6{
     font-size: 0.8rem;  
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
+
 a:hover{
     color: white;
     text-decoration: none;
@@ -1021,7 +1025,7 @@ em{
 
 .imageContainerBestSellers, .imageContainerBestSellerImage{
     position: relative;
-    height: 410px;
+    height: 330px;
 }
 
 .imageContainerBestSellers:hover .imageTitle{
@@ -1040,7 +1044,7 @@ em{
     opacity: 1;
 }
 .imageDescription{
-    padding-top: 320px;
+    padding-top: 230px;
 }
 
 
@@ -1048,7 +1052,7 @@ em{
     display: block;
     position: absolute;
     width: 100%;
-    height: 320px;
+    height: 230px;
     backface-visibility: hidden;
 }
 .middle {
@@ -1063,6 +1067,15 @@ em{
 .verticalmiddle {
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.verticalbottommiddle {
+    position: absolute;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -1689,7 +1702,7 @@ span.onsale{
 }
 
 .shadowBox{
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.10);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.10);
 }

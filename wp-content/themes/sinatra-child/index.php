@@ -66,6 +66,39 @@
 <!---------------HEADER END--------------------->
 
 
+<div class="container-flud">
+    <div class="row" style="margin: 0px !important; padding: 0px !important;">
+        <div class="col-md-6 col-sm-12" style="padding: 0px !important;">
+            <a href="<?php echo site_url() . '/shop/?product_cat=frames' ?>">
+                <div style="height: 500px; background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/personaliziraniPosteriHeader.jpg); background-position: center; background-repeat: no-repeat; background-size: cover" >
+                    <div class="verticalbottommiddle">
+                        <div class="headerButton">
+                            <button type="button" class="btn btn-lg btn-header uppercase">
+                                Frames for you
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="padding: 0px !important;">
+            <a href="<?php echo site_url() . '/shop/?product_cat=muslin' ?>">
+                <div style="height: 500px; background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/personaliziraniPosteriHeader.jpg); background-position: center; background-repeat: no-repeat; background-size: cover" >
+                    <div class="verticalbottommiddle">
+                        <div class="headerButton">
+                            <button type="button" class="btn btn-lg btn-header uppercase">
+                                Muslin for you
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
 <!--<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CiHt53rM71n/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> 
         <a href="https://www.instagram.com/reel/CiHt53rM71n/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> 
             <div style=" display: flex; flex-direction: row; align-items: center;"> 
@@ -124,13 +157,13 @@
                     <div class="image-container">
                         <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba2.jpg" alt="Avatar" class="image" style="width:100%">
-                            <div class="middle">
-                                <div class="headerButton">
-                                    <button type="button" class="btn btn-lg btn-header">
-                                        NA POPUSTU
-                                    </button>
-                                </div>
+                        <div class="middle">
+                            <div class="headerButton">
+                                <button type="button" class="btn btn-lg btn-header">
+                                    NA POPUSTU
+                                </button>
                             </div>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -138,13 +171,13 @@
                 <a href="<?php echo site_url() . '/shop/?product_cat=personalized' ?>">
                     <div class="image-container">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/img10.jpg" alt="Avatar" class="image" style="width:100%">
-                            <div class="middle">
-                                <div class="headerButton">
-                                    <button type="button" class="btn btn-lg btn-header">
-                                        NOVO
-                                    </button>
-                                </div>
+                        <div class="middle">
+                            <div class="headerButton">
+                                <button type="button" class="btn btn-lg btn-header">
+                                    NOVO
+                                </button>
                             </div>
+                        </div>
                     </div>
 
                 </a>
@@ -153,14 +186,14 @@
                 <a href="<?php echo site_url() . '/shop/?product_cat=best-sellers' ?>">
                     <div class="image-container">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba1.jpg" alt="Avatar" class="image img-fluid" style="width:100%">
-                            <div class="middle">
-                                <div class="headerButton">
-                                    <a href="<?php echo site_url() ?>/kontakt" >
-                                        <button type="button" class="btn btn-lg btn-header" style="word-break: normal;">
-                                            NAJPRODAVANIJE
-                                        </button></a>
-                                </div>
+                        <div class="middle">
+                            <div class="headerButton">
+                                <a href="<?php echo site_url() ?>/kontakt" >
+                                    <button type="button" class="btn btn-lg btn-header" style="word-break: normal;">
+                                        NAJPRODAVANIJE
+                                    </button></a>
                             </div>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -173,6 +206,8 @@
         <div class="row justify-content-center">
             <div class="col-sm-12">
 
+                <h1 class="text-center"> Frames for you </h1>
+                
                 <p class="text-center">
                     Mi znamo koliki luksuz i osvježenje svakom domu daju slike na zidovima, stoga smo za Vas pripremili širok i raznolik asortiman postera za Vaš dom. 
                 </p>
@@ -188,13 +223,45 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="container mt-5 mb-5">
+    <div class="mt-5 mb-5">
 
-        <div class="row justify-content-center">
+<!--        <div class="row justify-content-center">
             <h4>NAŠI FAVORITI</h4>
-        </div>
+        </div>-->
         <div class="row justify-content-center mt-2">
-            <?php echo fetchCategoriesForName(); ?>
+            <?php echo fetchCategoriesForName('Hoodies'); ?>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="mt-5" style="padding-left: 15%; padding-right: 15%; font-size: 11pt;">
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+
+                <h1 class="text-center"> Muslin for you </h1>
+                
+                <p class="text-center">
+                    Mi znamo koliki luksuz i osvježenje svakom domu daju slike na zidovima, stoga smo za Vas pripremili širok i raznolik asortiman postera za Vaš dom. 
+                </p>
+                <p class="text-center">
+                    Da bi se posteri uklopili u svaki prostor bio on veći ili manji pobrinuli smo se da u ponudi imamo čak 4 standardne dimenzije: 21x30cm, 30x40cm, 40x50cm, 50x70cm.<br/>
+                    * Moguće slanjem poštom postere svih veličina bez okvira, postere dimenzija 21x30cm, 30x40cm šaljemo s okvirom. 
+                </p>
+                <p class="text-center">
+                    Ono po čemu smo drugačiji su naši personalizirani posteri koje je moguće upotpuniti Vašim imenima, inicijalima, Vama bitnim datumima ili nekim citatom. Svi personalizirani posteri dizajniraju se individualno za Vas te ih prije tiska šaljemo Vama na uvid putem e-mail adrese.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="mt-5 mb-5">
+
+<!--        <div class="row justify-content-center">
+            <h4>NAŠI FAVORITI</h4>
+        </div>-->
+        <div class="row justify-content-center mt-2">
+            <?php echo fetchCategoriesForName('baby-posters'); ?>
         </div>
     </div>
 </div>
@@ -267,13 +334,13 @@
                     <div class="image-container">
                         <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/proba6.jpg" alt="Avatar" class="image" style="width:100%">
-                            <div class="verticalmiddle">
-                                <div class="headerButton">
-                                    <button type="button" class="btn btn-lg btn-header">
-                                        Inspirativni posteri
-                                    </button>
-                                </div>
+                        <div class="verticalmiddle">
+                            <div class="headerButton">
+                                <button type="button" class="btn btn-lg btn-header">
+                                    Inspirativni posteri
+                                </button>
                             </div>
+                        </div>
                     </div>
 
                 </a>
@@ -283,13 +350,13 @@
                     <div class="image-container">
                         <!--<img src="<?php echo bloginfo('template_url'); ?>/images/download5.jpg" alt="Avatar" class="image" style="width:100%">-->
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/vaseslikenaslovna1.jpg" alt="Avatar" class="image" style="width:100%">
-                            <div class="verticalmiddle">
-                                <div class="headerButton">
-                                    <button type="button" class="btn btn-lg btn-header">
-                                        Vaši posteri
-                                    </button>
-                                </div>
+                        <div class="verticalmiddle">
+                            <div class="headerButton">
+                                <button type="button" class="btn btn-lg btn-header">
+                                    Vaši posteri
+                                </button>
                             </div>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -303,8 +370,8 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
                 <div class="importantNoticeIcon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-card-image" viewBox="0 0 16 16">
-                        <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                        <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z"/>
+                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                    <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z"/>
                     </svg>
                 </div>
                 <div class="importantNoticeTitle">
@@ -317,7 +384,7 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
                 <div class="importantNoticeIcon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
-                        <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                    <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
                     </svg>
                 </div>
                 <div class="importantNoticeTitle">
@@ -330,7 +397,7 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 pr-5 pb-3 justify-content-center text-center">
                 <div class="importantNoticeIcon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
                     </svg>
                 </div>
                 <div class="importantNoticeTitle">
@@ -342,8 +409,8 @@
             </div><div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-3 justify-content-center text-center">
                 <div class="importantNoticeIcon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16" style="margin-left: -30px;">
-                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
-                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                     </svg>
                 </div>
                 <div class="importantNoticeTitle">
