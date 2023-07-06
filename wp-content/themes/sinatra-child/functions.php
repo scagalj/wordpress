@@ -633,7 +633,7 @@ function my_awesome_func2($request) {
     
     // Perform necessary processing using the author ID
     
-    $customPrice = calculatePrice($productId, $imageSize, $frameType, $setType, $price);
+    $customPrice = calculatePrice($productId, $imageSize, $frameSize, $setType, $originalPrice);
     
     // Generate the response
     $response = array(
