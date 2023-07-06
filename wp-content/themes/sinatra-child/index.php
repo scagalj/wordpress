@@ -201,19 +201,37 @@
     </div>
 </div>
 
+<style>
+    .horizontallist li{
+        float: left;
+        font-weight: 500;
+        margin-left: 30px;
+    }
+
+</style>
+
 <div class="container">
-    <div class=" mt-5" style="padding-left: 15%; padding-right: 15%; font-size: 11pt;">
+    <div class=" mt-5" style="font-size: 13pt;">
         <div class="row justify-content-center">
             <div class="col-sm-12">
 
                 <h1 class="text-center"> Frames for you </h1>
-                
+
                 <p class="text-center">
                     Mi znamo koliki luksuz i osvježenje svakom domu daju slike na zidovima, stoga smo za Vas pripremili širok i raznolik asortiman postera za Vaš dom. 
                 </p>
                 <p class="text-center">
-                    Da bi se posteri uklopili u svaki prostor bio on veći ili manji pobrinuli smo se da u ponudi imamo čak 4 standardne dimenzije: 21x30cm, 30x40cm, 40x50cm, 50x70cm.<br/>
-                    * Moguće slanjem poštom postere svih veličina bez okvira, postere dimenzija 21x30cm, 30x40cm šaljemo s okvirom. 
+                    Da bi se posteri uklopili u svaki prostor bio on veći ili manji pobrinuli smo se da u ponudi imamo čak 4 standardne dimenzije:
+                </p>
+                <p class="text-center" style="font-weight: 500;">
+                        21x30cm;  
+                        30x40cm; 
+                        40x50cm; 
+                        50x70cm;
+                    </ul>
+                </p>
+                <p class="text-center">
+                * Moguće slanjem poštom postere svih veličina bez okvira, postere dimenzija 21x30cm, 30x40cm šaljemo s okvirom. 
                 </p>
                 <p class="text-center">
                     Ono po čemu smo drugačiji su naši personalizirani posteri koje je moguće upotpuniti Vašim imenima, inicijalima, Vama bitnim datumima ili nekim citatom. Svi personalizirani posteri dizajniraju se individualno za Vas te ih prije tiska šaljemo Vama na uvid putem e-mail adrese.
@@ -225,31 +243,35 @@
 <div class="container-fluid">
     <div class="mt-5 mb-5">
 
-<!--        <div class="row justify-content-center">
-            <h4>NAŠI FAVORITI</h4>
-        </div>-->
+        <!--        <div class="row justify-content-center">
+                    <h4>NAŠI FAVORITI</h4>
+                </div>-->
         <div class="row justify-content-center mt-2">
             <?php echo fetchCategoriesForName('Hoodies'); ?>
         </div>
     </div>
 </div>
 <div class="container">
-    <div class="mt-5" style="padding-left: 15%; padding-right: 15%; font-size: 11pt;">
+    <div class="mt-5 pr-2 pl-2" style="font-size: 13pt;">
         <div class="row justify-content-center">
             <div class="col-sm-12">
 
                 <h1 class="text-center"> Muslin for you </h1>
-                
+
                 <p class="text-center">
-                    Mi znamo koliki luksuz i osvježenje svakom domu daju slike na zidovima, stoga smo za Vas pripremili širok i raznolik asortiman postera za Vaš dom. 
+                    Muslin je visokokvalitetna pamučna tkanina koja pruža neodoljivo mekan i prozračan osjećaj. Posebno je pogodna za bebe i malu djecu zbog svoje mekoće i prozračnosti. Muslin ima izvanrednu moć upijanja različitih tekućina te izvrsnu sposobnost reguliranja tjelesne temperature. Stoga je idealan odabir za odjeću odraslih osoba, ali i za kućni tekstil poput posteljine.
                 </p>
                 <p class="text-center">
-                    Da bi se posteri uklopili u svaki prostor bio on veći ili manji pobrinuli smo se da u ponudi imamo čak 4 standardne dimenzije: 21x30cm, 30x40cm, 40x50cm, 50x70cm.<br/>
-                    * Moguće slanjem poštom postere svih veličina bez okvira, postere dimenzija 21x30cm, 30x40cm šaljemo s okvirom. 
+                    Naša ponuda obuhvaća širok izbor proizvoda koji su namijenjeni svakodnevnim potrebama. U našem asortimanu možete pronaći sljedeće proizvode:
                 </p>
-                <p class="text-center">
-                    Ono po čemu smo drugačiji su naši personalizirani posteri koje je moguće upotpuniti Vašim imenima, inicijalima, Vama bitnim datumima ili nekim citatom. Svi personalizirani posteri dizajniraju se individualno za Vas te ih prije tiska šaljemo Vama na uvid putem e-mail adrese.
-                </p>
+                <div class="text-center horizontallist" >
+                    <ul> <li>3u1 Muslin prekrivac za bebe i djecu</li> 
+                        <li> Tetra pelene za bebe</li>
+                        <li> Trakice za kosu</li>
+                        <li> Prekrivači za bračne krevete</li>
+                        <li> Gumice za kosu za djecu i odrasle</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -257,9 +279,9 @@
 <div class="container-fluid">
     <div class="mt-5 mb-5">
 
-<!--        <div class="row justify-content-center">
-            <h4>NAŠI FAVORITI</h4>
-        </div>-->
+        <!--        <div class="row justify-content-center">
+                    <h4>NAŠI FAVORITI</h4>
+                </div>-->
         <div class="row justify-content-center mt-2">
             <?php echo fetchCategoriesForName('baby-posters'); ?>
         </div>
