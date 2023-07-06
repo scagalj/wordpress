@@ -1,8 +1,6 @@
 /* Javascript */
 jQuery(document).ready(function ($) {
     console.log('ready');
-
-
     function myFunction(x) {
         $header = $('#sideBarHeader');
         $content = $header.next();
@@ -15,10 +13,10 @@ jQuery(document).ready(function ($) {
             $('#showFilters').hide();
             $('#hideFilters').show();
         }
-//        $header.text(function () {
-            //change text based on condition
-//            return $content.is(":visible") ? "Sakrij filtere" : "Prikaži filtere";
-//        });
+        //        $header.text(function () {
+        //change text based on condition
+        //            return $content.is(":visible") ? "Sakrij filtere" : "Prikaži filtere";
+        //        });
     }
 
     var x = window.matchMedia("(max-width: 960px)")
@@ -34,21 +32,21 @@ jQuery(document).ready(function ($) {
         $content.slideToggle(500, function () {
             //execute this after slideToggle is done
             //change text of header based on visibility of content div
-//            $header.text(function () {
-                //change text based on condition
-//                return $content.is(":visible") ? "Sakrij filtere" : "Prikaži filtere";
-//            });
+            //            $header.text(function () {
+            //change text based on condition
+            //                return $content.is(":visible") ? "Sakrij filtere" : "Prikaži filtere";
+            //            });
         });
-        if($("#showFilters").is(":visible")){
-           $("#showFilters").hide(); 
-           $("#hideFilters").show(); 
-        }else{
-           $("#showFilters").show(); 
-           $("#hideFilters").hide(); 
+        if ($("#showFilters").is(":visible")) {
+            $("#showFilters").hide();
+            $("#hideFilters").show();
+        } else {
+            $("#showFilters").show();
+            $("#hideFilters").hide();
         }
-        
-        
-        
+
+
+
 
     });
 
@@ -74,7 +72,6 @@ jQuery(document).ready(function ($) {
             }
         });
     };
-
     $('#submitBtn').click(function () {
         console.log('OnCLickSubmit');
         var email = $('#emailId').val();
@@ -82,25 +79,18 @@ jQuery(document).ready(function ($) {
         var mobitel = $('#mobitelId').val();
         var naslov = $('#naslovId').val();
         var poruka = $('#porukaId').val();
-
         console.log('Sadrzaj: ' + email + ime + mobitel + naslov + poruka);
-
         contactUs(email, ime, mobitel, naslov, poruka);
-
     });
-
     $('#imageSizeId').change(function () {
 
         var imageSize = $('#imageSizeId').val();
         updateFrameOnImageChange(imageSize);
-
         updatePriceOnSelectedValues();
     });
-
     $('#imageFrameId').change(function () {
         updatePriceOnSelectedValues();
     });
-
     function updateFrameOnImageChange(imageSize) {
         console.log('size: ' + imageSize);
         if (imageSize === '40x50' || imageSize === '50x70') {
@@ -121,7 +111,6 @@ jQuery(document).ready(function ($) {
         var imageSize = $('#imageSizeId').val();
         var frameSize = $('#imageFrameId').val();
         var setType = parseInt($('#setTypeInput').val());
-
         var calculatedProductPrice = parseFloat($('#single_product_price').text());
         var regularPriceInput = parseFloat($('#reguladPriceInput').val());
         if (parseFloat(regularPriceInput) === 0) {
@@ -130,10 +119,9 @@ jQuery(document).ready(function ($) {
         }
 
         calculatedPrice2(null, imageSize, frameSize, setType, regularPriceInput);
-
     }
 
-    //TODO: CIJENA U EUR I HRK
+//TODO: CIJENA U EUR I HRK
     function displayPrice(calculatedPrice) {
         $('#calculatedPriceInput').val(calculatedPrice);
         $('#single_product_price').html(number_format(parseFloat(calculatedPrice), 2, ',', '.'));
@@ -142,8 +130,8 @@ jQuery(document).ready(function ($) {
 
     var calculatedPrice2 = function (productId, imageSize, frameSize, setType, originalPrice) {
         $.ajax({
-            url: '/wordpress/wp-content/themes/sinatra-child/calculatePrice.php',
-            type: 'POST',
+            url: '/wp-json/calculateprice/v1',
+            method: 'GET',
             data: {
                 action: 'calculatePrice',
                 productId: productId,
@@ -152,13 +140,18 @@ jQuery(document).ready(function ($) {
                 setType: setType,
                 originalPrice: originalPrice
             },
-            success: function (data) {
-                displayPrice(data);
-                return data;
+            success: function (response) {
+                console.log(response);
+                displayPrice(response);
+                return response;
+            },
+            error: function (xhr, status, error) {
+                // Handle AJAX error
+                console.log(error);
             }
         });
     };
-
+    
     function number_format(number, decimals, dec_point, thousands_sep) {
         // Strip all characters but numerical ones.
         number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
@@ -185,15 +178,12 @@ jQuery(document).ready(function ($) {
 
     var bla = $('#productCategoryValue').val();
     var selectedCategories = bla.split(",");
-
     $('input[name="categories"]').each(function () {
         if (selectedCategories.includes($(this).val())) {
             $(this).prop('checked', true);
             console.log($(this).val());
         }
     });
-
-
     $('#submitButton').click(function () {
 
         let checkboxes = document.querySelectorAll('input[name="categories"]:checked');
@@ -203,17 +193,13 @@ jQuery(document).ready(function ($) {
         });
         $('#productCategoryValue').val(values);
     });
-
     $('.selectCategoriesGroup > label').click(function () {
         $('#submitButton').click();
     });
-
-
     //Predstavjla ajax request za orderby, prepraviti za filter
     $('.woocommerce-ordering2').on('change', 'select.filterby', function () {
         $(this).closest('form').trigger('submit');
     });
-
     $(".wpcp-post-image").hover(
             function () {
                 $(this).find("img").css({'transform': 'scale(1.3)'}, {'transform-origin': '50% 50%'});
@@ -232,8 +218,4 @@ jQuery(document).ready(function ($) {
         $(this).css('top', '256px');
     }
     );
-});
-
-jQuery(function ($) {
-
 });

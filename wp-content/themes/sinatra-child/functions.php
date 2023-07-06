@@ -613,6 +613,41 @@ function hide_shipping_when_free_is_available($rates, $package) {
 
 // <editor-fold defaultstate="collapsed" desc="END POINTS">
 
+// API endpoint
+//http://localhost/wordpress/wp-json/calculateprice/v1?productId=2&imageSize=....etc
+add_action('rest_api_init', function () {
+    register_rest_route('calculateprice','/v1', array(
+        'methods' => 'GET',
+        'callback' => 'my_awesome_func2',
+    ));
+});
+
+function my_awesome_func2($request) {
+    $author_id = 2;
+    
+    $productId = $_GET['productId'];
+        $imageSize = $_GET['imageSize'];
+        $frameSize = $_GET['frameSize'];
+        $setType = $_GET['setType'];
+        $originalPrice = $_GET['originalPrice'];
+    
+    // Perform necessary processing using the author ID
+    
+    $customPrice = calculatePrice($productId, $imageSize, $frameType, $setType, $price);
+    
+    // Generate the response
+    $response = array(
+        'author_id1' => $productId,
+        'author_id2' => $imageSize,
+        'author_id3' => $frameSize,
+        'author_id4' => $setType,
+        'author_id5' => $originalPrice,
+        'message' => 'Hello from the API endpoint!',
+    );
+    
+    return rest_ensure_response($customPrice);
+}
+
 //Poziv endpoint-a!
 //http://localhost/wordpress/wp-json/myplugin/v1/author/1
 
