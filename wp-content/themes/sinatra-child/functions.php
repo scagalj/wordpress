@@ -65,7 +65,6 @@ function wpb_load_fa() {
 add_action('wp_enqueue_scripts', 'wpb_load_fa');
 
 //</editor-fold>
-
 //<editor-fold defaultstate="collapsed" desc="Metode koje se trenutno nigdje ne koriste">
 //Trenutno se nigdje ne koristi
 function showBestSellingFrames() {
@@ -359,15 +358,15 @@ function createImageTagFromImageId($imageId, $widht = null, $height = null, $id 
 function generateSingleProductAdditionalOptions() {
     global $product;
 
-    /***
+    /*     * *
      * Samo za odredene kategorije ovo treba prikazati
      * tipa samo za Custom kategoriju treba prikazati "Željeni tekst"!
      * Ostali nisu custombilni.
      */
 
     $isCustomProduct = isCustomProduct($product);
-    
-    if($isCustomProduct){
+
+    if ($isCustomProduct) {
 
         printf('<div class="productAdditionalFields">
         <label for="customText">Željeni tekst</label>  
@@ -376,44 +375,104 @@ function generateSingleProductAdditionalOptions() {
     }
     ?>
 
-<div id="outputTextId" class="outputText" style="font-style: italic; font-size: 10pt; font-weight: 500; padding-bottom: 10px;">
+    <div id="outputTextId" class="outputText" style="font-style: italic; font-size: 10pt; font-weight: 500; padding-bottom: 10px;">
         <span id="outputTextHolder"></span>
     </div>
 
-    <div class="productAdditionalFields">
-        <label for="imageSizeId"><?php _e('Veličina slike'); ?></label>
-        <select id="imageSizeId" name="imageSize" class="form-select" required="true" style="width: 100%">
-            <option value=""><?php _e('Odaberite veličinu slike'); ?></option>
-            <option selected="true" value="21x30">21 x 30 cm</option>
-            <option value="30x40">30 x 40 cm</option>
-            <option value="40x50">40 x 50 cm</option>
-            <option value="50x70">50 x 70 cm</option>
-        </select>
-    </div>
-    <div id="imageFrameFieldsId" class="productAdditionalFields">
-        <label for="imageFrameId"><?php _e('Vrsta okvira'); ?></label>
-        <select id="imageFrameId" name="frameType" class="form-select" required="true" style="width: 100%">
-            <option value=""><?php _e('Odaberite vrstu okvira'); ?></option>
-            <option selected="" value="none">Bez okvira</option>
-            <option value="BijeliOkvir">Bijeli okvir</option>
-            <option value="CrniOkvir">Crni okvir</option>
-            <option value="SvijtloSmeđiOkvir">Svijetlo smeđi</option>
-        </select>
-    </div>
+    <?php
+    $isFrameCategoryProduct = isFrameCategoryProduct($product);
+    $isMuslinCategoryProduct = isMuslinCategoryProduct($product);
+
+    if ($isFrameCategoryProduct) {
+
+        echo generateHTMLForImageSize();
+
+        echo generateHTMLForFrameType();
+    }
+
+    echo generateHTMLForProdcutAttibutes($product);
+    ?>    
+
+
 
     <input type="hidden" id="reguladPriceInput" value="0" name="reguladPriceInput">
     <input type="hidden" id="calculatedPriceInput" value="0" name="calculatedPriceInput">
     <input type="hidden" id="setTypeInput" value="<?php echo resolveProductSetType($product) ?>" name="setType">
     <?php
 }
+
 add_action('woocommerce_before_add_to_cart_button', 'generateSingleProductAdditionalOptions', 10);
 
-/***
+function generateHTMLForImageSize() {
+
+    ob_start();
+    ?>
+    <div class="productAdditionalFields">
+        <label for="imageSizeId">  <?php echo _e('Veličina slike'); ?> </label>
+        <select id="imageSizeId" name="imageSize" class="form-select" required="true" style="width: 100%">
+            <option value="">  <?php echo _e('Odaberite veličinu slike'); ?> </option>
+            <option selected="true" value="21x30">21 x 30 cm</option>
+            <option value="30x40">30 x 40 cm</option>
+            <option value="40x50">40 x 50 cm</option>
+            <option value="50x70">50 x 70 cm</option>
+        </select>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+function generateHTMLForFrameType() {
+    ob_start();
+    ?>
+
+
+    <div id="imageFrameFieldsId" class="productAdditionalFields">
+        <label for="imageFrameId">' <?php echo _e('Vrsta okvira'); ?> </label>
+        <select id="imageFrameId" name="frameType" class="form-select" required="true" style="width: 100%">
+            <option value=""> <?php echo _e('Odaberite vrstu okvira'); ?></option>
+            <option selected="" value="none">Bez okvira</option>
+            <option value="BijeliOkvir">Bijeli okvir</option>
+            <option value="CrniOkvir">Crni okvir</option>
+            <option value="SvijtloSmeđiOkvir">Svijetlo smeđi</option>
+        </select>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+function generateHTMLForProdcutAttibutes($product) {
+
+    $product_id = $product->get_id(); // Replace with the ID of your product
+    $product_attributes = wc_get_product($product_id)->get_attributes();
+
+    if (!empty($product_attributes)) {
+        foreach ($product_attributes as $attribute) {
+            $attribute_taxonomy = $attribute->get_name();
+            $attribute_values = $attribute->get_options();
+
+            if (!empty($attribute_values)) {
+                ?>
+                <div id="additionalAttributesId" class="productAdditionalFields">
+                    <label for="<?php echo esc_attr($attribute_taxonomy); ?>"><?php echo esc_html($attribute_taxonomy); ?></label>
+                    <select name="<?php echo strtolower(esc_attr($attribute_taxonomy)); ?>" id="<?php echo esc_attr($attribute_taxonomy); ?>" style="width: 100%;" class="form-select" required="true" >
+                        <?php foreach ($attribute_values as $attribute_value) : ?>
+                            <option value="<?php echo esc_attr($attribute_value); ?>"><?php echo esc_html($attribute_value); ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <?php
+            }
+        }
+    }
+}
+
+/* * *
  * Izracunava broj postera za setove, 
  * ako je setoftwo, 2 su postera
  * ako je setofthree, 3 su postera
  * inace je 1 poster odnosno nije set.
  */
+
 function resolveProductSetType($product) {
     if (is_object_in_term($product->get_id(), 'product_tag', 'setoftwo')) {
         return 2;
@@ -423,14 +482,30 @@ function resolveProductSetType($product) {
     return 1;
 }
 
-/***
+/* * *
  * Provjera je li proizvod custombilan,
  * Moze li klijent unijeti svoj tekst.
  */
-function isCustomProduct($product){
+
+function isCustomProduct($product) {
     return is_object_in_term($product->get_id(), 'product_tag', 'custom');
 }
 
+/* * *
+ * Provjera sadzi li proizvod kategoriju Frames
+ */
+
+function isFrameCategoryProduct($product) {
+    return is_object_in_term($product->get_id(), 'product_cat', 'frames');
+}
+
+/* * *
+ * Provjera sadrzi li proizvod kategoriju Muslin
+ */
+
+function isMuslinCategoryProduct($product) {
+    return is_object_in_term($product->get_id(), 'product_cat', 'muslin');
+}
 
 /**
  * Prilikom odabira proizoda spremi popratne odabrane opcije 
@@ -447,6 +522,8 @@ function save_additional_options_to_cart_item($cart_item_data, $product_id, $var
     $imageSize = filter_input(INPUT_POST, 'imageSize');
     $frameType = filter_input(INPUT_POST, 'frameType');
     $setType = filter_input(INPUT_POST, 'setType');
+    $option = filter_input(INPUT_POST, 'opcije');
+    //TODO DODAT SPREMANJE OPCIJA S PROIZVODA
 
     if (!empty($customText)) {
         $cart_item_data['customText'] = $customText;
@@ -459,6 +536,10 @@ function save_additional_options_to_cart_item($cart_item_data, $product_id, $var
     }
     if (!empty($setType)) {
         $cart_item_data['setType'] = $setType;
+    }
+    
+    if (!empty($option)) {
+        $cart_item_data['option'] = $option;
     }
 
 //        $cart_item_data['customPrice'] = (float) 22;
@@ -502,14 +583,26 @@ function display_additional_options_on_cart($item_data, $cart_item) {
             'display' => '',
         );
     }
+    
+    if (!empty($cart_item['option'])) {
+        $item_data[] = array(
+            'key' => __('Proizvod', 'iconic'),
+            'value' => wc_clean($cart_item['option']),
+            'display' => '',
+        );
+    }
+
+    //TODO DODAT SPREMANJE OPCIJA S PROIZVODA
 
     return $item_data;
 }
+
 add_filter('woocommerce_get_item_data', 'display_additional_options_on_cart', 10, 2);
 
-/***
+/* * *
  * Resolvanje teksta za pojedini naziv okvira
  */
+
 function resolveFrameTypeValue($frameType) {
 
     if ($frameType == 'BijeliOkvir') {
@@ -547,14 +640,20 @@ function save_additional_options_to_order_items($item, $cart_item_key, $values, 
     if (!empty($values['setType'])) {
         $item->add_meta_data(__('Vrsta seta', 'iconic'), $values['setType']);
     }
+    
+    if (!empty($values['option'])) {
+        $item->add_meta_data(__('Proizvod', 'iconic'), $values['option']);
+    }
+    //TODO DODAT SPREMANJE OPCIJA S PROIZVODA
 }
 
 add_action('woocommerce_checkout_create_order_line_item', 'save_additional_options_to_order_items', 10, 4);
 
 add_action('woocommerce_before_calculate_totals', 'add_custom_price');
-/***
+/* * *
  * Izracun cijene na stranici cart (Košarica), na listi svih dodanih proizvoda u košarici.
  */
+
 function add_custom_price($cart_object) {
     foreach ($cart_object->cart_contents as $key => $value) {
 //        $value['data']->price = $custom_price;
@@ -564,6 +663,7 @@ function add_custom_price($cart_object) {
         $frameType = $value['frameType'];
         $setType = $value['setType'];
         $price = $value['data']->get_price();
+        //TODO DODAT DOHVACANJE OPCIJA S PROIZVODA AKO TREBA
 
         $customPrice = calculatePrice(null, $imageSize, $frameType, $setType, $price);
         $value['data']->set_price($customPrice);
@@ -572,7 +672,7 @@ function add_custom_price($cart_object) {
 
 add_filter('woocommerce_package_rates', 'hide_shipping_when_free_is_available', 100, 2);
 
-/***
+/* * *
  * Izracunavanje cijene za dostavu!
  */
 
@@ -609,14 +709,11 @@ function hide_shipping_when_free_is_available($rates, $package) {
 }
 
 //--------------------add to cart new custom field --------------------------
-
-
 // <editor-fold defaultstate="collapsed" desc="END POINTS">
-
 // API endpoint
 //http://localhost/wordpress/wp-json/calculateprice/v1?productId=2&imageSize=....etc
 add_action('rest_api_init', function () {
-    register_rest_route('calculateprice','/v1', array(
+    register_rest_route('calculateprice', '/v1', array(
         'methods' => 'GET',
         'callback' => 'my_awesome_func2',
     ));
@@ -624,17 +721,17 @@ add_action('rest_api_init', function () {
 
 function my_awesome_func2($request) {
     $author_id = 2;
-    
+
     $productId = $_GET['productId'];
-        $imageSize = $_GET['imageSize'];
-        $frameSize = $_GET['frameSize'];
-        $setType = $_GET['setType'];
-        $originalPrice = $_GET['originalPrice'];
-    
+    $imageSize = $_GET['imageSize'];
+    $frameSize = $_GET['frameSize'];
+    $setType = $_GET['setType'];
+    $originalPrice = $_GET['originalPrice'];
+
     // Perform necessary processing using the author ID
-    
+
     $customPrice = calculatePrice($productId, $imageSize, $frameSize, $setType, $originalPrice);
-    
+
     // Generate the response
     $response = array(
         'author_id1' => $productId,
@@ -644,7 +741,7 @@ function my_awesome_func2($request) {
         'author_id5' => $originalPrice,
         'message' => 'Hello from the API endpoint!',
     );
-    
+
     return rest_ensure_response($customPrice);
 }
 
@@ -740,7 +837,6 @@ function my_awesome_func(WP_REST_Request $request) {
 //        exit(wp_redirect(get_permalink($tattoo_ID)));
 //    }
 }
+
 // </editor-fold>
-
-
 ?>

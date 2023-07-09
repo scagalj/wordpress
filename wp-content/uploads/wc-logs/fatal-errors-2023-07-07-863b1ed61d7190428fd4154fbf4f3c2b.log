@@ -1,0 +1,20 @@
+2023-07-07T16:31:19+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function isFrameCategoryProduct(), 0 passed in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 385 and exactly 1 expected in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php:490
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php(385): isFrameCategoryProduct()
+#1 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(307): generateSingleProductAdditionalOptions('')
+#2 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\wordpress\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\single-product\add-to-cart\simple.php(33): do_action('woocommerce_bef...')
+#5 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommer in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 490
+
+2023-07-07T16:31:58+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function generateHTMLForProdcutAttibutes(), 0 passed in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 396 and exactly 1 expected in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php:435
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php(396): generateHTMLForProdcutAttibutes()
+#1 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(307): generateSingleProductAdditionalOptions('')
+#2 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\wordpress\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\single-product\add-to-cart\simple.php(33): do_action('woocommerce_bef...')
+#5 C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\wordpress\wp-content in C:\xampp\htdocs\wordpress\wp-content\themes\sinatra-child\functions.php on line 435
+
